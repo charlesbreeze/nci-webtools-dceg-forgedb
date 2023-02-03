@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Helvetica;
+      }
+
+      input, button {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 4px;
+      }
+
+      label {
+        font-size: 22px;
+      }
+
+      .h1 {
+        font-size: 70px;
+        font-weight: normal;
+        color: #eeae6a;
+      }
+
+      .block-center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .w-100 {
+        display: block;
+        width: 100%;
+      }
+
+      .no-list-decoration {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .mb-1 {
+        margin-bottom: 1.5rem;
+      }
+
+      .mb-5 {
+        margin-bottom: 7.5rem;
+      }
+
+      .mb-10 {
+        margin-bottom: 15rem;
+      }
+
+      .mt-15 {
+        margin-top: 22.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="h1 text-center mt-15 mb-5">FORGEdb</h1>
+    <form id="rsidForm" class="block-center text-center mb-10" style="width: 320px">
+      <label class="w-100 mb-1" for="rsid">Enter SNP rsid:</label>
+      <input class="w-100" id="rsid" name="rsid" />
+      <button class="w-100" type="submit">Search</button>
+    </form>
+
+    <ul class="block-center no-list-decoration" style="width: 160px">
+      <li><a href="/files/rs1421/summary.table.rs1421085.html">Example Analysis</a></li>
+      <li><a href="https://forge2.altiusinstitute.org/?about">About</a></li>
+      <li><a href="https://www.biorxiv.org/content/10.1101/2022.11.14.516365v1">Citation</a></li>
+    </ul>
+
+    <script>
+      window.rsidForm.onsubmit = function (event) {
+        event.preventDefault();
+        var searchTerm = window.rsid.value;
+        if (searchTerm) {
+          window.location.href = "/files/" + searchTerm.substr(0, 6) + "/summary.table." + searchTerm + ".html";
+        }
+      };
+    </script>
+  </body>
+</html>

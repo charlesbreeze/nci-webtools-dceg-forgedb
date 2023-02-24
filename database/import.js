@@ -47,7 +47,7 @@ async function getForgeData(sources, rsid) {
       case "tabix":
         const [key, index, fields] = source.query;
         const [chr, start, end] = fields.map((f) => data[key]?.[index]?.[f]);
-        await source.connection.getLines(chr, start, end, (line) => results.push(formatObject(rsid, camelCase, asNumber)));
+        await source.connection.getLines(chr, start, end, (line) => results.push(formatObject(line, camelCase, asNumber)));
         break;
     }
 

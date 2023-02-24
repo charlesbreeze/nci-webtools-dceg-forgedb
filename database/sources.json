@@ -1,0 +1,51 @@
+[
+  { 
+    "name": "closestGene",
+    "type": "sqlite",
+    "path": "closest.refseq.gene.hg19.db",
+    "query": "SELECT * from gene WHERE rsid = ?"
+  },
+  {
+    "name": "gtex",
+    "type": "sqlite",
+    "path": "gtex.eqtl.db",
+    "query": "SELECT * FROM eqtl WHERE rs_id_dbSNP151_GRCh38p7 = ?"
+  },
+  {
+    "name": "cadd",
+    "type": "tabix",
+    "path": "whole_genome_SNVs.tsv.gz",
+    "query": ["closestGene", 0, ["chr", "start", "end"]]
+  },
+  {
+    "name": "eqtlgen",
+    "type": "sqlite",
+    "path": "eqtlgen.db",
+    "query": "SELECT * FROM eqtlgen WHERE SNP = ?"
+  },
+  {
+    "name": "abc",
+    "type": "sqlite",
+    "path": "abc.db",
+    "query": "SELECT * FROM abc WHERE rsid = ?"
+  },
+  {
+    "name": "forge2TfMotif",
+    "type": "sqlite",
+    "path": "forge2.tf.fimo.jaspar.1e-5.taipale.1e-5.taipaledimer.1e-5.uniprobe.1e-5.xfac.1e-5.db",
+    "query": "SELECT * FROM tf WHERE rsid = ?"
+  },
+  {
+    "name": "cato",
+    "type": "sqlite",
+    "path": "cato.db",
+    "query": "SELECT * from cato WHERE probe = ?"
+  },
+  {
+    "name": "forge2",
+    "type": "sqlite",
+    "path": "forge_2.0.db",
+    "query": "SELECT d.dataset_tag as dataset, s.shortcell as cell, s.tissue as tissue, s.datatype as datatype FROM probe_bitstring pb JOIN sample s on pb.dataset_id = s.dataset_id JOIN dataset d on pb.dataset_id = d.dataset_id WHERE pb.array_id = 1 AND SUBSTR(pb.bit, s.sample_order, 1) = '1' AND pb.probe_id = ?",
+    "groupBy": "dataset"
+  }
+]

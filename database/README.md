@@ -1,8 +1,6 @@
 # FORGEdb Data Import
 
-The import.js script generates FORGEdb `json` files given a list of rsids. 
-
-The following datasets are required:
+The import.js script generates FORGEdb `json` files given a list of rsids and the following datasets:
 
 - [abc.db](https://forge2.altiusinstitute.org/files/abc.db)
 - [cato.db](https://forge2.altiusinstitute.org/files/cato.db)
@@ -17,10 +15,14 @@ The following datasets are required:
 Usage:
 
 ```sh
-# Install dependencies if needed
+# Install dependencies
 npm install
 
 # Execute import.js to generate FORGEdb json files within the output folder
+# - ./sources.json is a file containing dataset-query mappings (included)
+# - ./input refers to the folder containing the datasets above
+# - ./output refers to the folder where the json files should be generated
+# - ./rsids.txt should contain a list of rsids (one per line)
 node import.js \
   --sources ./sources.json \
   --inputPath ./input \
@@ -36,3 +38,6 @@ parallel node import.js \
   --outputPath ./output \
   --rsids {} ::: ./rsids.txt.*
 ```
+
+After the FORGEdb `json` files have been generated, they can be imported into a document store or uploaded to object storage and served behind a CDN.
+

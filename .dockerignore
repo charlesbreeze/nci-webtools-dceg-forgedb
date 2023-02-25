@@ -1,0 +1,6 @@
+
+.git
+.gitignore
+database/input
+database/output
+database/node_modules

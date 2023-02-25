@@ -25,17 +25,17 @@ npm install
 # - ./rsids.txt should contain a list of rsids (one per line)
 node import.js \
   --sources ./sources.json \
-  --inputPath ./input \
-  --outputPath ./output \
+  --input ./input \
+  --output ./output \
   --rsids ./rsids.txt
 
 # Alternatively, use GNU split/parallel for large batches
-split -l 1000000 rsids.txt rsids.txt.
+split -d -n l/32 rsids.txt rsids.txt.
 
 parallel node import.js \
   --sources ./sources.json \
-  --inputPath ./input \
-  --outputPath ./output \
+  --input ./input \
+  --output ./output \
   --rsids {} ::: ./rsids.txt.*
 ```
 

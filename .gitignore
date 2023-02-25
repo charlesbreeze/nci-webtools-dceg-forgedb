@@ -1,0 +1,4 @@
+/database/input
+/database/output
+/database/**/rsids.txt*
+**/*/node_modules

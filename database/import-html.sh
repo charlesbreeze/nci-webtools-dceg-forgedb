@@ -14,12 +14,12 @@ aws configure set default.s3.max_concurrent_requests 20
 mkdir -p $OUTPUT_FOLDER
 
 # Download the source file from S3
-aws --quiet s3 cp $S3_SOURCE_PATH $INPUT_FILEPATH
+aws s3 cp --only-show-errors $S3_SOURCE_PATH $INPUT_FILEPATH
 
 # Extract the source file using pigz/tar 
 tar -I pigz -xf $INPUT_FILEPATH --strip-components=3 -k -C $OUTPUT_FOLDER
 
 # Upload the extracted source file to S3
-aws --quiet --recursive s3 cp $OUTPUT_FOLDER $S3_DESTINATION_PATH
+aws s3 cp --recursive --exclude "*" --include "*.html" --only-show-errors $OUTPUT_FOLDER $S3_DESTINATION_PATH
 
 echo "Done"

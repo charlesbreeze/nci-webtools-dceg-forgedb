@@ -8,7 +8,7 @@ S3_SOURCE_PATH=$1
 S3_DESTINATION_PATH=$2
 
 # Set max concurrent requests (higher = faster for larger numbers of small files)
-aws configure set default.s3.max_concurrent_requests 200
+aws configure set default.s3.max_concurrent_requests 20
 
 # Create the output folder
 mkdir -p $OUTPUT_FOLDER

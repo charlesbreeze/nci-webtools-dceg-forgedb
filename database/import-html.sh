@@ -17,6 +17,6 @@ aws --quiet s3 cp $S3_SOURCE_PATH $INPUT_FILEPATH
 tar -I pigz -xf $INPUT_FILEPATH --strip-components=3 -k -C $OUTPUT_FOLDER
 
 # Upload the extracted source file to S3
-aws --quiet s3 sync $OUTPUT_FOLDER $S3_DESTINATION_PATH
+aws --quiet --recursive s3 cp $OUTPUT_FOLDER $S3_DESTINATION_PATH
 
 echo "Done"

@@ -1,6 +1,9 @@
 #!/bin/bash
 set -ex
 
+# Set max concurrent requests (higher = faster for larger numbers of small files)
+aws configure set default.s3.max_concurrent_requests 100
+
 # Get the list of files to import
 files=$(aws s3 ls $S3_SOURCE_PATH/ | awk '{print $4}' | grep --color=never "htmls.tar.gz")
 
@@ -11,9 +14,6 @@ do
   TEMP_FOLDER=$(mktemp -d)
   INPUT_FILEPATH=$TEMP_FOLDER/input.tar.gz
   OUTPUT_FOLDER=$TEMP_FOLDER/output
-
-  # Set max concurrent requests (higher = faster for larger numbers of small files)
-  aws configure set default.s3.max_concurrent_requests 100
 
   # Create the output folder
   mkdir -p $OUTPUT_FOLDER

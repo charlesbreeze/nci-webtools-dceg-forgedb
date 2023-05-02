@@ -3,6 +3,8 @@ set -ex
 
 # Set max concurrent requests (higher = faster for larger numbers of small files)
 aws configure set default.s3.max_concurrent_requests 100
+aws configure set default.retry_mode standard
+aws configure set default.max_attempts 20
 
 # Get the list of files to import
 files=$(aws s3 ls $S3_SOURCE_PATH/ | awk '{print $4}' | grep --color=never "htmls.tar.gz")

@@ -1,10 +1,14 @@
 #!/bin/bash
 # KEEP TRAILING SLASHES ON S3 PATHS
-# ./launch-html-import.sh S3://path/to/dump/ S3://path/to/html/ 10
+# ./launch-html-import.sh S3://path/to/dump/
+# Required environment variables:
+# - ECS_CLUSTER
+# - ECS_TASK_DEFINITION
+# - SUBNET_IDS
+# - SECURITY_GROUP_IDS
+# - NUM_TASKS
 
 set -ex
-
-NUM_TASKS=$3
 
 # Get the list of files to import
 S3_FILES=$(aws s3 ls $1 | awk '{print $4}' | grep --color=never "htmls.tar.gz$")

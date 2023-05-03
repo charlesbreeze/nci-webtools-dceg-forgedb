@@ -30,5 +30,5 @@ do
     --cluster $ECS_CLUSTER \
     --task-definition $ECS_TASK_DEFINITION \
     --network-configuration "awsvpcConfiguration={subnets=[$SUBNET_IDS],securityGroups=[$SECURITY_GROUP_IDS]}" \
-    --overrides "{\"containerOverrides\": [{\"name\": \"data-import\", \"environment\": [{\"name\": \"S3_FILES\", \"value\": \"$S3_SOURCE_FILES\"}]\"}]}"
+    --overrides "{\"containerOverrides\": [{\"name\": \"data-import\", \"environment\": [{\"name\": \"S3_FILES\", \"value\": \"$S3_SOURCE_FILES\"}]}]}"
 done

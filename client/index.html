@@ -6,27 +6,73 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1 class="h1 text-center mt-15 mb-5">FORGEdb</h1>
-    <form id="rsidForm" class="block-center text-center mb-10" style="width: 320px">
-      <label class="w-100 mb-1" for="rsid">Enter SNP rsid:</label>
-      <input class="w-100" id="rsid" name="rsid" />
-      <button class="w-100" type="submit">Search</button>
-    </form>
+    <h1 class="h1 text-center mt-15 mb-5">
+      <a class="title" href="/">FORGEdb</a>
+    </h1>
 
-    <ul class="block-center no-list-decoration mb-10" style="width: 160px">
-      <li><a href="/files/rs1421/summary.table.rs1421085.html">Example Analysis</a></li>
-      <li><a href="https://forge2.altiusinstitute.org/?about">About</a></li>
-      <li><a href="https://www.biorxiv.org/content/10.1101/2022.11.14.516365v1">Citation</a></li>
-    </ul>
+    <div id="home">
+      <form id="rsidForm" class="block-center text-center mb-10" style="width: 320px">
+        <label class="w-100 mb-1" for="rsid">Enter SNP rsid:</label>
+        <input class="w-100" id="rsid" name="rsid" />
+        <button class="w-100" type="submit">Search</button>
+        <div id="error"></div>
+      </form>
+
+      <ul class="block-center no-list-decoration mb-10" style="width: 160px">
+        <li><a href="/files/rs1421/summary.table.rs1421085.html">Example Analysis</a></li>
+        <li><a href="https://forge2.altiusinstitute.org/?about">About</a></li>
+        <li><a href="https://www.biorxiv.org/content/10.1101/2022.11.14.516365v1">Citation</a></li>
+      </ul>
+    </div>
+
+    <div id="results"></div>
 
     <script>
+      const homeElement = document.getElementById("home");
+      const resultsElement = document.getElementById("results");
+      const errorElement = document.getElementById("error");
+      const rsid = new URLSearchParams(window.location.search).get("rsid");
+      loadResults(rsid);
+
+      async function loadResults(rsid) {
+        if (!rsid) return;
+        try {
+          const url = `/html/summary.table.${rsid}.html`;
+          const request = await fetch(url);
+          if (!request.ok) {
+            throw new Error(`${rsid} not found`);
+          }
+          const html = await request.text();
+          const tables = Array.from(getElement(html).querySelectorAll("table"));
+          for (const table of tables) {
+            table.classList.add("table", "block-center", "text-center", "mb-5", "w-fit-content");
+            if (tables.indexOf(table) == 0) {
+              table.classList.add("bordered");
+            }
+            resultsElement.appendChild(table);
+          }
+          homeElement.hidden = true;
+        } catch (error) {
+          console.error("caught error", error);
+          errorElement.innerText = error.toString();
+        }
+      }
+
+      function getElement(htmlString) {
+        const node = document.createElement("div");
+        node.innerHTML = htmlString;
+        return node;
+      }
+    </script>
+
+    <!-- <script>
       window.rsidForm.onsubmit = function (event) {
         event.preventDefault();
         var searchTerm = window.rsid.value;
         if (searchTerm) {
-          window.location.href = "/files/" + searchTerm.substr(0, 6) + "/summary.table." + searchTerm + ".html";
+          // window.location.href = "/html/" + searchTerm.substr(0, 6) + "/summary.table." + searchTerm + ".html";
         }
       };
-    </script>
+    </script> -->
   </body>
 </html>

@@ -3,7 +3,7 @@
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  /* font: inherit; */
   vertical-align: baseline;
   box-sizing: border-box;
 }
@@ -22,6 +22,11 @@ label {
   font-size: 22px;
 }
 
+a.title {
+  text-decoration: none;
+  color: inherit;
+}
+
 .h1 {
   font-size: 70px;
   font-weight: normal;
@@ -36,6 +41,10 @@ label {
 
 .text-center {
   text-align: center;
+}
+
+.w-fit-content {
+  width: fit-content;
 }
 
 .w-100 {
@@ -63,3 +72,20 @@ label {
 .mt-15 {
   margin-top: 22.5rem;
 }
+
+.table {
+  border-collapse: collapse;
+}
+
+.table td, .table th {
+  padding: 0.1rem;
+}
+
+.table .row_odd {
+  background-color: #E2E4FD;
+}
+
+.table.bordered td, .table.bordered th {
+  border: 2px solid black;
+}
+

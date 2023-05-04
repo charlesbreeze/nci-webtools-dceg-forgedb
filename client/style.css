@@ -43,6 +43,10 @@ a.title {
   text-align: center;
 }
 
+.text-danger {
+  color: red;
+}
+
 .w-fit-content {
   width: fit-content;
 }

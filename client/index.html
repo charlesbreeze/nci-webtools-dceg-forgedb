@@ -37,7 +37,7 @@
       async function loadResults(rsid) {
         if (!rsid) return;
         try {
-          const url = `/html/summary.table.${rsid}.html`;
+          const url = `./html/summary.table.${rsid}.html`;
           const request = await fetch(url);
           if (!request.ok) {
             throw new Error(`${rsid} not found`);

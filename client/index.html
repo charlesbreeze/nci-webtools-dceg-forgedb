@@ -7,7 +7,7 @@
   </head>
   <body>
     <h1 class="h1 text-center mt-15 mb-5">
-      <a class="title" href="/">FORGEdb</a>
+      <a class="title" href=".">FORGEdb</a>
     </h1>
 
     <div id="home">
@@ -19,7 +19,7 @@
       </form>
 
       <ul class="block-center no-list-decoration mb-10" style="width: 160px">
-        <li><a href="/files/rs1421/summary.table.rs1421085.html">Example Analysis</a></li>
+        <li><a href="?rsid=rs1421085">Example Analysis</a></li>
         <li><a href="https://forge2.altiusinstitute.org/?about">About</a></li>
         <li><a href="https://www.biorxiv.org/content/10.1101/2022.11.14.516365v1">Citation</a></li>
       </ul>
@@ -43,7 +43,10 @@
             throw new Error(`${rsid} not found`);
           }
           const html = await request.text();
-          const tables = Array.from(getElement(html).querySelectorAll("table"));
+          const node = document.createElement("div");
+          node.innerHTML = html;
+          const tables = Array.from(node.querySelectorAll("table"));
+
           for (const table of tables) {
             table.classList.add("table", "block-center", "text-center", "mb-5", "w-fit-content");
             if (tables.indexOf(table) == 0) {
@@ -56,12 +59,6 @@
           console.error("caught error", error);
           errorElement.innerText = error.toString();
         }
-      }
-
-      function getElement(htmlString) {
-        const node = document.createElement("div");
-        node.innerHTML = htmlString;
-        return node;
       }
     </script>
 

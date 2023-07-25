@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: 'forgedb',
+  basePath: '/forgedb',
   output: 'export',
   trailingSlash: true,
 }

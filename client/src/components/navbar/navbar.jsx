@@ -7,15 +7,20 @@ import Navbar from "react-bootstrap/Navbar";
 import clsx from "clsx";
 import NavbarSearch from "./navbar-search";
 
+import config  from "../../../next.config"
+
 function pathsMatch(path1, path2) {
   // remove trailing slash
+ 
   path1 = path1.replace(/\/$/, "");
   path2 = path2.replace(/\/$/, "");
-  return path1 === path2;
+
+  return path1 === ((config.basePath ? config.basePath : "") + path2);
 }
 
 export default function AppNavbar({ routes = [] }) {
   const pathName = usePathname();
+
   return (
     <Navbar bg="dark" variant="dark" className="text-uppercase font-title" expand="md">
       <Container>

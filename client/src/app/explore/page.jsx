@@ -9,7 +9,7 @@ export default function Explore() {
       <Row>
         <Col>
           <article className="shadow p-4 rounded">
-            <h1 className="text-primary h3 mb-4">Explore Visualization SNP</h1>
+            <h1 className="text-primary h3 mb-4">Explore Functional SNP</h1>
             <hr/>
             <p>
               Placeholder

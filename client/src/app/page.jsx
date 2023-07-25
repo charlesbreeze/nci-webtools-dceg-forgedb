@@ -14,9 +14,9 @@ export default function Home() {
               <Col md={12}>
                 <div className="d-flex h-100 text-align-center align-items-center py-5">
                   <div>
-                    <h1 className="font-title text-light mb-3">Visualization SNP</h1>
+                    <h1 className="font-title text-light mb-3">Functional SNP</h1>
                     <hr className="border-white" />
-                    <p className="lead text-light">Explore Visualization SNP Databases.</p>
+                    <p className="lead text-light">Explore Functional SNP Databases.</p>
                     <Link href="/explore" className="btn btn-lg btn-outline-light text-decoration-none">
                       Explore Database
                     </Link>

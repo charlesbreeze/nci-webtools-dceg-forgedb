@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
     <RecoilRoot>
       <html lang="en">
         <head>
-          <title>Visualization SNP</title>
+          <title>Functional SNP</title>
           <meta name="keywords" content="HPVAVE" />
           <link rel="icon" href="/favicon.ico" sizes="any" />
           <GoogleAnalytics id={process.env.GOOGLE_ANALYTICS_ID} />

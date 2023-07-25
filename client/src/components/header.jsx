@@ -11,7 +11,7 @@ export default function Header({ routes = [] }) {
       </div>
       <div className="d-none d-md-block bg-primary text-white py-1">
         <div className="container">
-          <h1 className="h6 fw-semibold">Visualization SNP</h1>
+          <h1 className="h6 fw-semibold">Functional SNP</h1>
         </div>
       </div>
       <AppNavbar routes={routes} />

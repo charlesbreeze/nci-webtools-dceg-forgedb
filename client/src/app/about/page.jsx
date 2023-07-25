@@ -9,7 +9,7 @@ export default function About() {
       <Row>
         <Col>
           <article className="shadow p-4 rounded">
-            <h1 className="text-primary h3 mb-4">About Visualization SNP</h1>
+            <h1 className="text-primary h3 mb-4">About Functional SNP</h1>
             <hr/>
             <p>
               Placeholder

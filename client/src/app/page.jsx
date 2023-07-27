@@ -20,7 +20,7 @@ export default function Home() {
                   <div className="text-center my-5">
                     <h1 className="fs-1 text-light fw-light mb-3">FORGE<span className="small text-warning fw-normal">db</span></h1>
                     <hr className="border-white" />
-                    <p className="lead text-light">Explore functional SNP databases</p>
+                    <p className="lead text-light">Explore candidate functional variants</p>
 
                     <Form action="/explore">
                       <InputGroup className="border-white">
@@ -45,7 +45,7 @@ export default function Home() {
           <Row>
             <Col>
               <p>
-                A web-based tool designed to enable the exploration of DNase I tag (chromatin accessibility) signal surrounding GWAS array SNPs and the calculation of significance of overlap with transcription factor binding sites from common TF databases.
+                FORGEdb is a web-based tool that helps researchers understand the role of specific genetic variants, especially those related to diseases. It does this by collecting and integrating a wide range of data related to these variants, like their association with specific genes or their impact on gene regulation. The tool then gives each variant a score to help researchers decide which ones might be most important to study further.
               </p>
             </Col>
           </Row>

@@ -22,10 +22,10 @@ export default function AppNavbar({ routes = [] }) {
   const pathName = usePathname();
 
   return (
-    <Navbar bg="dark" variant="dark" className="text-uppercase font-title" expand="md">
+    <Navbar bg="dark" variant="dark" className="text-uppercase" expand="md">
       <Container>
         <Navbar.Brand as={Link} href="/" className="d-flex d-md-none text-light">
-          Functional SNP{" "}
+          FORGEdb
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-nav" className="px-0 py-3 text-uppercase">
           <i className="bi bi-list me-1"></i>

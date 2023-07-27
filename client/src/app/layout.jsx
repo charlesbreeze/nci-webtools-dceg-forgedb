@@ -1,12 +1,9 @@
 "use client";
-import { Inter } from "next/font/google";
 import { RecoilRoot } from "recoil";
 import GoogleAnalytics from "@/components/analytics";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import "./styles/main.scss";
-
-const inter = Inter({ subsets: ["latin"], variable: "--bs-font-sans-serif", display: "block" });
 
 export default function RootLayout({ children }) {
   const routes = [
@@ -19,12 +16,12 @@ export default function RootLayout({ children }) {
     <RecoilRoot>
       <html lang="en">
         <head>
-          <title>Functional SNP</title>
-          <meta name="keywords" content="HPVAVE" />
+          <title>FORGEdb - Functional SNP</title>
+          <meta name="keywords" content="FORGEdb" />
           <link rel="icon" href="/favicon.ico" sizes="any" />
           <GoogleAnalytics id={process.env.GOOGLE_ANALYTICS_ID} />
         </head>
-        <body className={[inter.className, "d-flex flex-column vh-100"].join(" ")}>
+        <body className="d-flex flex-column vh-100">
           <Header routes={routes} />
           <main className="position-relative d-flex flex-column flex-grow-1 align-items-stretch bg-light">{children}</main>
           <Footer />

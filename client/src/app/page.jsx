@@ -3,23 +3,35 @@ import Link from 'next/link';
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+import InputGroup from "react-bootstrap/InputGroup";
+
 
 export default function Home() {
   return (
     <>
-      <div className="bg-primary-dark">
-        <div className="cover-image">
+      <div className="bg-black">
+        <div className="cover-image" style={{backgroundImage: `url('/assets/forgedb-background.svg')`}}>
           <Container>
             <Row>
               <Col md={12}>
-                <div className="d-flex h-100 text-align-center align-items-center py-5">
-                  <div>
-                    <h1 className="font-title text-light mb-3">Functional SNP</h1>
+                <div className="d-flex h-100 text-align-center align-items-center justify-content-center py-5">
+                  <div className="text-center my-5">
+                    <h1 className="fs-1 text-light fw-light mb-3">FORGE<span className="small text-warning fw-normal">db</span></h1>
                     <hr className="border-white" />
-                    <p className="lead text-light">Explore Functional SNP Databases.</p>
-                    <Link href="/explore" className="btn btn-lg btn-outline-light text-decoration-none">
-                      Explore Database
-                    </Link>
+                    <p className="lead text-light">Explore functional SNP databases</p>
+
+                    <Form action="/explore">
+                      <InputGroup className="border-white">
+                        <Form.Control className="search-control-transparent fw-light text-center" type="search"  placeholder="Enter RSID" aria-label="Enter RSID" name="rsid" required />
+                        <Button variant="outline-secondary" className="search-control-transparent-button position-absolute" style={{right: 0, zIndex: 9999}} type="submit">
+                          <i className="bi bi-search"></i>
+                          <span className="visually-hidden">Search</span>
+                        </Button>
+                      </InputGroup>
+                    </Form>
+
                   </div>
                 </div>
               </Col>

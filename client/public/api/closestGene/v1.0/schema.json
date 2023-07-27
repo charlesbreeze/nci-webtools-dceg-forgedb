@@ -1,0 +1,13 @@
+{
+  "title": "RefSeq closest gene information (hg19, for more details, see <a href=\"https://www.ncbi.nlm.nih.gov/refseq/about/\">NCBI RefSeq</a>)",
+  "columns": [
+    {"name": "rsid", "label": "RSID"},
+    {"name": "chr", "label": "RSID Chromosome"},
+    {"name": "start", "label": "RSID Start Position"},
+    {"name": "end", "label": "RSID End Position"},
+    {"name": "gene name", "label": "Gene"},
+    {"name": "chr2", "label": "Gene Chromosome"},
+    {"name": "start2", "label": "Gene Start Position"},
+    {"name": "end2", "label": "Gene End Position"}
+  ]
+}

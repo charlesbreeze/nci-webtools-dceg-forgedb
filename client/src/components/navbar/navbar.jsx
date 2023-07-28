@@ -5,13 +5,13 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import clsx from "clsx";
-import { basePath } from "@/next.config.js";
 import NavbarSearch from "./navbar-search";
 
 function pathsMatch(path1, path2) {
   // remove trailing slash
   path1 = path1.replace(/\/$/, "");
   path2 = path2.replace(/\/$/, "");
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
   return [path2, basePath + path2].includes(path1);
 }
 

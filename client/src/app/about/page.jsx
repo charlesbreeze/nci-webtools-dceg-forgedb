@@ -2,7 +2,6 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { basePath } from "@/next.config.js";
 
 export default function About() {
   return (
@@ -58,7 +57,7 @@ export default function About() {
             <p>To view a specific example of a SNP with a FORGEdb score of 9, the following figure highlights score details for rs1421085:</p>
             <p>Example FORGEdb results for rs1421085</p>
             <figure className="figure">
-              <img src={`${basePath}/assets/forgedb-example.png`} className="figure-img img-fluid" alt="Example FORGEdb results for rs1421085" />
+              <img src={`${process.env.NEXT_PUBLIC_BASE_PATH}/assets/forgedb-example.png`} className="figure-img img-fluid" alt="Example FORGEdb results for rs1421085" />
               <figcaption className="figure-caption">
                 Figure 1: Example FORGEdb results for rs1421085. For this SNP, there is evidence for eQTL associations (with IRX3, shown to be a key target gene by Bell et al. and Smemo et al.), chromatin looping (ABC interactions), overlap with significant TF motifs, DNase I hotspot overlap, as well as overlap with histone mark broadPeaks. The only regulatory dataset that this SNP does not have
                 evidence for is for CATO score (1 point). The resulting FORGEdb score for rs1421085 is therefore 9 = 2 (eQTL) + 2 (ABC) + 1 (TF motif) + 2 (DNase I hotspot) + 2 (histone mark ChIP-seq). Independent experimental analyses by Claussnitzer et al. have demonstrated a regulatory role for this SNP in the regulation of white vs. beige adipocyte proliferation via IRX3/IRX5.

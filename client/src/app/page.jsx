@@ -5,13 +5,12 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup";
-import { basePath } from "@/next.config.js";
 
 export default function Home() {
   return (
     <>
       <div className="bg-black">
-        <div className="cover-image" style={{backgroundImage: `url('${basePath}/assets/forgedb-background.svg')`}}>
+        <div className="cover-image" style={{backgroundImage: `url('${process.env.NEXT_PUBLIC_BASE_PATH}/assets/forgedb-background.svg')`}}>
           <Container>
             <Row>
               <Col md={12}>

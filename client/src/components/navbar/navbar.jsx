@@ -5,17 +5,14 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import clsx from "clsx";
+import { basePath } from "@/next.config.js";
 import NavbarSearch from "./navbar-search";
-
-import config  from "../../../next.config"
 
 function pathsMatch(path1, path2) {
   // remove trailing slash
- 
   path1 = path1.replace(/\/$/, "");
   path2 = path2.replace(/\/$/, "");
-
-  return path1 === ((config.basePath ? config.basePath : "") + path2);
+  return [path2, basePath + path2].includes(path1);
 }
 
 export default function AppNavbar({ routes = [] }) {

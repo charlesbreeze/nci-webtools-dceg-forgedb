@@ -1,5 +1,7 @@
 "use client";
 import { RecoilRoot } from "recoil";
+import { useRouter } from "next/router";
+import { basePath } from "@/../next.config.js";
 import GoogleAnalytics from "@/components/analytics";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
@@ -18,7 +20,7 @@ export default function RootLayout({ children }) {
         <head>
           <title>FORGEdb - Functional SNP</title>
           <meta name="keywords" content="FORGEdb" />
-          <link rel="icon" href="/favicon.ico" sizes="any" />
+          <link rel="icon" href={`${basePath}/favicon.ico`} sizes="any" />
           <GoogleAnalytics id={process.env.GOOGLE_ANALYTICS_ID} />
         </head>
         <body className="d-flex flex-column vh-100">

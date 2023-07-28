@@ -1,18 +1,17 @@
 "use client";
-import Link from 'next/link';
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup";
-
+import { basePath } from "@/next.config.js";
 
 export default function Home() {
   return (
     <>
       <div className="bg-black">
-        <div className="cover-image" style={{backgroundImage: `url('/assets/forgedb-background.svg')`}}>
+        <div className="cover-image" style={{backgroundImage: `url('${basePath}/assets/forgedb-background.svg')`}}>
           <Container>
             <Row>
               <Col md={12}>
@@ -22,7 +21,7 @@ export default function Home() {
                     <hr className="border-white" />
                     <p className="lead text-light">Explore candidate functional variants</p>
 
-                    <Form action="/explore">
+                    <Form action="explore">
                       <InputGroup className="border-white">
                         <Form.Control className="search-control-transparent fw-light text-center" type="search"  placeholder="Enter RSID" aria-label="Enter RSID" name="rsid" required />
                         <Button variant="outline-secondary" className="search-control-transparent-button position-absolute" style={{right: 0, zIndex: 9999}} type="submit">

@@ -9,6 +9,7 @@ export default function RootLayout({ children }) {
   const routes = [
     { title: "Home", path: "/"},
     { title: "Explore", path: "/explore" },
+    { title: "API Access", path: "/api-access" },
     { title: "About", path: "/about" },
   ]
 

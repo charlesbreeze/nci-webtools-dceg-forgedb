@@ -2,6 +2,7 @@
 import { RecoilRoot } from "recoil";
 import GoogleAnalytics from "@/components/analytics";
 import Header from "@/components/header";
+import AppNavbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer";
 import "./styles/main.scss";
 
@@ -24,7 +25,12 @@ export default function RootLayout({ children }) {
         </head>
         <body className="d-flex flex-column vh-100">
           <Header routes={routes} />
-          <main className="position-relative d-flex flex-column flex-grow-1 align-items-stretch bg-light">{children}</main>
+          <main className="position-relative d-flex flex-column flex-grow-1 align-items-stretch bg-black">
+            <div className="cover-image" style={{backgroundImage: `url('${process.env.NEXT_PUBLIC_BASE_PATH}/assets/forgedb-background.svg')`}}>
+              <AppNavbar routes={routes} />
+              <div className="bg-light">{children}</div>
+            </div>
+          </main>
           <Footer />
         </body>
       </html>

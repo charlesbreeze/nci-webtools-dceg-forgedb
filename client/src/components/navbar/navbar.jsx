@@ -19,10 +19,13 @@ export default function AppNavbar({ routes = [] }) {
   const pathName = usePathname();
 
   return (
-    <Navbar bg="dark" variant="dark" className="text-uppercase" expand="md">
+    <Navbar bg="transparent" variant="dark" expand="md">
       <Container>
         <Navbar.Brand as={Link} href="/" className="d-flex d-md-none text-light">
-          FORGEdb
+        <h1 className="h4 fw-normal">
+            FORGE<span className="small text-warning">db</span>
+          </h1>          
+          
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-nav" className="px-0 py-3 text-uppercase">
           <i className="bi bi-list me-1"></i>
@@ -36,7 +39,7 @@ export default function AppNavbar({ routes = [] }) {
               </Link>
             ))}
           </Nav>
-          <NavbarSearch />
+          {/* <NavbarSearch /> */}
         </Navbar.Collapse>
       </Container>
     </Navbar>

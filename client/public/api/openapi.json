@@ -1,0 +1,113 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "FORGEdb",
+    "version": "1.1.0"
+  },
+  "tags": [
+    {
+      "name": "Data API"
+    }
+  ],
+  "paths": {
+    "/api/datasets.json": {
+      "get": {
+        "tags": [
+          "Data API"
+        ],
+        "summary": "Retrieves a list of available datasets and their versions",
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/{dataset}/{version}/schema.json": {
+      "get": {
+        "tags": [
+          "Data API"
+        ],
+        "summary": "Retrieves the schema for a versioned dataset",
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "404": {
+            "description": "Dataset not found"
+          }
+        },
+        "parameters": [
+          {
+            "name": "dataset",
+            "in": "path",
+            "description": "Dataset name",
+            "required": true,
+            "example": "closestGene",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "Dataset version",
+            "required": true,
+            "example": "v1.0",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/api/{dataset}/{version}/{rsid}.json": {
+      "get": {
+        "tags": [
+          "Data API"
+        ],
+        "summary": "Retrieves a versioned dataset for an rsid",
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "404": {
+            "description": "Dataset not found"
+          }
+        },
+        "parameters": [
+          {
+            "name": "dataset",
+            "in": "path",
+            "description": "Dataset name",
+            "required": true,
+            "example": "closestGene",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "Dataset version",
+            "required": true,
+            "example": "v1.0",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "rsid",
+            "in": "path",
+            "description": "RSID to retrieve data for",
+            "required": true,
+            "example": "rs123",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

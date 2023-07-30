@@ -3,11 +3,10 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import SwaggerUI from "swagger-ui-react"
-import { useRecoilValue } from "recoil";
-import { specSelector } from "./state";
+import spec from "./openapi.json"
+spec.servers = [{url: process.env.NEXT_PUBLIC_BASE_PATH }]
 
 export default function ApiAccess() {
-  const spec = useRecoilValue(specSelector);
   return (
     <Container className="py-5">
       <Row>

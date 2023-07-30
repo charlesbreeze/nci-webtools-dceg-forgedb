@@ -1,9 +1,5 @@
 {
   "openapi": "3.0.3",
-  "info": {
-    "title": "FORGEdb",
-    "version": "1.1.0"
-  },
   "tags": [
     {
       "name": "Data API"
@@ -15,7 +11,7 @@
         "tags": [
           "Data API"
         ],
-        "summary": "Retrieves a list of available datasets and their versions",
+        "summary": "Retrieves metadata for all versioned datasets",
         "responses": {
           "200": {
             "description": "Successful operation"

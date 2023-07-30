@@ -8,8 +8,8 @@ export default function Header() {
       </div>
       <div className="d-none d-md-block bg-primary-dark text-white py-1">
         <div className="container">
-          <h1 className="h4 fw-normal">
-            FORGE<span className="small text-warning">db</span>
+          <h1 className="h5 fw-normal">
+            FORGE<span className="fw-semibold small text-warning">db</span>
             <small className="ms-2 fs-6 text-light opacity-75">Functional SNP</small>
           </h1>
         </div>

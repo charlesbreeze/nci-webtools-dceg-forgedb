@@ -22,10 +22,9 @@ export default function AppNavbar({ routes = [] }) {
     <Navbar bg="transparent" variant="dark" expand="md">
       <Container>
         <Navbar.Brand as={Link} href="/" className="d-flex d-md-none text-light">
-        <h1 className="h4 fw-normal">
-            FORGE<span className="small text-warning">db</span>
-          </h1>          
-          
+          <h1 className="h5 fw-normal">
+            FORGE<span className="fw-semibold small text-warning">db</span>
+          </h1>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-nav" className="px-0 py-3 text-uppercase">
           <i className="bi bi-list me-1"></i>

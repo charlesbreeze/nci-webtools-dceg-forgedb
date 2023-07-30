@@ -101,7 +101,7 @@
             "in": "path",
             "description": "RSID to retrieve data for",
             "required": true,
-            "example": "rs123",
+            "example": "rs12203592",
             "schema": {
               "type": "string"
             }

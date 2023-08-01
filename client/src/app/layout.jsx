@@ -25,11 +25,9 @@ export default function RootLayout({ children }) {
         </head>
         <body className="d-flex flex-column vh-100">
           <Header routes={routes} />
-          <main className="position-relative d-flex flex-column flex-grow-1 align-items-stretch bg-black">
-            <div className="cover-image" style={{backgroundImage: `url('${process.env.NEXT_PUBLIC_BASE_PATH}/assets/forgedb-background.svg')`}}>
-              <AppNavbar routes={routes} />
-              <div className="bg-light">{children}</div>
-            </div>
+          <main className="position-relative d-flex flex-column flex-grow-1 align-items-stretch bg-black cover-image" style={{backgroundImage: `url('${process.env.NEXT_PUBLIC_BASE_PATH}/assets/forgedb-background.png')`}}>
+            <AppNavbar routes={routes} />
+            {children}
           </main>
           <Footer />
         </body>

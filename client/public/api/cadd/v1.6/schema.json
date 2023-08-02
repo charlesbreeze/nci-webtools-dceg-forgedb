@@ -1,0 +1,29 @@
+{
+  "title": "CADD v1.6 annotations at SNP coordinates in hg19 (note that none or several variants may be shown at this position):",
+  "columns": [
+    {
+      "name": "chromosome",
+      "label": "chromosome"
+    },
+    {
+      "name": "position",
+      "label": "position"
+    },
+    {
+      "name": "reference_allele",
+      "label": "reference_allele"
+    },
+    {
+      "name": "alternative_allele",
+      "label": "alternative_allele"
+    },
+    {
+      "name": "raw_CADD_score",
+      "label": "raw_CADD_score"
+    },
+    {
+      "name": "PHRED_score",
+      "label": "PHRED_score"
+    }
+  ]
+}

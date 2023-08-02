@@ -1,0 +1,121 @@
+{
+  "title": "Activity-By-Contact (ABC) information (hg19, for more details, see https://www.engreitzlab.org/resources):",
+  "columns": [
+    {
+      "name": "SNP chromosome",
+      "label": "SNP chromosome"
+    },
+    {
+      "name": "SNP start",
+      "label": "SNP start"
+    },
+    {
+      "name": "SNP end",
+      "label": "SNP end"
+    },
+    {
+      "name": "rsid",
+      "label": "rsid"
+    },
+    {
+      "name": "bait chromosome",
+      "label": "bait chromosome"
+    },
+    {
+      "name": "bait start",
+      "label": "bait start"
+    },
+    {
+      "name": "bait end",
+      "label": "bait end"
+    },
+    {
+      "name": "name",
+      "label": "name"
+    },
+    {
+      "name": "class",
+      "label": "class"
+    },
+    {
+      "name": "activity base",
+      "label": "activity base"
+    },
+    {
+      "name": "TargetGene",
+      "label": "TargetGene"
+    },
+    {
+      "name": "TargetGeneTSS",
+      "label": "TargetGeneTSS"
+    },
+    {
+      "name": "TargetGeneExpression",
+      "label": "TargetGeneExpression"
+    },
+    {
+      "name": "TargetGenePromoterActivityQuantile",
+      "label": "TargetGenePromoterActivityQuantile"
+    },
+    {
+      "name": "TargetGeneIsExpressed",
+      "label": "TargetGeneIsExpressed"
+    },
+    {
+      "name": "distance",
+      "label": "distance"
+    },
+    {
+      "name": "isSelfPromoter",
+      "label": "isSelfPromoter"
+    },
+    {
+      "name": "Hi-C contact",
+      "label": "Hi-C contact"
+    },
+    {
+      "name": "powerlaw contact",
+      "label": "powerlaw contact"
+    },
+    {
+      "name": "powerlaw contact reference",
+      "label": "powerlaw contact reference"
+    },
+    {
+      "name": "Hi-C contact pl scaled",
+      "label": "Hi-C contact pl scaled"
+    },
+    {
+      "name": "Hi-C pseudocount",
+      "label": "Hi-C pseudocount"
+    },
+    {
+      "name": "Hi-C contact pl scaled adj",
+      "label": "Hi-C contact pl scaled adj"
+    },
+    {
+      "name": "ABC Score Numerator",
+      "label": "ABC Score Numerator"
+    },
+    {
+      "name": "ABC Score",
+      "label": "ABC Score"
+    },
+    {
+      "name": "powerlaw Score Numerator",
+      "label": "powerlaw Score Numerator"
+    },
+    {
+      "name": "powerlaw Score",
+      "label": "powerlaw Score"
+    },
+    {
+      "name": "CellType",
+      "label": "CellType"
+    },
+    {
+      "name": "base overlap",
+      "label": "base overlap"
+    }
+  ]
+}

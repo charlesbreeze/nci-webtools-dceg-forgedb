@@ -1,0 +1,36 @@
+{
+  "rsid": "rs12203592",
+  "data": [
+    {
+      "SNP chromosome": "chr6",
+      "SNP start": 396320,
+      "SNP end": 396321,
+      "rsid": "rs12203592",
+      "bait chromosome": "chr6",
+      "bait start": 396175,
+      "bait end": 396375,
+      "name": "genic|chr6:396025-396525",
+      "class": "genic",
+      "activity base": 3.644273,
+      "TargetGene": "IRF4",
+      "TargetGeneTSS": 391738,
+      "TargetGeneExpression": "NA",
+      "TargetGenePromoterActivityQuantile": 0.815667,
+      "TargetGeneIsExpressed": "True",
+      "distance": 4537,
+      "isSelfPromoter": "False",
+      "Hi-C contact": 0.04777,
+      "powerlaw contact": 0.125372,
+      "powerlaw contact reference": 0.123436,
+      "Hi-C contact pl scaled": 0.047032,
+      "Hi-C pseudocount": 0.001216,
+      "Hi-C contact pl scaled adj": 0.048248,
+      "ABC Score Numerator": 0.175829,
+      "ABC Score": 0.03375,
+      "powerlaw Score Numerator": 0.449835,
+      "powerlaw Score": 0.040169,
+      "CellType": "MM.1S-ENCODE",
+      "base overlap": 1
+    }
+  ]
+}

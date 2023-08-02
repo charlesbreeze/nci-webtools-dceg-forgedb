@@ -1,0 +1,53 @@
+{
+  "title": "CATO (contextual analysis of TF occupancy) score (coordinates in hg19, for more details, see http://www.mauranolab.org/CATO/):",
+  "columns": [
+    {
+      "name": "chr",
+      "label": "chr"
+    },
+    {
+      "name": "start",
+      "label": "start"
+    },
+    {
+      "name": "end",
+      "label": "end"
+    },
+    {
+      "name": "rsid",
+      "label": "rsid"
+    },
+    {
+      "name": "CATO score",
+      "label": "CATO score"
+    },
+    {
+      "name": "strand",
+      "label": "strand"
+    },
+    {
+      "name": "TF motif",
+      "label": "TF motif"
+    },
+    {
+      "name": "score1",
+      "label": "score1"
+    },
+    {
+      "name": "allele1",
+      "label": "allele1"
+    },
+    {
+      "name": "allele2",
+      "label": "allele2"
+    },
+    {
+      "name": "score2",
+      "label": "score2"
+    },
+    {
+      "name": "biosample",
+      "label": "biosample"
+    }
+  ]
+}

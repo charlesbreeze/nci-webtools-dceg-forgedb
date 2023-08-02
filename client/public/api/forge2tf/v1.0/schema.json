@@ -1,5 +1,5 @@
 {
-  "title": "RefSeq closest gene information (hg19, for more details, see NCBI RefSeq):",
+  "title": "FORGE2-TF motif information (hg19, for more details, see FORGE2-TF, eFORGE-TF and the FORGE2 main paper):",
   "columns": [
     {
       "name": "chr",
@@ -30,8 +30,20 @@
       "label": "end2"
     },
     {
-      "name": "gene name",
-      "label": "gene name"
+      "name": "TF motif name",
+      "label": "TF motif name"
+    },
+    {
+      "name": "p-value",
+      "label": "p-value"
+    },
+    {
+      "name": "strand",
+      "label": "strand"
+    },
+    {
+      "name": "genomic sequence",
+      "label": "genomic sequence"
     }
   ]
 }

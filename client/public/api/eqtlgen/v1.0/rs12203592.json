@@ -1,0 +1,39 @@
+{
+  "rsid": "rs12203592",
+  "data": [
+    {
+      "Gene Symbol": "IRF4",
+      "p-value": 1.4771e-29,
+      "rsid": "rs12203592",
+      "SNP Chromosome": 6,
+      "SNP Position": 396321,
+      "Assessed Allele": "T",
+      "Other Allele": "C",
+      "Z-score": 11.2896,
+      "Gene ID": "ENSG00000137265",
+      "Gene Chromosome": 6,
+      "Gene Position": 401593,
+      "Number of Cohorts": 33,
+      "Number of Samples": 30912,
+      "FDR": 0,
+      "Bonferroni p-value": 1.881e-21
+    },
+    {
+      "Gene Symbol": "EXOC2",
+      "p-value": 6.4207e-11,
+      "rsid": "rs12203592",
+      "SNP Chromosome": 6,
+      "SNP Position": 396321,
+      "Assessed Allele": "T",
+      "Other Allele": "C",
+      "Z-score": -6.5335,
+      "Gene ID": "ENSG00000112685",
+      "Gene Chromosome": 6,
+      "Gene Position": 589125,
+      "Number of Cohorts": 33,
+      "Number of Samples": 30912,
+      "FDR": 0,
+      "Bonferroni p-value": 0.008176234824186
+    }
+  ]
+}

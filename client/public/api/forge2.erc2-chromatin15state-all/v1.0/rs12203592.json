@@ -1,0 +1,21 @@
+{
+  "title": "FORGE2 .erc2-chromatin15state-all:",
+  "columns": [
+    {
+      "name": "Cell",
+      "label": "Cell"
+    },
+    {
+      "name": "Tissue",
+      "label": "Tissue"
+    },
+    {
+      "name": "Datatype",
+      "label": "Datatype"
+    },
+    {
+      "name": "Variant rsid",
+      "label": "Variant rsid"
+    }
+  ]
+}

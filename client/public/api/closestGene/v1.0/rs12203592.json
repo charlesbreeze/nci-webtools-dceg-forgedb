@@ -1,15 +1,15 @@
 {
   "rsid": "rs12203592",
   "data": [
-    { 
-      "rsid": "rs12203592",
-      "chr": "6",
+    {
+      "chr": "chr6",
       "start": 396320,
       "end": 396321,
-      "gene name": "IRF4",
-      "chr2": "6",
+      "rsid": "rs12203592",
+      "chr2": "chr6",
       "start2": 393151,
-      "end2": 407598
+      "end2": 407598,
+      "gene name": "IRF4"
     }
   ]
 }

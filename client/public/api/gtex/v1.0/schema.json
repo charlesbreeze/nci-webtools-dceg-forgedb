@@ -1,0 +1,65 @@
+{
+  "title": "eQTLGen blood FDR 0.05 cis-eQTL information (hg19, for more details, see https://www.eqtlgen.org):",
+  "columns": [
+    {
+      "name": "Gene Symbol",
+      "label": "Gene Symbol"
+    },
+    {
+      "name": "p-value",
+      "label": "p-value"
+    },
+    {
+      "name": "rsid",
+      "label": "rsid"
+    },
+    {
+      "name": "SNP Chromosome",
+      "label": "SNP Chromosome"
+    },
+    {
+      "name": "SNP Position",
+      "label": "SNP Position"
+    },
+    {
+      "name": "Assessed Allele",
+      "label": "Assessed Allele"
+    },
+    {
+      "name": "Other Allele",
+      "label": "Other Allele"
+    },
+    {
+      "name": "Z-score",
+      "label": "Z-score"
+    },
+    {
+      "name": "Gene ID",
+      "label": "Gene ID"
+    },
+    {
+      "name": "Gene Chromosome",
+      "label": "Gene Chromosome"
+    },
+    {
+      "name": "Gene Position",
+      "label": "Gene Position"
+    },
+    {
+      "name": "Number of Cohorts",
+      "label": "Number of Cohorts"
+    },
+    {
+      "name": "Number of Samples",
+      "label": "Number of Samples"
+    },
+    {
+      "name": "FDR",
+      "label": "FDR"
+    },
+    {
+      "name": "Bonferroni p-value",
+      "label": "Bonferroni p-value"
+    }
+  ]
+}

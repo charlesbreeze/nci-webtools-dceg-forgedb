@@ -1,0 +1,18 @@
+{
+  "rsid": "rs12203592",
+  "data": [
+    {
+      "chr": "chr6",
+      "start": 396320,
+      "end": 396321,
+      "rsid": "rs12203592",
+      "chr2": "chr6",
+      "start2": 396315,
+      "end2": 396330,
+      "TF motif name": "V_TST1_01",
+      "p-value": 0.00000819273,
+      "strand": "-",
+      "genomic sequence": "GAAGGCAAATTCCCC"
+    }
+  ]
+}

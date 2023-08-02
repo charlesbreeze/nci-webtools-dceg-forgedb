@@ -1,10 +1,80 @@
-{
-	"datasets": [
-    {
-      "name": "closestGene",
-      "versions": [
-        "v1.0"
-      ]
-    }
-	]
-}
+[
+  {
+    "name": "abc",
+    "version": [
+      "v1.0"
+    ]
+  },
+  {
+    "name": "cadd",
+    "version": [
+      "v1.6"
+    ]
+  },
+  {
+    "name": "cato",
+    "version": [
+      "v1.0"
+    ]
+  },
+  {
+    "name": "closestGene",
+    "version": [
+      "v1.0"
+    ]
+  },
+  {
+    "name": "eqtlgen",
+    "version": [
+      "v1.0"
+    ]
+  },
+  {
+    "name": "forge2.blueprint",
+    "version": [
+      "v1.0"
+    ]
+  },
+  {
+    "name": "forge2.encode",
+    "version": [
+      "v1.0"
+    ]
+  },
+  {
+    "name": "forge2.erc",
+    "version": [
+      "v1.0"
+    ]
+  },
+  {
+    "name": "forge2.erc2-chromatin15state-all",
+    "version": [
+      "v1.0"
+    ]
+  },
+  {
+    "name": "forge2.erc2-DHS",
+    "version": [
+      "v1.0"
+    ]
+  },
+  {
+    "name": "forge2.erc2-H3-all",
+    "version": [
+      "v1.0"
+    ]
+  },
+  {
+    "name": "forge2tf",
+    "version": [
+      "v1.0"
+    ]
+  },
+  {
+    "name": "gtex",
+    "version": [
+      "v1.0"
+    ]
+  }
+]

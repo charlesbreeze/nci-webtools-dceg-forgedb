@@ -3,8 +3,7 @@ import { Container, Row, Col, Tabs, Tab } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import ResultsTable from "../../components/results-table";
 
-import data from "./sample_data.json";
-
+import data from "./sample_data.json"; 
 
 export default function Explore() {
   const [results, setResults] = useState({})
@@ -33,7 +32,7 @@ export default function Explore() {
       summary: summary,
       closestGene: data.closestGene || [],
     })
-  })
+  }, [data])
 
   return (
     <div className="flex-grow-1 bg-light">

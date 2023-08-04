@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
         </head>
         <body className="d-flex flex-column vh-100">
           <Header routes={routes} />
-          <main className="position-relative d-flex flex-column flex-grow-1 align-items-stretch bg-black cover-image" style={{backgroundImage: `linear-gradient(45deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.7), transparent),url('${process.env.NEXT_PUBLIC_BASE_PATH}/assets/forgedb-background.png')`}}>
+          <main className="position-relative d-flex flex-column flex-grow-1 align-items-stretch bg-black cover-image" style={{backgroundImage: `url('${process.env.NEXT_PUBLIC_BASE_PATH}/assets/forgedb-background.jpg')`}}>
             <AppNavbar routes={routes} />
             {children}
           </main>

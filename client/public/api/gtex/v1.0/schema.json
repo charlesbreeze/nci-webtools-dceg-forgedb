@@ -1,65 +1,93 @@
 {
-  "title": "eQTLGen blood FDR 0.05 cis-eQTL information (hg19, for more details, see https://www.eqtlgen.org):",
+  "title": "GTEx cis-eQTL information (for more details, see https://gtexportal.org/home/):",
   "columns": [
     {
-      "name": "Gene Symbol",
-      "label": "Gene Symbol"
+      "name": "gene symbol",
+      "label": "gene symbol"
     },
     {
-      "name": "p-value",
-      "label": "p-value"
+      "name": "gene ID",
+      "label": "gene ID"
     },
     {
-      "name": "rsid",
-      "label": "rsid"
+      "name": "variant ID",
+      "label": "variant ID"
     },
     {
-      "name": "SNP Chromosome",
-      "label": "SNP Chromosome"
+      "name": "gene ID2",
+      "label": "gene ID2"
     },
     {
-      "name": "SNP Position",
-      "label": "SNP Position"
+      "name": "TSS distance",
+      "label": "TSS distance"
     },
     {
-      "name": "Assessed Allele",
-      "label": "Assessed Allele"
+      "name": "reference allele",
+      "label": "reference allele"
     },
     {
-      "name": "Other Allele",
-      "label": "Other Allele"
+      "name": "alternative allele",
+      "label": "alternative allele"
     },
     {
-      "name": "Z-score",
-      "label": "Z-score"
+      "name": "MA samples",
+      "label": "MA samples"
     },
     {
-      "name": "Gene ID",
-      "label": "Gene ID"
+      "name": "MA count",
+      "label": "MA count"
     },
     {
-      "name": "Gene Chromosome",
-      "label": "Gene Chromosome"
+      "name": "MAF",
+      "label": "MAF"
     },
     {
-      "name": "Gene Position",
-      "label": "Gene Position"
+      "name": "p-value nominal",
+      "label": "p-value nominal"
     },
     {
-      "name": "Number of Cohorts",
-      "label": "Number of Cohorts"
+      "name": "slope",
+      "label": "slope"
     },
     {
-      "name": "Number of Samples",
-      "label": "Number of Samples"
+      "name": "slope se",
+      "label": "slope se"
     },
     {
-      "name": "FDR",
-      "label": "FDR"
+      "name": "p-value nominal threshold",
+      "label": "p-value nominal threshold"
     },
     {
-      "name": "Bonferroni p-value",
-      "label": "Bonferroni p-value"
+      "name": "min p-value nominal",
+      "label": "min p-value nominal"
+    },
+    {
+      "name": "p-value beta",
+      "label": "p-value beta"
+    },
+    {
+      "name": "biosample",
+      "label": "biosample"
+    },
+    {
+      "name": "chr (hg38)",
+      "label": "chr (hg38)"
+    },
+    {
+      "name": "variant position (hg38)",
+      "label": "variant position (hg38)"
+    },
+    {
+      "name": "num alternative alleles per site",
+      "label": "num alternative alleles per site"
+    },
+    {
+      "name": "rs ID dbSNP151 GRCh38p7",
+      "label": "rs ID dbSNP151 GRCh38p7"
+    },
+    {
+      "name": "variant ID b37",
+      "label": "variant ID b37"
     }
   ]
 }

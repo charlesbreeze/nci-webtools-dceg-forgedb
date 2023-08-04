@@ -1,5 +1,6 @@
 {
   "title": "Activity-By-Contact (ABC) information (hg19, for more details, see https://www.engreitzlab.org/resources):",
+  "shortTitle": "ABC contacts",
   "columns": [
     {
       "name": "SNP chromosome",

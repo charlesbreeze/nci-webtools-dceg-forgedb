@@ -1,79 +1,79 @@
 [
   {
-    "name": "abc",
-    "version": [
+    "name": "closestGene",
+    "versions": [
       "v1.0"
     ]
   },
   {
     "name": "cadd",
-    "version": [
+    "versions": [
       "v1.6"
     ]
   },
   {
-    "name": "cato",
-    "version": [
-      "v1.0"
-    ]
-  },
-  {
-    "name": "closestGene",
-    "version": [
+    "name": "gtex",
+    "versions": [
       "v1.0"
     ]
   },
   {
     "name": "eqtlgen",
-    "version": [
+    "versions": [
       "v1.0"
     ]
   },
   {
-    "name": "forge2.blueprint",
-    "version": [
-      "v1.0"
-    ]
-  },
-  {
-    "name": "forge2.encode",
-    "version": [
-      "v1.0"
-    ]
-  },
-  {
-    "name": "forge2.erc",
-    "version": [
-      "v1.0"
-    ]
-  },
-  {
-    "name": "forge2.erc2-chromatin15state-all",
-    "version": [
-      "v1.0"
-    ]
-  },
-  {
-    "name": "forge2.erc2-DHS",
-    "version": [
-      "v1.0"
-    ]
-  },
-  {
-    "name": "forge2.erc2-H3-all",
-    "version": [
+    "name": "abc",
+    "versions": [
       "v1.0"
     ]
   },
   {
     "name": "forge2tf",
-    "version": [
+    "versions": [
       "v1.0"
     ]
   },
   {
-    "name": "gtex",
-    "version": [
+    "name": "cato",
+    "versions": [
+      "v1.0"
+    ]
+  },
+  {
+    "name": "forge2.blueprint",
+    "versions": [
+      "v1.0"
+    ]
+  },
+  {
+    "name": "forge2.encode",
+    "versions": [
+      "v1.0"
+    ]
+  },
+  {
+    "name": "forge2.erc",
+    "versions": [
+      "v1.0"
+    ]
+  },
+  {
+    "name": "forge2.erc2-chromatin15state-all",
+    "versions": [
+      "v1.0"
+    ]
+  },
+  {
+    "name": "forge2.erc2-DHS",
+    "versions": [
+      "v1.0"
+    ]
+  },
+  {
+    "name": "forge2.erc2-H3-all",
+    "versions": [
       "v1.0"
     ]
   }

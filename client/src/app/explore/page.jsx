@@ -49,6 +49,7 @@ export default function Explore() {
   const searchParams = useSearchParams();
   const rsid = searchParams.get("rsid");
   const [tissue, setTissue] = useState("");
+  const [search, setSearch] = useState("");
 
   const { data: datasetsResponse, error: datasetsError } = useSWR([`${process.env.NEXT_PUBLIC_BASE_PATH}/api/datasets.json`], fetchBatch);
   const datasets = datasetsResponse ? datasetsResponse[0] : [];
@@ -72,7 +73,13 @@ export default function Explore() {
     version: versions[0],
     schema: schemaData?.[index] || null,
     table: {
-      data: tableData?.[index]?.data?.filter((row) => (!row.Tissue || !tissue) || (row.Tissue === tissue)),
+      data: tableData?.[index]?.data?.filter((row) => {
+        if (search) {
+          const regex = new RegExp(search, "i");
+          return Object.values(row).some((value) => regex.test(value));
+        }
+        return (!row.Tissue || !tissue) || (row.Tissue === tissue);
+      }),
     },
   }));
 
@@ -117,14 +124,21 @@ export default function Explore() {
 
               {rsid && (
                 <>
-                  <div className="mb-3 form-floating">
-                    <select className="form-select w-auto" aria-label="Select Tissue" id="tissue" value={tissue} onChange={e => setTissue(e.target.value)}>
-                      <option value="">All Tissues Selected</option>
-                      {tissues.map((tissue) => (
-                        <option value={tissue}>{tissue}</option>
-                      ))}
-                    </select>
-                    <label htmlFor="tissue">Tissue</label>
+                  <div className="d-flex mb-3">
+                    <div className="me-3 form-floating  d-inline-block">
+                      <select className="form-select w-auto" aria-label="Select Tissue" id="tissue" value={tissue} onChange={e => setTissue(e.target.value)}>
+                        <option value="">All Tissues Selected</option>
+                        {tissues.map((tissue) => (
+                          <option value={tissue}>{tissue}</option>
+                        ))}
+                      </select>
+                      <label htmlFor="tissue">Tissue</label>
+                    </div>
+
+                    <div className="me-3 form-floating d-inline-block">
+                      <input className="form-control w-auto" id="search" placeholder="Search" id="search" value={search} onChange={e => setSearch(e.target.value)} />
+                      <label htmlFor="search">Search</label>
+                    </div>
                   </div>
 
                   <h2 className="fs-5 fw-semibold mb-1 d-flex align-items-baseline justify-content-between">

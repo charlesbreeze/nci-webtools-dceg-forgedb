@@ -72,7 +72,7 @@ export default function Explore() {
     version: versions[0],
     schema: schemaData?.[index] || null,
     table: {
-      data: tableData?.[index]?.data?.filter((row) => !row.Tissue || row.Tissue === tissue),
+      data: tableData?.[index]?.data?.filter((row) => (!row.Tissue || !tissue) || (row.Tissue === tissue)),
     },
   }));
 
@@ -157,8 +157,7 @@ export default function Explore() {
 
                   {data.map(
                     ({ name, schema, table }, index) =>
-                      schema &&
-                      table?.data?.length && (
+                      schema && (
                         <>
                           <h2 className="fs-5 fw-semibold mb-1" id={name}>
                             {schema.title}

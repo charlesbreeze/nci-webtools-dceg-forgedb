@@ -74,9 +74,9 @@ export default function Explore() {
     schema: schemaData?.[index] || null,
     table: {
       data: tableData?.[index]?.data?.filter((row) => {
-        if (search) {
-          const regex = new RegExp(search, "i");
-          return Object.values(row).some((value) => regex.test(value));
+        let query = (search.trim() || "").toLowerCase();
+       if (query) {
+          return Object.values(row).some((value) => String(value).toLowerCase().includes(query));
         }
         return (!row.Tissue || !tissue) || (row.Tissue === tissue);
       }),

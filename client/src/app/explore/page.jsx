@@ -98,7 +98,7 @@ export default function Explore() {
           <Row>
             <Col>
               {!rsid && <>
-                <h1 className="fs-1 fw-light">Please enter an RSID to view summmary-level data</h1>
+                <h1 className="fs-2 fw-light">Please enter an RSID to view summary-level data.</h1>
               </>}
             
               {rsid &&  <>

@@ -11,17 +11,18 @@ export default function Home() {
     <>
       <Container>
         <Row>
-          <Col className="py-lg-5">
-            <div className="d-flex h-100 align-items-center py-lg-5">
-              <div className="my-5">
+          <Col>
+            {/*  Use hardcoded min-height to ensure consistent aspect ratio for cover image */}
+            <div className="d-flex h-100 align-items-center"  style={{minHeight: '320px' }} >
+              <div>
                 <h1 className="fs-1 text-light fw-light mb-3">FORGE<span className="small text-warning fw-normal">db</span></h1>
                 <hr className="border-white" />
                 <p className="lead text-light">Explore candidate functional variants</p>
 
-                <Form action="explore">
+                <Form action={`${process.env.NEXT_PUBLIC_BASE_PATH}/explore`}>
                   <InputGroup className="border-white">
-                    <Form.Control className="search-control-transparent fw-light" type="search"  placeholder="Enter RSID" aria-label="Enter RSID" name="rsid" required />
-                    <Button variant="outline-secondary" className="search-control-transparent-button position-absolute" style={{right: 0, zIndex: 9999}} type="submit">
+                    <Form.Control className="search-control-transparent fw-light" type="search" placeholder="Enter RSID" aria-label="Enter RSID" name="rsid" required />
+                    <Button variant="outline-secondary" className="search-control-transparent-button position-absolute z-3 end-0" type="submit">
                       <i className="bi bi-search"></i>
                       <span className="visually-hidden">Search</span>
                     </Button>

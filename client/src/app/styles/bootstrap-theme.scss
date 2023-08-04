@@ -33,8 +33,14 @@ legend {
 
 .cover-image {
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position-x: 300px;
+  background-size: auto 400px;
+  background-position-x: right;
+}
+
+@media screen and (max-width: 1400px) {
+  .cover-image {
+    background-position-x: 460px;
+  }
 }
 
 .cursor-pointer {
@@ -54,6 +60,7 @@ legend {
     padding-left: $navbar-nav-link-padding-x !important;
     padding-right: $navbar-nav-link-padding-x !important;
     text-decoration: none;
+    background-color: black;
 
     &:hover,
     &.active {
@@ -126,7 +133,7 @@ legend {
 }
 
 :root {
-  font-size: 1.2rem;
+  // font-size: 1.2rem;
 }
 
 .table {

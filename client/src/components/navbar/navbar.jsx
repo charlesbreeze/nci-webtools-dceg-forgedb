@@ -20,7 +20,7 @@ export default function AppNavbar({ routes = [] }) {
 
   return (
     <Navbar bg="transparent" variant="dark" expand="md">
-      <Container>
+      <Container className="position-relative">
         <Navbar.Brand as={Link} href="/" className="d-flex d-md-none text-light">
           <h1 className="h5 fw-normal">
             FORGE<span className="fw-semibold small text-warning">db</span>
@@ -30,7 +30,7 @@ export default function AppNavbar({ routes = [] }) {
           <i className="bi bi-list me-1"></i>
           Menu
         </Navbar.Toggle>
-        <Navbar.Collapse id="navbar-nav" className="align-items-stretch">
+        <Navbar.Collapse id="navbar-nav" className="align-items-stretch w-100 position-absolute position-md-relative z-3 mt-5 mt-md-0 top-0 start-0 mt-5 border-light border-md-black">
           <Nav className="me-auto">
             {routes.map((route) => (
               <Link className={clsx("nav-link", pathsMatch(pathName, route.path) && "active")} key={route.path} href={route.path}>

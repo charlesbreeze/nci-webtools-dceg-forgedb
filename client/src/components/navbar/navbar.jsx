@@ -19,7 +19,7 @@ export default function AppNavbar({ routes = [] }) {
   const pathName = usePathname();
 
   return (
-    <Navbar bg="transparent" variant="dark" expand="md">
+    <Navbar className="bg-black bg-md-transparent" variant="dark" expand="md">
       <Container className="position-relative">
         <Navbar.Brand as={Link} href="/" className="d-flex d-md-none text-light">
           <h1 className="h5 fw-normal">

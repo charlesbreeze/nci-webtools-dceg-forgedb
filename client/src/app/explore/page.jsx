@@ -132,16 +132,6 @@ export default function Explore() {
               {rsid && (
                 <>
                   <div className="d-flex mb-3">
-                    {/* <div className="me-3 form-floating  d-inline-block">
-                      <select className="form-select w-auto" aria-label="Select Tissue" id="tissue" value={tissue} onChange={e => setTissue(e.target.value)}>
-                        <option value="">All Tissues Selected</option>
-                        {tissues.map((tissue) => (
-                          <option value={tissue}>{tissue}</option>
-                        ))}
-                      </select>
-                      <label htmlFor="tissue">Tissue</label>
-                    </div> */}
-
                     <div className="me-3 form-floating d-inline-block">
                       <input className="form-control w-auto" id="search" placeholder="Search" id="search" value={search} onChange={e => setSearch(e.target.value)} />
                       <label htmlFor="search">Search</label>
@@ -184,9 +174,9 @@ export default function Explore() {
                             {schema.title}
                           </h2>
 
-                          <div className="table-responsive mb-5" key={index}>
-                            <table className="table table-sm  table-striped table-hover shadow-lg border">
-                              <thead className="">
+                          <div className="table-responsive mb-5" style={{maxHeight: '800px'}}  key={index}>
+                            <table className="table table-sm table-striped table-hover shadow-lg border">
+                              <thead className="position-sticky top-0">
                                 <tr>
                                   {schema.columns.map(({ name, label }) => (
                                     <th key={name} className="small text-muted fw-bold bg-light text-uppercase">

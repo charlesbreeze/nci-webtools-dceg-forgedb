@@ -125,7 +125,7 @@ export default function Explore() {
               {rsid && (
                 <>
                   <div className="d-flex mb-3">
-                    <div className="me-3 form-floating  d-inline-block">
+                    {/* <div className="me-3 form-floating  d-inline-block">
                       <select className="form-select w-auto" aria-label="Select Tissue" id="tissue" value={tissue} onChange={e => setTissue(e.target.value)}>
                         <option value="">All Tissues Selected</option>
                         {tissues.map((tissue) => (
@@ -133,7 +133,7 @@ export default function Explore() {
                         ))}
                       </select>
                       <label htmlFor="tissue">Tissue</label>
-                    </div>
+                    </div> */}
 
                     <div className="me-3 form-floating d-inline-block">
                       <input className="form-control w-auto" id="search" placeholder="Search" id="search" value={search} onChange={e => setSearch(e.target.value)} />

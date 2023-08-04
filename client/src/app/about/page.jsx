@@ -5,14 +5,14 @@ import Col from "react-bootstrap/Col";
 
 export default function About() {
   return (
-    <div className="flex-grow-1 bg-light py-5">
+    <div className="flex-grow-1 bg-light py-4">
       <Container>
         <Row>
           <Col>
-            <article className="shadow p-4 rounded">
-              <h1 className="text-primary h3 mb-4">About FORGEdb - Functional SNP</h1>
+            <article>
+              <h1 className="fs-1 fw-light">About FORGE<small className="fw-normal">db</small> <small className="fs-3 text-muted fw-normal">(Functional SNP)</small></h1>
               <hr />
-              <h2>FORGEdb scores</h2>
+              <h2 className="fs-2 fw-light mb-3">FORGEdb scores</h2>
               <p>FORGEdb scores are used for predicting which genetic variants are most likely to be a regulatory variant. FORGEdb scores range between 0 and 10, and are calculated using different regulatory DNA datasets, including data for transcription factor (TF) binding and chromatin accessibility.</p>
               <p>Specifically, FORGEdb scores are computed from the sum of the presence/absence of the following elements:</p>
               <table className="table">
@@ -64,7 +64,8 @@ export default function About() {
                   evidence for is for CATO score (1 point). The resulting FORGEdb score for rs1421085 is therefore 9 = 2 (eQTL) + 2 (ABC) + 1 (TF motif) + 2 (DNase I hotspot) + 2 (histone mark ChIP-seq). Independent experimental analyses by Claussnitzer et al. have demonstrated a regulatory role for this SNP in the regulation of white vs. beige adipocyte proliferation via IRX3/IRX5.
                 </figcaption>
               </figure>
-              <h2>References</h2>
+
+              <h2 className="fs-2 fw-light mb-3">References</h2>
 
               <ul>
                 <li>Bell, C. G. et al. Integrated Genetic and Epigenetic Analysis Identifies Haplotype-Specific Methylation in the FTO Type 2 Diabetes and Obesity Susceptibility Locus. PLOS ONE 5, e14040 (2010). </li>

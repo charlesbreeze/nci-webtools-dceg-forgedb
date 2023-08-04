@@ -8,12 +8,12 @@ spec.servers = [{url: process.env.NEXT_PUBLIC_BASE_PATH }]
 
 export default function ApiAccess() {
   return (
-    <div className="flex-grow-1 bg-light py-5">
+    <div className="flex-grow-1 bg-white py-4">
       <Container>
         <Row>
           <Col>
-            <article className="shadow p-4 rounded">
-              <h1 className="text-primary h3 mb-4">API Access</h1>
+            <article>
+              <h1 className="fs-1 fw-light">API Access</h1>
               <hr/>
               <SwaggerUI spec={spec} />
             </article>

@@ -15,30 +15,37 @@ const fetchBatch = (requests) => Promise.all(requests.map((request) => fetch(req
 
 function getForgeDbScore(data) {
   let score = 0;
-  for (const { name, table } of data) {
-    if (table?.data?.length > 0) {
-      switch (name) {
-        case "eqtlgen":
-          score += 2;
-          break;
-        case "abc":
-          score += 2;
-          break;
-        case "forge2tf":
-          score += 1;
-          break;
-        case "cato":
-          score += 1;
-          break;
-        case "forge2.erc2-DHS":
-          score += 2;
-          break;
-        case "forge2.erc2-H3-all":
-          score += 2;
-          break;
-        default:
-          break;
-      }
+  const mapping = {
+    eqtl: { 
+      names: ["eqtlgen", "gtex"],
+      score: 2
+    },
+    abc: {
+      names: ["abc"],
+      score: 2
+    },
+    forge2tf: {
+      names: ["forge2tf"],
+      score: 1
+    },
+    cato: {
+      names: ["cato"],
+      score: 1
+    },
+    forge2DNase: {
+      names: ["forge2.erc2-DHS", "forge2.erc", "forge2.encode", "forge2.blueprint"],
+      score: 2
+    },
+    forge2H3: {
+      names: ["forge2.erc2-H3-all"],
+      score: 2
+    }
+  }
+
+  // for each mapping, check if any of the datasets are present and have data
+  for (const { names, score: mappingScore } of Object.values(mapping)) {
+    if (data.some(({ name, table }) => names.includes(name) && table?.data?.length > 0)) {
+      score += mappingScore;
     }
   }
 

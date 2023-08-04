@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -6,7 +7,7 @@ import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import Button from "react-bootstrap/Button";
 import Link from "next/link";
-import { useSearchParams } from 'next/navigation'
+import { useSearchParams } from "next/navigation";
 import useSWR from "swr";
 
 const fetchBatch = (requests) => Promise.all(requests.map((request) => fetch(request).then((res) => res.json())));
@@ -17,22 +18,22 @@ function getForgeDbScore(data) {
   for (const { name, table } of data) {
     if (table?.data?.length > 0) {
       switch (name) {
-        case 'eqtlgen':
+        case "eqtlgen":
           score += 2;
           break;
-        case 'abc':
+        case "abc":
           score += 2;
           break;
-        case 'forge2tf':
+        case "forge2tf":
           score += 1;
           break;
-        case 'cato':
+        case "cato":
           score += 1;
           break;
-        case 'forge2.erc2-DHS':
+        case "forge2.erc2-DHS":
           score += 2;
           break;
-        case 'forge2.erc2-H3-all':
+        case "forge2.erc2-H3-all":
           score += 2;
           break;
         default:
@@ -45,8 +46,9 @@ function getForgeDbScore(data) {
 }
 
 export default function Explore() {
-  const searchParams = useSearchParams()
-  const rsid = searchParams.get('rsid')
+  const searchParams = useSearchParams();
+  const rsid = searchParams.get("rsid");
+  const [tissue, setTissue] = useState("");
 
   const { data: datasetsResponse, error: datasetsError } = useSWR([`${process.env.NEXT_PUBLIC_BASE_PATH}/api/datasets.json`], fetchBatch);
   const datasets = datasetsResponse ? datasetsResponse[0] : [];
@@ -56,17 +58,27 @@ export default function Explore() {
   const { data: schemaData, error: schemaError } = useSWR(schemaQueries, fetchBatch);
   const { data: tableData, error: tableError } = useSWR(tableQueries, fetchBatch);
 
+  const tissues = Array.from(
+    new Set(
+      (tableData || [])
+        .map((d) => d.data?.map((r) => r.Tissue))
+        .flat()
+        .filter(Boolean)
+    )
+  ).sort();
+
   const data = datasets.map(({ name, versions }, index) => ({
     name,
     version: versions[0],
     schema: schemaData?.[index] || null,
-    table: tableData?.[index] || [],
+    table: {
+      data: tableData?.[index]?.data?.filter((row) => !row.Tissue || row.Tissue === tissue),
+    },
   }));
 
-  console.log({ data });
-  const closestGene = data.find(d => d.name === 'closestGene')?.table?.data?.[0];
-  const forgedbScore = getForgeDbScore(data)
-
+  const closestGene = data.find((d) => d.name === "closestGene")?.table?.data?.[0];
+  const forgedbScore = getForgeDbScore(data);
+  
   return (
     <>
       <div className="bg-black">
@@ -97,72 +109,88 @@ export default function Explore() {
         <Container>
           <Row>
             <Col>
-              {!rsid && <>
-                <h1 className="fs-2 fw-light">Please enter an RSID to view summary-level data.</h1>
-              </>}
-            
-              {rsid &&  <>
-              <h2 className="fs-5 fw-semibold mb-1 d-flex align-items-baseline justify-content-between">
-                <span>
-                  Summary and number of annotations for {rsid} <Link href="/about">(FORGEdb score={forgedbScore})</Link>
-                </span>
-                {closestGene && <a className="small" target="_blank" href={`https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg19&position=${closestGene.chr}%3A${closestGene.start}-${closestGene.start}`}>UCSC genome browser link (hg19)</a>}
-              </h2>
-              <div className="table-responsive mb-5">
-                <table className="table table-sm table-hover shadow-lg border">
-                  <tbody>
-                    {data?.map(
-                      ({ name, schema, table }, index) =>
-                        schema && (
-                          <tr>
-                            <th className="fw-normal">{schema.shortTitle || schema.title}</th>
-                            <td>
-                              <a href={`#${name}`}> {table?.data?.length || 0}</a>
-                            </td>
-                          </tr>
-                        )
-                    )}
-                  </tbody>
-                </table>
-              </div>
-
-              {data.map(
-                ({ name, schema, table }, index) =>
-                  schema &&
-                  table?.data?.length && (
-                    <>
-                      <h2 className="fs-5 fw-semibold mb-1" id={name}>
-                        {schema.title}
-                      </h2>
-
-                      <div className="table-responsive mb-5" key={index}>
-                        <table className="table table-sm table-hover shadow-lg border">
-                          <thead className="">
-                            <tr>
-                              {schema.columns.map(({ name, label }) => (
-                                <th key={name} className="small text-muted fw-bold bg-light text-uppercase">
-                                  {label}
-                                </th>
-                              ))}
-                            </tr>
-                          </thead>
-                          <tbody>
-                            {table?.data?.map((row, index) => (
-                              <tr key={index}>
-                                {schema.columns.map(({ name }) => (
-                                  <td key={name}>{row[name]}</td>
-                                ))}
-                              </tr>
-                            ))}
-                          </tbody>
-                        </table>
-                      </div>
-                    </>
-                  )
+              {!rsid && (
+                <>
+                  <h1 className="fs-2 fw-light">Please enter an RSID to view summary-level data.</h1>
+                </>
               )}
-              </>}
-              
-              
+
+              {rsid && (
+                <>
+                  <div className="mb-3 form-floating">
+                    <select className="form-select w-auto" aria-label="Select Tissue" id="tissue" value={tissue} onChange={e => setTissue(e.target.value)}>
+                      <option value="">All Tissues Selected</option>
+                      {tissues.map((tissue) => (
+                        <option value={tissue}>{tissue}</option>
+                      ))}
+                    </select>
+                    <label htmlFor="tissue">Tissue</label>
+                  </div>
+
+                  <h2 className="fs-5 fw-semibold mb-1 d-flex align-items-baseline justify-content-between">
+                    <span>
+                      Summary and number of annotations for {rsid} <Link href="/about">(FORGEdb score={forgedbScore})</Link>
+                    </span>
+                    {closestGene && (
+                      <a className="small" target="_blank" href={`https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg19&position=${closestGene.chr}%3A${closestGene.start}-${closestGene.start}`}>
+                        UCSC genome browser link (hg19)
+                      </a>
+                    )}
+                  </h2>
+                  <div className="table-responsive mb-5">
+                    <table className="table table-sm table-hover table-striped shadow-lg border">
+                      <tbody>
+                        {data?.map(
+                          ({ name, schema, table }, index) =>
+                            schema && (
+                              <tr>
+                                <th className="fw-normal">{schema.shortTitle || schema.title}</th>
+                                <td>
+                                  <a href={`#${name}`}> {table?.data?.length || 0}</a>
+                                </td>
+                              </tr>
+                            )
+                        )}
+                      </tbody>
+                    </table>
+                  </div>
+
+                  {data.map(
+                    ({ name, schema, table }, index) =>
+                      schema &&
+                      table?.data?.length && (
+                        <>
+                          <h2 className="fs-5 fw-semibold mb-1" id={name}>
+                            {schema.title}
+                          </h2>
+
+                          <div className="table-responsive mb-5" key={index}>
+                            <table className="table table-sm  table-striped table-hover shadow-lg border">
+                              <thead className="">
+                                <tr>
+                                  {schema.columns.map(({ name, label }) => (
+                                    <th key={name} className="small text-muted fw-bold bg-light text-uppercase">
+                                      {label}
+                                    </th>
+                                  ))}
+                                </tr>
+                              </thead>
+                              <tbody>
+                                {table?.data?.map((row, index) => (
+                                  <tr key={index}>
+                                    {schema.columns.map(({ name }) => (
+                                      <td key={name}>{row[name]}</td>
+                                    ))}
+                                  </tr>
+                                ))}
+                              </tbody>
+                            </table>
+                          </div>
+                        </>
+                      )
+                  )}
+                </>
+              )}
             </Col>
           </Row>
         </Container>

@@ -5,6 +5,7 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup";
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -19,15 +20,17 @@ export default function Home() {
                 <hr className="border-white" />
                 <p className="lead text-light">Explore candidate functional variants</p>
 
-                <Form action={`${process.env.NEXT_PUBLIC_BASE_PATH}/explore`}>
+                <Form action={`${process.env.NEXT_PUBLIC_BASE_PATH}/explore`} className="mb-2">
                   <InputGroup className="border-white">
-                    <Form.Control className="search-control-transparent fw-light" type="search" placeholder="Enter RSID" aria-label="Enter RSID" name="rsid" required />
+                    <Form.Control className="search-control-transparent fw-light ps-0" type="search" placeholder="Enter RSID" aria-label="Enter RSID" name="rsid" pattern="^rs\d+" required />
                     <Button variant="outline-secondary" className="search-control-transparent-button position-absolute z-3 end-0" type="submit">
                       <i className="bi bi-search"></i>
                       <span className="visually-hidden">Search</span>
                     </Button>
                   </InputGroup>
                 </Form>
+
+                <Link className="link-warning" href="/explore/?rsid=rs12203592">Example Analysis</Link>
               </div>
             </div>
           </Col>

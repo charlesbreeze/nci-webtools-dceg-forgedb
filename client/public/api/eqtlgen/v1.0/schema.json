@@ -54,6 +54,10 @@
       "label": "Number of Samples"
     },
     {
+      "name": "TISSUE",
+      "label": "TISSUE"
+    },
+    {
       "name": "FDR",
       "label": "FDR"
     },

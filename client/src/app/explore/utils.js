@@ -2,6 +2,10 @@
 
 export const fetchBatch = (requests) => Promise.all(requests.map((request) => fetch(request).then((res) => res.json())));
 
+export const getRowFilter = query => row => {
+  query = (query.trim() || "").toLowerCase();
+  return !query || Object.values(row).some((value) => String(value).toLowerCase().includes(query))
+}
 
 export function getForgeDbScore(data) {
   let score = 0;

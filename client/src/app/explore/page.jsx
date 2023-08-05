@@ -9,7 +9,7 @@ import Button from "react-bootstrap/Button";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import useSWR from "swr";
-import { fetchBatch, getForgeDbScore } from "./utils.js";
+import { fetchBatch, getForgeDbScore, getRowFilter } from "./utils.js";
 
 export default function Explore() {
   const searchParams = useSearchParams();
@@ -28,13 +28,10 @@ export default function Explore() {
     name,
     version: versions[0],
     schema: schemaData?.[index] || null,
-    table: tableData?.[index]?.data?.filter((row) => {
-      const query = (search.trim() || "").toLowerCase();
-      return !query || Object.values(row).some((value) => String(value).toLowerCase().includes(query))
-    }),
+    table: tableData?.[index]?.data?.filter(getRowFilter(search)),
   }));
-  const closestGene = data.find((d) => d.name === "closestGene")?.table?.[0];
   const forgeDbScore = getForgeDbScore(data);
+  const closestGene = data.find((d) => d.name === "closestGene")?.table?.[0];
 
   return (
     <>

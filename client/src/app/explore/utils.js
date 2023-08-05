@@ -8,7 +8,6 @@ export const getRowFilter = query => row => {
 }
 
 export function getForgeDbScore(data) {
-  let score = 0;
   const mapping = {
     eqtl: { 
       names: ["eqtlgen", "gtex"],
@@ -36,12 +35,10 @@ export function getForgeDbScore(data) {
     }
   }
 
-  // for each mapping, check if any of the datasets are present and have data
-  for (const { names, score: mappingScore } of Object.values(mapping)) {
+  return Object.values(mapping).reduce((totalScore, { names, score }) => {
     if (data.some(({ name, table }) => names.includes(name) && table?.length > 0)) {
-      score += mappingScore;
+      return totalScore + score;
     }
-  }
-
-  return score;
+    return totalScore;
+  }, 0);
 }

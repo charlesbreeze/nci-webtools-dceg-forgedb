@@ -35,29 +35,27 @@ export default function Explore() {
 
   return (
     <>
-      <div className="bg-black">
-        <Container>
-          <Row>
-            <Col>
-              <div className="d-flex flex-wrap align-items-baseline py-3">
-                <h1 className="fs-1 text-light fw-light me-2">
-                  FORGE<small className="fw-normal text-warning">db</small> Summary for
-                </h1>
+      <Container>
+        <Row>
+          <Col>
+            <div className="d-flex flex-wrap align-items-baseline py-3">
+              <h1 className="fs-1 text-light fw-light me-2">
+                FORGE<small className="fw-normal text-warning">db</small> Summary for
+              </h1>
 
-                <Form action={`${process.env.NEXT_PUBLIC_BASE_PATH}/explore`} className="mb-2">
-                  <InputGroup className="border-white">
-                    <Form.Control className="search-control-transparent fs-1 fw-light ps-0" type="search" placeholder="rsid" aria-label="rsid" name="rsid" defaultValue={rsid} required style={{ width: "200px" }} pattern="^rs\d+" />
-                    <Button variant="outline-secondary" className="fs-1 search-control-transparent-button" type="submit">
-                      <i className="bi bi-search"></i>
-                      <span className="visually-hidden">Search</span>
-                    </Button>
-                  </InputGroup>
-                </Form>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </div>
+              <Form action={`${process.env.NEXT_PUBLIC_BASE_PATH}/explore`} className="mb-2">
+                <InputGroup className="border-white">
+                  <Form.Control className="search-control-transparent fs-1 fw-light ps-0" type="search" placeholder="rsid" aria-label="rsid" name="rsid" defaultValue={rsid} required style={{ width: "200px" }} pattern="^rs\d+" />
+                  <Button variant="outline-secondary" className="fs-1 search-control-transparent-button" type="submit">
+                    <i className="bi bi-search"></i>
+                    <span className="visually-hidden">Search</span>
+                  </Button>
+                </InputGroup>
+              </Form>
+            </div>
+          </Col>
+        </Row>
+      </Container>
 
       <div className="flex-grow-1 bg-white py-5">
         <Container>

@@ -9,90 +9,33 @@ import Button from "react-bootstrap/Button";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import useSWR from "swr";
-
-const fetchBatch = (requests) => Promise.all(requests.map((request) => fetch(request).then((res) => res.json())));
-// const fetcher = (...args) => fetch(...args).then((res) => res.json())
-
-function getForgeDbScore(data) {
-  let score = 0;
-  const mapping = {
-    eqtl: { 
-      names: ["eqtlgen", "gtex"],
-      score: 2
-    },
-    abc: {
-      names: ["abc"],
-      score: 2
-    },
-    forge2tf: {
-      names: ["forge2tf"],
-      score: 1
-    },
-    cato: {
-      names: ["cato"],
-      score: 1
-    },
-    forge2DNase: {
-      names: ["forge2.erc2-DHS", "forge2.erc", "forge2.encode", "forge2.blueprint"],
-      score: 2
-    },
-    forge2H3: {
-      names: ["forge2.erc2-H3-all"],
-      score: 2
-    }
-  }
-
-  // for each mapping, check if any of the datasets are present and have data
-  for (const { names, score: mappingScore } of Object.values(mapping)) {
-    if (data.some(({ name, table }) => names.includes(name) && table?.data?.length > 0)) {
-      score += mappingScore;
-    }
-  }
-
-  return score;
-}
+import { fetchBatch, getForgeDbScore } from "./utils.js";
 
 export default function Explore() {
   const searchParams = useSearchParams();
   const rsid = searchParams.get("rsid");
-  const [tissue, setTissue] = useState("");
   const [search, setSearch] = useState("");
 
   const { data: datasetsResponse, error: datasetsError } = useSWR([`${process.env.NEXT_PUBLIC_BASE_PATH}/api/datasets.json`], fetchBatch);
   const datasets = datasetsResponse ? datasetsResponse[0] : [];
   const schemaQueries = datasets.map(({ name, versions }) => `${process.env.NEXT_PUBLIC_BASE_PATH}/api/${name}/${versions[0]}/schema.json`);
   const tableQueries = datasets.map(({ name, versions }) => `${process.env.NEXT_PUBLIC_BASE_PATH}/api/${name}/${versions[0]}/${rsid}.json`);
-
   const { data: schemaData, error: schemaError } = useSWR(schemaQueries, fetchBatch);
   const { data: tableData, error: tableError } = useSWR(tableQueries, fetchBatch);
 
-  const tissues = Array.from(
-    new Set(
-      (tableData || [])
-        .map((d) => d.data?.map((r) => r.Tissue))
-        .flat()
-        .filter(Boolean)
-    )
-  ).sort();
-
+  // combine datasets, schema, and table data
   const data = datasets.map(({ name, versions }, index) => ({
     name,
     version: versions[0],
     schema: schemaData?.[index] || null,
-    table: {
-      data: tableData?.[index]?.data?.filter((row) => {
-        let query = (search.trim() || "").toLowerCase();
-       if (query) {
-          return Object.values(row).some((value) => String(value).toLowerCase().includes(query));
-        }
-        return (!row.Tissue || !tissue) || (row.Tissue === tissue);
-      }),
-    },
+    table: tableData?.[index]?.data?.filter((row) => {
+      const query = (search.trim() || "").toLowerCase();
+      return !query || Object.values(row).some((value) => String(value).toLowerCase().includes(query))
+    }),
   }));
+  const closestGene = data.find((d) => d.name === "closestGene")?.table?.[0];
+  const forgeDbScore = getForgeDbScore(data);
 
-  const closestGene = data.find((d) => d.name === "closestGene")?.table?.data?.[0];
-  const forgedbScore = getForgeDbScore(data);
-  
   return (
     <>
       <div className="bg-black">
@@ -133,14 +76,14 @@ export default function Explore() {
                 <>
                   <div className="d-flex mb-3">
                     <div className="me-3 form-floating d-inline-block">
-                      <input className="form-control w-auto" id="search" placeholder="Search" id="search" value={search} onChange={e => setSearch(e.target.value)} />
+                      <input className="form-control w-auto" id="search" placeholder="Search" value={search} onChange={(e) => setSearch(e.target.value)} />
                       <label htmlFor="search">Search</label>
                     </div>
                   </div>
 
                   <h2 className="fs-5 fw-semibold mb-1 d-flex align-items-baseline justify-content-between">
                     <span>
-                      Summary and number of annotations for {rsid} <Link href="/about">(FORGEdb score={forgedbScore})</Link>
+                      Summary and number of annotations for {rsid} <Link href="/about">(FORGEdb score={forgeDbScore})</Link>
                     </span>
                     {closestGene && (
                       <a className="small" target="_blank" href={`https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg19&position=${closestGene.chr}%3A${closestGene.start}-${closestGene.start}`}>
@@ -157,7 +100,7 @@ export default function Explore() {
                               <tr>
                                 <th className="fw-normal">{schema.shortTitle || schema.title}</th>
                                 <td>
-                                  <a href={`#${name}`}> {table?.data?.length || 0}</a>
+                                  <a href={`#${name}`}> {table?.length || 0}</a>
                                 </td>
                               </tr>
                             )
@@ -174,7 +117,7 @@ export default function Explore() {
                             {schema.title}
                           </h2>
 
-                          <div className="table-responsive mb-5" style={{maxHeight: '800px'}}  key={index}>
+                          <div className="table-responsive mb-5" style={{ maxHeight: "800px" }} key={index}>
                             <table className="table table-sm table-striped table-hover shadow-lg border">
                               <thead className="position-sticky top-0">
                                 <tr>
@@ -186,7 +129,7 @@ export default function Explore() {
                                 </tr>
                               </thead>
                               <tbody>
-                                {table?.data?.map((row, index) => (
+                                {table?.map((row, index) => (
                                   <tr key={index}>
                                     {schema.columns.map(({ name }) => (
                                       <td key={name}>{row[name]}</td>

@@ -140,10 +140,5 @@ legend {
   margin-bottom: $spacer;
   .table {
     margin-bottom: 0;
-    --bs-table-bg: 0;
   }
-}
-
-.striped:nth-of-type(odd){
-  background-color: #E2E4FB;
 }

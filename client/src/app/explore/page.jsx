@@ -87,12 +87,12 @@ export default function Explore() {
                     )}
                   </h2>
                   <div className="table-responsive mb-5">
-                    <table className="table table-sm table-hover table-striped shadow-lg border">
+                    <table className="table table-sm table-hover shadow-lg border">
                       <tbody>
                         {data?.map(
                           ({ name, schema, table }, index) =>
                             schema && (
-                              <tr>
+                              <tr className="striped">
                                 <th className="fw-normal">{schema.shortTitle || schema.title}</th>
                                 <td>
                                   <a href={`#${name}`}> {table?.length || 0}</a>
@@ -113,7 +113,7 @@ export default function Explore() {
                           </h2>
 
                           <div className="table-responsive mb-5" style={{ maxHeight: "800px" }} key={index}>
-                            <table className="table table-sm table-striped table-hover shadow-lg border">
+                            <table className="table table-sm table-hover shadow-lg border">
                               <thead className="position-sticky top-0">
                                 <tr>
                                   {schema.columns.map(({ name, label }) => (
@@ -125,7 +125,7 @@ export default function Explore() {
                               </thead>
                               <tbody>
                                 {table?.map((row, index) => (
-                                  <tr key={index}>
+                                  <tr className="striped" key={index}>
                                     {schema.columns.map(({ name }) => (
                                       <td key={name}>{row[name]}</td>
                                     ))}

@@ -9,7 +9,7 @@ import Button from "react-bootstrap/Button";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import useSWR from "swr";
-import { fetchBatch, getForgeDbScore, getRowFilter } from "./utils.js";
+import { fetchBatch, getForgeDbScore, getRowFilter, isEmpty } from "./utils.js";
 
 export default function Explore() {
   const searchParams = useSearchParams();
@@ -32,7 +32,7 @@ export default function Explore() {
   }));
   const forgeDbScore = getForgeDbScore(data);
   const closestGene = data.find((d) => d.name === "closestGene")?.table?.[0];
-
+  
   return (
     <>
       <Container>
@@ -51,6 +51,7 @@ export default function Explore() {
                     <span className="visually-hidden">Search</span>
                   </Button>
                 </InputGroup>
+                {searchParams.get("rsid") && isEmpty(data) ? <div style={{color: "red"}}>RSID did not return any results</div> : <></>}
               </Form>
             </div>
           </Col>

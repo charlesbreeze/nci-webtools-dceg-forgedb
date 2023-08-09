@@ -9,7 +9,7 @@ export const getRowFilter = query => row => {
 
 export function getForgeDbScore(data) {
   const mapping = {
-    eqtl: { 
+    eqtl: {
       names: ["eqtlgen", "gtex"],
       score: 2
     },
@@ -41,4 +41,16 @@ export function getForgeDbScore(data) {
     }
     return totalScore;
   }, 0);
+}
+
+
+export function isEmpty(data) {
+
+  for(var i = 0;i < data.length;i++){
+
+    if(data[i].table?.length)
+      return false
+  }
+  
+  return true
 }

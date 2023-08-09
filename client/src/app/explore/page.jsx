@@ -51,7 +51,7 @@ export default function Explore() {
                     <span className="visually-hidden">Search</span>
                   </Button>
                 </InputGroup>
-                {searchParams.get("rsid") && !closestGene ? <div style={{color: "red"}}>RSID did not return any results</div> : <></>}
+                {searchParams.get("rsid") && !search && !closestGene ? <div style={{color: "red"}}>RSID did not return any results</div> : <></>}
               </Form>
             </div>
           </Col>

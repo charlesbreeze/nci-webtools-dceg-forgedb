@@ -32,7 +32,7 @@ export default function Explore() {
   }));
   const forgeDbScore = getForgeDbScore(data);
   const closestGene = data.find((d) => d.name === "closestGene")?.table?.[0];
-  
+
   return (
     <>
       <Container>
@@ -51,7 +51,7 @@ export default function Explore() {
                     <span className="visually-hidden">Search</span>
                   </Button>
                 </InputGroup>
-                {searchParams.get("rsid") && isEmpty(data) ? <div style={{color: "red"}}>RSID did not return any results</div> : <></>}
+                {searchParams.get("rsid") && !closestGene ? <div style={{color: "red"}}>RSID did not return any results</div> : <></>}
               </Form>
             </div>
           </Col>

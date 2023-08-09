@@ -43,14 +43,3 @@ export function getForgeDbScore(data) {
   }, 0);
 }
 
-
-export function isEmpty(data) {
-
-  for(var i = 0;i < data.length;i++){
-
-    if(data[i].table?.length)
-      return false
-  }
-  
-  return true
-}

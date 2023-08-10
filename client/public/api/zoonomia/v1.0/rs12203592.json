@@ -1,0 +1,15 @@
+{
+  "rsid": "rs12203592",
+  "data": [
+    {
+      "chr": "chr6",
+      "start": 396320,
+      "end": 396321,
+      "rsid": "rs12203592",
+      "chr2": "chr6",
+      "start2": 396320,
+      "end2": 396321,
+      "Zoonomia_PhyloP_Score": "1.274"
+    }
+  ]
+}

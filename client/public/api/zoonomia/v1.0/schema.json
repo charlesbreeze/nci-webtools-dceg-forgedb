@@ -1,0 +1,40 @@
+{
+  "title": "Zoonomia conservation information: Human PhyloP score V2 (hg38, from the 241-way mammalian alignment, for more details, see https://cglgenomics.ucsc.edu/data/cactus/)",
+  "columns": [
+    {
+      "name": "chr",
+      "label": "chr"
+    },
+    {
+      "name": "start",
+      "label": "start"
+    },
+    {
+      "name": "end",
+      "label": "end"
+    },
+    {
+      "name": "rsid",
+      "label": "rsid"
+    },
+    {
+      "name": "chr2",
+      "label": "chr2",
+      "description": "PhyloP chromosome"
+    },
+    {
+      "name": "start2",
+      "label": "start2",
+      "description": "PhyloP start position"
+    },
+    {
+      "name": "end2",
+      "label": "end2",
+      "description": "PhyloP end position"
+    },
+    {
+      "name": "Zoonomia_PhyloP_Score",
+      "label": "Zoonomia PhyloP Score"
+    }
+  ]
+}

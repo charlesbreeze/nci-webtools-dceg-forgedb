@@ -42,6 +42,12 @@
     ]
   },
   {
+    "name": "zoonomia",
+    "versions": [
+      "v1.0"
+    ]
+  },
+  {
     "name": "forge2.blueprint",
     "versions": [
       "v1.0"

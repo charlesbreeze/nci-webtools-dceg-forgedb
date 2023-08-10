@@ -117,8 +117,8 @@ export default function Explore() {
                             <table className="table table-sm table-striped table-hover shadow-lg border" tabIndex={0}>
                               <thead className="position-sticky top-0">
                                 <tr>
-                                  {schema.columns.map(({ name, label }) => (
-                                    <th key={name} className="small text-muted fw-bold bg-light text-uppercase">
+                                  {schema.columns.map(({ name, label, description }) => (
+                                    <th key={name} className="small text-muted fw-bold bg-light text-uppercase" title={description}>
                                       {label}
                                     </th>
                                   ))}

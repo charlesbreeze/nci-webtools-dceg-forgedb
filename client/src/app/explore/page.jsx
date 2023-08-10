@@ -88,7 +88,7 @@ export default function Explore() {
                     )}
                   </h2>
                   <div className="table-responsive mb-5">
-                    <table className="table table-sm table-hover table-striped shadow-lg border">
+                    <table className="table table-sm table-hover table-striped shadow-lg border" >
                       <tbody>
                         {data?.map(
                           ({ name, schema, table }, index) =>
@@ -114,7 +114,7 @@ export default function Explore() {
                           </h2>
 
                           <div className="table-responsive mb-5" style={{ maxHeight: "800px" }} key={index}>
-                            <table className="table table-sm table-striped table-hover shadow-lg border">
+                            <table className="table table-sm table-striped table-hover shadow-lg border" tabIndex={0}>
                               <thead className="position-sticky top-0">
                                 <tr>
                                   {schema.columns.map(({ name, label }) => (

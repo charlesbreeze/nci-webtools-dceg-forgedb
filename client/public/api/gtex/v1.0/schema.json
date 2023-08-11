@@ -1,5 +1,6 @@
 {
-  "title": "GTEx cis-eQTL information (for more details, see https://gtexportal.org/home/):",
+  "title": "GTEx cis-eQTL information <small>(for more details, see <a target='_blank' rel='noopener noreferrer' href='https://gtexportal.org/home/'>https://gtexportal.org/home/</a>)</small>",
+  "shortTitle": "GTEx cis-eQTLs",
   "columns": [
     {
       "name": "gene symbol",

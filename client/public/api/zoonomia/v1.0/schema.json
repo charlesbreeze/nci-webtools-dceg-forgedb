@@ -1,5 +1,6 @@
 {
-  "title": "Zoonomia conservation information: Human PhyloP score V2 (hg38, from the 241-way mammalian alignment, for more details, see https://cglgenomics.ucsc.edu/data/cactus/)",
+  "title": "Zoonomia conservation information: Human PhyloP score V2 <small>(hg38, from the 241-way mammalian alignment, for more details, see <a target='_blank' rel='noopener noreferrer' href='https://cglgenomics.ucsc.edu/data/cactus/'>https://cglgenomics.ucsc.edu/data/cactus/</a>)</small>",
+  "shortTitle": "Zoonomia conservation information: Human PhyloP score V2",
   "columns": [
     {
       "name": "chr",

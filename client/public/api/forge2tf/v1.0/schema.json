@@ -1,5 +1,6 @@
 {
-  "title": "FORGE2-TF motif information (hg19, for more details, see FORGE2-TF, eFORGE-TF and the FORGE2 main paper):",
+  "title": "FORGE2-TF motif information <small>(hg19, for more details, see <a target='_blank' rel='noopener noreferrer' href='https://forge2-tf.altiusinstitute.org/'>FORGE2-TF</a>, <a target='_blank' rel='noopener noreferrer' href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6853678/'>eFORGE-TF</a> and the <a target='_blank' rel='noopener noreferrer' href='https://genomebiology.biomedcentral.com/articles/10.1186/s13059-021-02560-3'>FORGE2 main paper</a>)</small>",
+  "shortTitle": "FORGE2-TF motifs",
   "columns": [
     {
       "name": "chr",

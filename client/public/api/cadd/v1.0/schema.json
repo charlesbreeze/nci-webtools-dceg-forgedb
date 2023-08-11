@@ -1,5 +1,6 @@
 {
-  "title": "CADD v1.6 annotations at SNP coordinates in hg19 (note that none or several variants may be shown at this position):",
+  "title": "<a target='_blank' rel='noopener noreferrer' href='https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-021-00835-9'>CADD v1.6</a> annotations at SNP coordinates in <a target='_blank' rel='noopener noreferrer' href='https://cadd.gs.washington.edu'>hg19</a> <small>(note that none or several variants may be shown at this position)</small>",
+  "shortTitle": "CADD v1.6 annotations",
   "columns": [
     {
       "name": "chromosome",

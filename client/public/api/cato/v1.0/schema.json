@@ -1,5 +1,6 @@
 {
-  "title": "CATO (contextual analysis of TF occupancy) score (coordinates in hg19, for more details, see http://www.mauranolab.org/CATO/):",
+  "title": "<a target='_blank' rel='noopener noreferrer' href='https://forge2.altiusinstitute.org/files/cato.html'>CATO</a> (contextual analysis of TF occupancy) score <small>(coordinates in hg19, for more details, see <a target='_blank' rel='noopener noreferrer' href='http://www.mauranolab.org/CATO/'>http://www.mauranolab.org/CATO/</a>)</small>",
+  "shortTitle": "CATO score",
   "columns": [
     {
       "name": "chr",

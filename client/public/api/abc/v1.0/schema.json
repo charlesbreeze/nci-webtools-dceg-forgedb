@@ -1,5 +1,5 @@
 {
-  "title": "Activity-By-Contact (ABC) information (hg19, for more details, see https://www.engreitzlab.org/resources):",
+  "title": "Activity-By-Contact (ABC) information <small>(hg19, for more details, see <a href='https://www.engreitzlab.org/resources' target='_blank' rel='noopener noreferrer'>https://www.engreitzlab.org/resources</a>)</small>",
   "shortTitle": "ABC contacts",
   "columns": [
     {

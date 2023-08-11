@@ -1,5 +1,6 @@
 {
-  "title": "eQTLGen blood FDR 0.05 cis-eQTL information (hg19, for more details, see https://www.eqtlgen.org)",
+  "title": "<a target='_blank' rel='noopener noreferrer' href='https://www.nature.com/articles/s41588-021-00913-z'>eQTLGen</a> blood FDR 0.05 cis-eQTL information <small>(hg19, for more details, see <a target='_blank' rel='noopener noreferrer' href='https://www.eqtlgen.org/'>https://www.eqtlgen.org</a>)</small>",
+  "shortTitle": "eQTLGen blood cis-eQTLs",
   "columns": [
     {
       "name": "Gene Symbol",

@@ -16,22 +16,25 @@ export default function Explore() {
   const rsid = searchParams.get("rsid");
   const [search, setSearch] = useState("");
 
-  const { data: datasetsResponse, error: datasetsError } = useSWR([`${process.env.NEXT_PUBLIC_BASE_PATH}/api/datasets.json`], fetchBatch);
+  const { data: datasetsResponse, error: datasetsError, isLoading: datasetsLoading } = useSWR([`${process.env.NEXT_PUBLIC_BASE_PATH}/api/datasets.json`], fetchBatch);
   const datasets = datasetsResponse ? datasetsResponse[0] : [];
   const schemaQueries = datasets.map(({ name, versions }) => `${process.env.NEXT_PUBLIC_BASE_PATH}/api/${name}/${versions[0]}/schema.json`);
   const tableQueries = datasets.map(({ name, versions }) => `${process.env.NEXT_PUBLIC_BASE_PATH}/api/${name}/${versions[0]}/${rsid}.json`);
-  const { data: schemaData, error: schemaError } = useSWR(schemaQueries, fetchBatch);
-  const { data: tableData, error: tableError } = useSWR(tableQueries, fetchBatch);
+  const { data: schemaData, error: schemaError, isLoading: schemaLoading } = useSWR(schemaQueries, fetchBatch);
+  const { data: tableData, error: tableError, isLoading: tableLoading } = useSWR(tableQueries, fetchBatch);
 
   // combine datasets, schema, and table data
-  const data = datasets.map(({ name, versions }, index) => ({
+  const isLoading = datasetsLoading || schemaLoading || tableLoading;
+  const data = datasets?.map(({ name, versions }, index) => ({
     name,
     version: versions[0],
     schema: schemaData?.[index] || null,
+    originalTable: tableData?.[index]?.data,
     table: tableData?.[index]?.data?.filter(getRowFilter(search)),
   }));
   const forgeDbScore = getForgeDbScore(data);
-  const closestGene = data.find((d) => d.name === "closestGene")?.table?.[0];
+  const closestGene = data?.find((d) => d.name === "closestGene")?.originalTable?.[0];
+  const hasData = data?.some((d) => d.originalTable?.length > 0);
 
   return (
     <>
@@ -51,7 +54,7 @@ export default function Explore() {
                     <span className="visually-hidden">Search</span>
                   </Button>
                 </InputGroup>
-                {searchParams.get("rsid") && !search && !closestGene ? <div style={{color: "red"}}>RSID did not return any results</div> : <></>}
+                {rsid && !isLoading && !hasData && <div className="text-warning bg-black">No results were found for the given rsid.</div>}
               </Form>
             </div>
           </Col>
@@ -62,13 +65,9 @@ export default function Explore() {
         <Container>
           <Row>
             <Col>
-              {!rsid && (
-                <>
-                  <h1 className="fs-2 fw-light">Please enter an RSID to view summary-level data.</h1>
-                </>
-              )}
-
-              {rsid && (
+              {!rsid && !isLoading && <h1 className="fs-2 fw-light">Please enter an RSID to view summary-level data.</h1>}
+              {rsid && isLoading && <h1 className="fs-2 fw-light">Loading results</h1>}
+              {rsid && !isLoading && (
                 <>
                   <div className="d-flex mb-3">
                     <div className="me-3 form-floating d-inline-block">
@@ -88,56 +87,52 @@ export default function Explore() {
                     )}
                   </h2>
                   <div className="table-responsive mb-5">
-                    <table className="table table-sm table-hover table-striped shadow-lg border" >
+                    <table className="table table-sm table-hover table-striped shadow-lg border">
                       <tbody>
-                        {data?.map(
-                          ({ name, schema, table }, index) =>
-                            schema && (
-                              <tr>
-                                <th className="fw-normal">{schema.shortTitle || schema.title}</th>
-                                <td>
-                                  <a href={`#${name}`}> {table?.length || 0}</a>
-                                </td>
-                              </tr>
-                            )
-                        )}
+                        {data
+                          ?.filter((d) => d.schema)
+                          ?.map(({ name, schema, table }, index) => (
+                            <tr key={index}>
+                              <th className="fw-normal">{schema.shortTitle || schema.title}</th>
+                              <td>
+                                <a href={`#${name}`}> {table?.length || 0}</a>
+                              </td>
+                            </tr>
+                          ))}
                       </tbody>
                     </table>
                   </div>
 
-                  {data.map(
-                    ({ name, schema, table }, index) =>
-                      schema && (
-                        <>
-                          <h2 className="fs-5 fw-semibold mb-1" id={name}>
-                            {schema.title}
-                          </h2>
+                  {data
+                    ?.filter((d) => d.schema)
+                    ?.map(({ name, schema, table }, index) => (
+                      <div key={index}>
+                        <h2 className="fs-5 fw-semibold mb-1" id={name} dangerouslySetInnerHTML={{ __html: schema.title }} />
 
-                          <div className="table-responsive mb-5" style={{ maxHeight: "800px" }} key={index}>
-                            <table className="table table-sm table-striped table-hover shadow-lg border" tabIndex={0}>
-                              <thead className="position-sticky top-0">
-                                <tr>
-                                  {schema.columns.map(({ name, label, description }) => (
-                                    <th key={name} className="small text-muted fw-bold bg-light text-uppercase" title={description}>
-                                      {label}
-                                    </th>
+                        <div className="table-responsive mb-5" style={{ maxHeight: "800px" }} key={index}>
+                          <table className="table table-sm table-striped table-hover shadow-lg border" tabIndex={0}>
+                            <thead className="position-sticky top-0">
+                              <tr>
+                                {schema.columns.map(({ name, label, description }) => (
+                                  <th key={name} className="small text-muted fw-bold bg-light text-uppercase" title={description}>
+                                    {label}
+                                  </th>
+                                ))}
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {table?.map((row, index) => (
+                                <tr key={index}>
+                                  {schema.columns.map(({ name }) => (
+                                    <td key={name}>{row[name]}</td>
                                   ))}
                                 </tr>
-                              </thead>
-                              <tbody>
-                                {table?.map((row, index) => (
-                                  <tr key={index}>
-                                    {schema.columns.map(({ name }) => (
-                                      <td key={name}>{row[name]}</td>
-                                    ))}
-                                  </tr>
-                                ))}
-                              </tbody>
-                            </table>
-                          </div>
-                        </>
-                      )
-                  )}
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    ))}
                 </>
               )}
             </Col>

@@ -44,23 +44,23 @@
     },
     {
       "name": "TargetGene",
-      "label": "TargetGene"
+      "label": "Target Gene"
     },
     {
       "name": "TargetGeneTSS",
-      "label": "TargetGeneTSS"
+      "label": "Target Gene TSS"
     },
     {
       "name": "TargetGeneExpression",
-      "label": "TargetGeneExpression"
+      "label": "Target Gene Expression"
     },
     {
       "name": "TargetGenePromoterActivityQuantile",
-      "label": "TargetGenePromoterActivityQuantile"
+      "label": "Target Gene Promoter Activity Quantile"
     },
     {
       "name": "TargetGeneIsExpressed",
-      "label": "TargetGeneIsExpressed"
+      "label": "Target Gene Is Expressed"
     },
     {
       "name": "distance",

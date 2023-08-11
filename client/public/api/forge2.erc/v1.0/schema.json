@@ -4,19 +4,31 @@
   "columns": [
     {
       "name": "Cell",
-      "label": "Cell"
+      "label": "Cell",
+      "style": {
+        "width": "40%"
+      }
     },
     {
       "name": "Tissue",
-      "label": "Tissue"
+      "label": "Tissue",
+      "style": {
+        "width": "20%"
+      }
     },
     {
       "name": "Datatype",
-      "label": "Datatype"
+      "label": "Datatype",
+      "style": {
+        "width": "20%"
+      }
     },
     {
       "name": "Variant rsid",
-      "label": "Variant rsid"
+      "label": "Variant rsid",
+      "style": {
+        "width": "20%"
+      }
     }
   ]
 }

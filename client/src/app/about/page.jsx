@@ -10,7 +10,7 @@ export default function About() {
         <Row>
           <Col>
             <article>
-              <h1 className="fs-1 fw-light">About FORGE<small className="fw-normal">db</small> <small className="fs-3 text-muted fw-normal">(Functional SNP)</small></h1>
+              <h1 className="fs-1 fw-light">About FORGEdb <small className="fs-3 text-muted fw-normal">(Functional SNP)</small></h1>
               <hr />
               <h2 className="fs-2 fw-light mb-3">FORGEdb scores</h2>
               <p>FORGEdb scores are used for predicting which genetic variants are most likely to be a regulatory variant. FORGEdb scores range between 0 and 10, and are calculated using different regulatory DNA datasets, including data for transcription factor (TF) binding and chromatin accessibility.</p>

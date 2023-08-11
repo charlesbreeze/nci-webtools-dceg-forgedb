@@ -113,8 +113,8 @@ export default function Explore() {
                           <table className="table table-sm table-striped table-hover shadow-lg border" tabIndex={0}>
                             <thead className="position-sticky top-0">
                               <tr>
-                                {schema.columns.map(({ name, label, description }) => (
-                                  <th key={name} className="small text-muted fw-bold bg-light text-uppercase" title={description}>
+                                {schema.columns.map(({ name, label, description, style }) => (
+                                  <th key={name} className="small text-muted fw-bold bg-light text-uppercase" title={description} style={style}>
                                     {label}
                                   </th>
                                 ))}
@@ -124,7 +124,7 @@ export default function Explore() {
                               {table?.map((row, index) => (
                                 <tr key={index}>
                                   {schema.columns.map(({ name }) => (
-                                    <td key={name}>{row[name]}</td>
+                                    <td key={name} className="text-nowrap">{row[name]}</td>
                                   ))}
                                 </tr>
                               ))}

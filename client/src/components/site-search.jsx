@@ -3,7 +3,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup";
 
-export default function NavbarSearch() {
+export default function SiteSearch() {
   function handleSubmit(event) {
     event.preventDefault();
 

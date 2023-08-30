@@ -1,10 +1,26 @@
 
 
-export const fetchBatch = (requests) => Promise.all(requests.map((request) => fetch(request).then((res) => res.json())));
+export function fetchBatch(requests) {
+  return Promise.all(requests.map(async (request) => {
+    try {
+      const response = await fetch(request);
+      if (response.ok) {
+        return await response.json();
+      } else {
+        return null;
+      }
+    } catch (err) {
+      console.error(err);
+      return null;
+    }
+  }));
+}
 
-export const getRowFilter = query => row => {
-  query = (query.trim() || "").toLowerCase();
-  return !query || Object.values(row).some((value) => String(value).toLowerCase().includes(query))
+export function getRowFilter(query) {
+  return (row) => {
+    query = (query.trim() || "").toLowerCase();
+    return !query || Object.values(row).some((value) => String(value).toLowerCase().includes(query));
+  }
 }
 
 export function getForgeDbScore(data) {

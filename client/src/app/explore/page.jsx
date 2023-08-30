@@ -8,7 +8,7 @@ import InputGroup from "react-bootstrap/InputGroup";
 import Button from "react-bootstrap/Button";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import useSWR from "swr";
+import useSWR from "swr/immutable";
 import { fetchBatch, getForgeDbScore, getRowFilter, isEmpty } from "./utils.js";
 
 export default function Explore() {

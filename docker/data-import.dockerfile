@@ -6,7 +6,6 @@ RUN dnf -y update \
     make \
     nodejs \
     npm \
-    parallel \
  && dnf clean all
 
 ENV FORGEDB_FOLDER=/opt/forgedb
@@ -21,6 +20,4 @@ RUN npm install
 
 COPY database ${FORGEDB_FOLDER}
 
-RUN chmod +x import.sh
-
-CMD import.sh
+CMD node import.js

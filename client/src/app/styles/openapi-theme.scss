@@ -6,3 +6,7 @@
 .swagger-ui .scheme-container {
   display: none !important;
 }
+
+.swagger-ui .opblock.opblock-get .opblock-summary-method {
+  background-color: #2a71a5 !important;
+}

@@ -101,7 +101,8 @@ async function main() {
       let end = Date.now();
       let elapsed = (end - start) / 1000;
       let rate = i / elapsed;
-      console.log(`Processed ${i} rows (${objectCount} objects) in ${elapsed.toFixed(2)}s (${rate.toFixed(2)} rows/s)`);
+      let objectRate = objectCount / elapsed;
+      console.log(`Processed ${i} rows (${objectCount} objects) in ${elapsed.toFixed(2)}s (${rate.toFixed(2)} rows/s) (${objectRate.toFixed(2)} objects/s)`);
     }
 
     i++;
@@ -124,7 +125,8 @@ async function main() {
   let end = Date.now();
   let elapsed = (end - start) / 1000;
   let rate = i / elapsed;
-  console.log(`Processed ${i} rows (${objectCount} objects) in ${elapsed.toFixed(2)}s (${rate.toFixed(2)} rows/s)`);
+  let objectRate = objectCount / elapsed;
+  console.log(`Processed ${i} rows (${objectCount} objects) in ${elapsed.toFixed(2)}s (${rate.toFixed(2)} rows/s) (${objectRate.toFixed(2)} objects/s)`);
 
 
   // update the index file

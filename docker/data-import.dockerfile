@@ -8,7 +8,7 @@ RUN dnf -y update \
     npm \
  && dnf clean all
 
-ENV FORGEDB_FOLDER=/opt/forgedb
+ENV FORGEDB_FOLDER=/opt/forgedb/
 
 RUN mkdir -p ${FORGEDB_FOLDER}
 

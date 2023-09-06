@@ -1,5 +1,6 @@
-import { S3Client, GetObjectCommand, PutObjectCommand } from "@aws-sdk/client-s3";
 import { createGunzip } from "zlib";
+import { setTimeout } from "timers/promises";
+import { S3Client, GetObjectCommand, PutObjectCommand } from "@aws-sdk/client-s3";
 import { parse } from 'csv-parse';
 import dotenv from 'dotenv';
 
@@ -27,7 +28,7 @@ console.log(`Index key: s3://${bucket}/${indexKey}`);
 
 async function main() {
   const s3Client = new S3Client({ 
-    maxAttempts: 20,
+    maxAttempts: 40,
     retryMode: 'adaptive',
   });
 
@@ -65,7 +66,15 @@ async function main() {
       }
     }
 
-    let promises = buffer.map((args) => s3Client.send(new PutObjectCommand(args)));
+    let promises = buffer.map(async (args) => {
+      try {
+        await setTimeout(Math.random() * 100);
+        return s3Client.send(new PutObjectCommand(args))
+      } catch (e) {
+        console.error(e);
+        process.exit(1);
+      }
+    });
     await Promise.all(promises);
     objectCount += buffer.length;
     buffer = [];

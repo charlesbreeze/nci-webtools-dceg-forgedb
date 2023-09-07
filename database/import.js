@@ -180,10 +180,14 @@ async function main() {
   }
 }
 
+// keeps the process alive until all promises are resolved
+const id = setInterval(() => {}, 1000);
 try {
   await main();
   process.exit(0);
 } catch (e) {
   console.error(e);
   process.exit(1);
+} finally {
+  clearInterval(id);
 }

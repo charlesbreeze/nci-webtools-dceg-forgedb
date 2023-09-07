@@ -49,45 +49,13 @@ async function main() {
   let previousRsid = null;
   let previousItems = [];
   let buffer = [];
-  let bufferSize = 100;
-  let logInterval = 100000;
+  const bufferSize = 100;
+  const logInterval = 100000;
 
-  let flushBuffer = async () => {
-    // create a setTimeout to avoid node.js exiting early due to unresolved promises
-    let id = setTimeout(() => {}, 2**31 - 1);
-
-    try {
-      for (let { Key, Body } of buffer) {
-        let contents = JSON.parse(Body);
-        let rsid = contents.rsid;
-        let data = contents.data;
-        let isValid = data.every((item) => item.rsid === rsid);
-        if (!isValid) {
-          console.error(`Invalid data for ${rsid}`);
-          console.error(data);
-          throw new Error(`Invalid data for ${rsid}`);
-        }
-      }
-  
-      let promises = buffer.map(async (args, i) => {
-        try {
-          // use a new client for each batch to avoid socket errors
-          const s3Client = new S3Client({ 
-            maxAttempts: 40,
-            retryMode: 'adaptive',
-          });
-          return s3Client.send(new PutObjectCommand(args))
-        } catch (e) {
-          console.error(e);
-          process.exit(1);
-        }
-      });
-      await Promise.all(promises);
-      objectCount += buffer.length;
-      buffer = [];
-    } finally {
-      clearTimeout(id);
-    }
+  const flushBuffer = async () => {
+    await Promise.all(buffer.map((args, i) => s3Client.send(new PutObjectCommand(args))));
+    objectCount += buffer.length;
+    buffer = [];
   }
 
   for await (const item of response.Body.pipe(gunzip).pipe(parser)) {
@@ -146,7 +114,6 @@ async function main() {
   let rate = i / elapsed;
   let objectRate = objectCount / elapsed;
   console.log(`Processed ${i} rows (${objectCount} objects) in ${elapsed.toFixed(2)}s (${rate.toFixed(2)} rows/s) (${objectRate.toFixed(2)} objects/s)`);
-
 
   // update the index file
   const indexResponse = await s3Client.send(new GetObjectCommand({

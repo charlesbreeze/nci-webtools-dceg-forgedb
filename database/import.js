@@ -1,5 +1,4 @@
 import { createGunzip } from "zlib";
-import { setTimeout } from "timers/promises";
 import { S3Client, GetObjectCommand, PutObjectCommand } from "@aws-sdk/client-s3";
 import { parse } from 'csv-parse';
 import dotenv from 'dotenv';
@@ -54,30 +53,41 @@ async function main() {
   let logInterval = 100000;
 
   let flushBuffer = async () => {
-    for (let { Key, Body } of buffer) {
-      let contents = JSON.parse(Body);
-      let rsid = contents.rsid;
-      let data = contents.data;
-      let isValid = data.every((item) => item.rsid === rsid);
-      if (!isValid) {
-        console.error(`Invalid data for ${rsid}`);
-        console.error(data);
-        throw new Error(`Invalid data for ${rsid}`);
-      }
-    }
+    // create a setTimeout to avoid node.js exiting early due to unresolved promises
+    let id = setTimeout(() => {}, 2**31 - 1);
 
-    let promises = buffer.map(async (args) => {
-      try {
-        await setTimeout(Math.random() * 100);
-        return s3Client.send(new PutObjectCommand(args))
-      } catch (e) {
-        console.error(e);
-        process.exit(1);
+    try {
+      for (let { Key, Body } of buffer) {
+        let contents = JSON.parse(Body);
+        let rsid = contents.rsid;
+        let data = contents.data;
+        let isValid = data.every((item) => item.rsid === rsid);
+        if (!isValid) {
+          console.error(`Invalid data for ${rsid}`);
+          console.error(data);
+          throw new Error(`Invalid data for ${rsid}`);
+        }
       }
-    });
-    await Promise.all(promises);
-    objectCount += buffer.length;
-    buffer = [];
+  
+      let promises = buffer.map(async (args, i) => {
+        try {
+          // use a new client for each batch to avoid socket errors
+          const s3Client = new S3Client({ 
+            maxAttempts: 40,
+            retryMode: 'adaptive',
+          });
+          return s3Client.send(new PutObjectCommand(args))
+        } catch (e) {
+          console.error(e);
+          process.exit(1);
+        }
+      });
+      await Promise.all(promises);
+      objectCount += buffer.length;
+      buffer = [];
+    } finally {
+      clearTimeout(id);
+    }
   }
 
   for await (const item of response.Body.pipe(gunzip).pipe(parser)) {

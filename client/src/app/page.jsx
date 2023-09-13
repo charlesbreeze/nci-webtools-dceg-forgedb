@@ -23,7 +23,7 @@ export default function Home() {
                 <Form action={`${process.env.NEXT_PUBLIC_BASE_PATH}/explore`} className="mb-2">
                   <InputGroup className="border-white">
                     <Form.Control className="search-control-transparent fw-light ps-0" type="search" placeholder="Enter RSID" aria-label="Enter RSID" name="rsid" pattern="^rs\d+" required />
-                    <Button variant="outline-secondary" className="search-control-transparent-button position-absolute z-3 end-0" type="submit">
+                    <Button variant="outline-secondary" className="search-control-transparent-button" type="submit">
                       <i className="bi bi-search"></i>
                       <span className="visually-hidden">Search</span>
                     </Button>

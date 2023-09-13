@@ -1,9 +1,4 @@
-"use client";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import InputGroup from "react-bootstrap/InputGroup";
-
-export default function SiteSearch() {
+export default function SiteSearch({className = ''}) {
   function handleSubmit(event) {
     event.preventDefault();
 
@@ -20,18 +15,18 @@ export default function SiteSearch() {
   }
 
   return (
-    <Form
-      className="d-flex align-items-stretch mb-4 mb-md-0"
+    <form
+      className={"d-flex align-items-stretch mb-4 mb-md-0 " + className}
       role="search"
       action="https://www.google.com/search"
       onSubmit={handleSubmit}>
-      <InputGroup  className="border-white">
-        <Form.Control className="search-control" type="search" placeholder="Search" aria-label="search" name="q"/>
-        <Button variant="outline-secondary" className="search-control-button" type="submit" >
+      <div className="input-group border-white">
+        <input className="form-control"  type="search" placeholder="Search" aria-label="search" name="q"/>
+        <button className="btn btn-outline-secondary" type="submit" >
           <i className="bi bi-search" ></i>
           <span className="visually-hidden">submit</span>
-        </Button>
-      </InputGroup>
-    </Form>
+        </button>
+      </div>
+    </form>
   );
 }

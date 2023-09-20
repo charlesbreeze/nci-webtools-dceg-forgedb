@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
           <title>FORGEdb - Functional SNP</title>
           <meta name="keywords" content="FORGEdb" />
           <link rel="icon" href={`${process.env.NEXT_PUBLIC_BASE_PATH}/favicon.ico`} sizes="any" />
-          <GoogleAnalytics id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />
+          <GoogleAnalytics id="G-SLRTWNCE23" />
         </head>
         <body className="d-flex flex-column vh-100">
           <Header routes={routes} />

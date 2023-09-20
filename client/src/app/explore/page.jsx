@@ -123,8 +123,8 @@ export default function Explore() {
                             <tbody>
                               {table?.map((row, index) => (
                                 <tr key={index}>
-                                  {schema.columns.map(({ name }) => (
-                                    <td key={name} className="text-nowrap">{row[name]}</td>
+                                  {schema.columns.map(({ name, defaultValue }) => (
+                                    <td key={name} className="text-nowrap">{row[name] ?? defaultValue}</td>
                                   ))}
                                 </tr>
                               ))}

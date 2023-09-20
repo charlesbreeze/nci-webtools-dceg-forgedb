@@ -25,7 +25,7 @@ export default function AppNavbar({ routes = [] }) {
             FORGE<span className="fw-semibold small text-warning">db</span>
           </h1>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbar-nav" className="px-0 py-3 text-uppercase">
+        <Navbar.Toggle aria-controls="navbar-nav" className="px-0 py-3 text-uppercase outline-0 border-0 shadow-0">
           <i className="bi bi-list me-1"></i>
           Menu
         </Navbar.Toggle>

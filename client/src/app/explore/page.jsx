@@ -41,14 +41,13 @@ export default function Explore() {
               </h1>
 
               <form action={`${process.env.NEXT_PUBLIC_BASE_PATH}/explore`} className="mb-2">
-                <div className="input-group border-white">
-                  <input className="form-control search-control-transparent fs-1 fw-light ps-0" type="search" placeholder="rsid" aria-label="rsid" name="rsid" defaultValue={rsid} required style={{ width: "200px" }} pattern="^rs\d+" />
-                  <button className="btn btn-outline-secondary fs-1 search-control-transparent-button" type="submit">
+                <div className="input-group border-bottom border-white border-2">
+                  <input className="form-control bg-transparent border-0 shadow-0 no-clear-control text-light placeholder-light fw-light ps-0 fs-1" type="search" placeholder="rsid" defaultValue={rsid} aria-label="Enter RSID" name="rsid" pattern="^rs\d+" required style={{ width: "200px" }} autofocus  />
+                  <button className="btn btn-outline-secondary bg-transparent border-0 text-light" type="submit">
                     <i className="bi bi-search"></i>
                     <span className="visually-hidden">Search</span>
                   </button>
                 </div>
-                {rsid && !isLoading && !hasData && <div className="text-warning bg-black">No results were found for the given rsid.</div>}
               </form>
             </div>
           </div>

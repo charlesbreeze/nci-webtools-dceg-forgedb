@@ -1,15 +1,9 @@
 "use client";
 import { useState } from "react";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Form from "react-bootstrap/Form";
-import InputGroup from "react-bootstrap/InputGroup";
-import Button from "react-bootstrap/Button";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import useSWR from "swr/immutable";
-import { fetchBatch, getForgeDbScore, getRowFilter, isEmpty } from "./utils.js";
+import { fetchBatch, getForgeDbScore, getRowFilter } from "./utils.js";
 
 export default function Explore() {
   const searchParams = useSearchParams();
@@ -38,33 +32,33 @@ export default function Explore() {
 
   return (
     <>
-      <Container>
-        <Row>
-          <Col>
+      <div className="container">
+        <div className="row">
+          <div className="col">
             <div className="d-flex flex-wrap align-items-baseline py-3">
               <h1 className="fs-1 text-light fw-light me-2">
                 FORGE<small className="fw-normal text-warning">db</small> Summary for
               </h1>
 
-              <Form action={`${process.env.NEXT_PUBLIC_BASE_PATH}/explore`} className="mb-2">
-                <InputGroup className="border-white">
-                  <Form.Control className="search-control-transparent fs-1 fw-light ps-0" type="search" placeholder="rsid" aria-label="rsid" name="rsid" defaultValue={rsid} required style={{ width: "200px" }} pattern="^rs\d+" />
-                  <Button variant="outline-secondary" className="fs-1 search-control-transparent-button" type="submit">
+              <form action={`${process.env.NEXT_PUBLIC_BASE_PATH}/explore`} className="mb-2">
+                <div className="input-group border-white">
+                  <input className="form-control search-control-transparent fs-1 fw-light ps-0" type="search" placeholder="rsid" aria-label="rsid" name="rsid" defaultValue={rsid} required style={{ width: "200px" }} pattern="^rs\d+" />
+                  <button className="btn btn-outline-secondary fs-1 search-control-transparent-button" type="submit">
                     <i className="bi bi-search"></i>
                     <span className="visually-hidden">Search</span>
-                  </Button>
-                </InputGroup>
+                  </button>
+                </div>
                 {rsid && !isLoading && !hasData && <div className="text-warning bg-black">No results were found for the given rsid.</div>}
-              </Form>
+              </form>
             </div>
-          </Col>
-        </Row>
-      </Container>
+          </div>
+        </div>
+      </div>
 
       <div className="flex-grow-1 bg-white py-5">
-        <Container>
-          <Row>
-            <Col>
+        <div className="container">
+          <div className="row">
+            <div className="col">
               {!rsid && !isLoading && <h1 className="fs-2 fw-light">Please enter an RSID to view summary-level data.</h1>}
               {rsid && isLoading && <h1 className="fs-2 fw-light">Loading results</h1>}
               {rsid && !isLoading && (
@@ -135,9 +129,9 @@ export default function Explore() {
                     ))}
                 </>
               )}
-            </Col>
-          </Row>
-        </Container>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

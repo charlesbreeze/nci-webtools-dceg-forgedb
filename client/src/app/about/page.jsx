@@ -1,14 +1,9 @@
-"use client";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-
 export default function About() {
   return (
     <div className="flex-grow-1 bg-light py-4">
-      <Container>
-        <Row>
-          <Col>
+      <div className="container">
+        <div className="row">
+          <div className="col">
             <article>
               <h1 className="fs-1 fw-light">About FORGEdb <small className="fs-3 text-muted fw-normal">(Functional SNP)</small></h1>
               <hr />
@@ -73,9 +68,9 @@ export default function About() {
                 <li>Smemo, S. et al. Obesity-associated variants within FTO form long-range functional connections with IRX3. Nature, (2014).</li>
               </ul>
             </article>
-          </Col>
-        </Row>
-      </Container>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

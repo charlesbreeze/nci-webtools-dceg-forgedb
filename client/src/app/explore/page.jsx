@@ -24,7 +24,7 @@ export default function Explore() {
     version: versions[0],
     schema: schemaData?.[index] || null,
     originalTable: tableData?.[index]?.data,
-    table: tableData?.[index]?.data?.filter(getRowFilter(search)),
+    table: tableData?.[index]?.data?.filter(getRowFilter(search, schemaData?.[index])),
   }));
   const forgeDbScore = getForgeDbScore(data);
   const closestGene = data?.find((d) => d.name === "closestGene")?.originalTable?.[0];
@@ -42,8 +42,8 @@ export default function Explore() {
 
               <form action={`${process.env.NEXT_PUBLIC_BASE_PATH}/explore`} className="mb-2">
                 <div className="input-group border-bottom border-white border-2">
-                  <input className="form-control bg-transparent border-0 shadow-0 no-clear-control text-light placeholder-light fw-light ps-0 fs-1" type="search" placeholder="rsid" defaultValue={rsid} aria-label="Enter RSID" name="rsid" pattern="^rs\d+" required style={{ width: "200px" }} autofocus  />
-                  <button className="btn btn-outline-secondary bg-transparent border-0 text-light" type="submit">
+                  <input className="form-control bg-transparent border-0 shadow-0 no-clear-control text-light placeholder-light fw-light ps-0 fs-1" type="search" placeholder="rsid" defaultValue={rsid} aria-label="Enter RSID" name="rsid" pattern="^rs\d+" required style={{ width: "200px" }} autoFocus  />
+                  <button className="btn btn-outline-secondary bg-transparent border-0 text-light fs-3" type="submit">
                     <i className="bi bi-search"></i>
                     <span className="visually-hidden">Search</span>
                   </button>
@@ -85,7 +85,7 @@ export default function Explore() {
                         {data
                           ?.filter((d) => d.schema)
                           ?.map(({ name, schema, table }, index) => (
-                            <tr key={index}>
+                            <tr key={`${index}_${name}`}>
                               <th className="fw-normal">{schema.shortTitle || schema.title}</th>
                               <td>
                                 <a href={`#${name}`}> {table?.length || 0}</a>
@@ -106,8 +106,8 @@ export default function Explore() {
                           <table className="table table-sm table-striped table-hover shadow-lg border" tabIndex={0}>
                             <thead className="position-sticky top-0">
                               <tr>
-                                {schema.columns.map(({ name, label, description, style }) => (
-                                  <th key={name} className="small text-muted fw-bold bg-light text-uppercase" title={description} style={style}>
+                                {schema.columns.map(({ name, label, description, style }, index) => (
+                                  <th key={`${name}_${index}`} className="small text-muted fw-bold bg-light text-uppercase" title={description} style={style}>
                                     {label}
                                   </th>
                                 ))}
@@ -116,8 +116,8 @@ export default function Explore() {
                             <tbody>
                               {table?.map((row, index) => (
                                 <tr key={index}>
-                                  {schema.columns.map(({ name, defaultValue }) => (
-                                    <td key={name} className="text-nowrap">{row[name] ?? defaultValue}</td>
+                                  {schema.columns.map(({ name, defaultValue }, index) => (
+                                    <td key={`${name}_${index}`} className="text-nowrap">{row[name] ?? defaultValue}</td>
                                   ))}
                                 </tr>
                               ))}

@@ -31,7 +31,7 @@
       "label": "end2"
     },
     {
-      "name": "gene name",
+      "name": "refseq_gene",
       "label": "gene name"
     }
   ]

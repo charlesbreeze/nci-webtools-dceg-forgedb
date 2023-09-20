@@ -2,358 +2,358 @@
   "rsid": "rs12203592",
   "data": [
     {
-      "Cell": "E029 Primary monocytes from peripheral blood",
-      "Tissue": "Blood",
-      "Datatype": "H3K27me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E029 Primary monocytes from peripheral blood",
+      "tissue": "Blood",
+      "datatype": "H3K27me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E029 Primary monocytes from peripheral blood",
-      "Tissue": "Blood",
-      "Datatype": "H3K36me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E029 Primary monocytes from peripheral blood",
+      "tissue": "Blood",
+      "datatype": "H3K36me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E032 Primary B cells from peripheral blood",
-      "Tissue": "Blood",
-      "Datatype": "H3K4me1",
-      "Variant rsid": "rs12203592"
+      "cell": "E032 Primary B cells from peripheral blood",
+      "tissue": "Blood",
+      "datatype": "H3K4me1",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E032 Primary B cells from peripheral blood",
-      "Tissue": "Blood",
-      "Datatype": "H3K36me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E032 Primary B cells from peripheral blood",
+      "tissue": "Blood",
+      "datatype": "H3K36me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E033 Primary T cells from cord blood",
-      "Tissue": "Blood",
-      "Datatype": "H3K36me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E033 Primary T cells from cord blood",
+      "tissue": "Blood",
+      "datatype": "H3K36me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E034 Primary T cells from peripheral blood",
-      "Tissue": "Blood",
-      "Datatype": "H3K4me1",
-      "Variant rsid": "rs12203592"
+      "cell": "E034 Primary T cells from peripheral blood",
+      "tissue": "Blood",
+      "datatype": "H3K4me1",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E034 Primary T cells from peripheral blood",
-      "Tissue": "Blood",
-      "Datatype": "H3K36me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E034 Primary T cells from peripheral blood",
+      "tissue": "Blood",
+      "datatype": "H3K36me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E046 Primary Natural Killer cells from peripheral",
-      "Tissue": "Blood",
-      "Datatype": "H3K36me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E046 Primary Natural Killer cells from peripheral",
+      "tissue": "Blood",
+      "datatype": "H3K36me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E050 Primary hematopoietic stem cells G-CSF-mobili",
-      "Tissue": "Blood",
-      "Datatype": "H3K9me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E050 Primary hematopoietic stem cells G-CSF-mobili",
+      "tissue": "Blood",
+      "datatype": "H3K9me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E050 Primary hematopoietic stem cells G-CSF-mobili",
-      "Tissue": "Blood",
-      "Datatype": "H3K27me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E050 Primary hematopoietic stem cells G-CSF-mobili",
+      "tissue": "Blood",
+      "datatype": "H3K27me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E051 Primary hematopoietic stem cells G-CSF-mobili",
-      "Tissue": "Blood",
-      "Datatype": "H3K27me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E051 Primary hematopoietic stem cells G-CSF-mobili",
+      "tissue": "Blood",
+      "datatype": "H3K27me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E028 Breast variant Human Mammary Epithelial Cells",
-      "Tissue": "Breast",
-      "Datatype": "H3K27me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E028 Breast variant Human Mammary Epithelial Cells",
+      "tissue": "Breast",
+      "datatype": "H3K27me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E003 H1 Cells",
-      "Tissue": "ES Cell",
-      "Datatype": "H3K9me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E003 H1 Cells",
+      "tissue": "ES Cell",
+      "datatype": "H3K9me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E004 H1 BMP4 Derived Mesendoderm Cultured Cells",
-      "Tissue": "ES Cell",
-      "Datatype": "H3K27me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E004 H1 BMP4 Derived Mesendoderm Cultured Cells",
+      "tissue": "ES Cell",
+      "datatype": "H3K27me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E005 H1 BMP4 Derived Trophoblast Cultured Cells",
-      "Tissue": "ES Cell",
-      "Datatype": "H3K4me1",
-      "Variant rsid": "rs12203592"
+      "cell": "E005 H1 BMP4 Derived Trophoblast Cultured Cells",
+      "tissue": "ES Cell",
+      "datatype": "H3K4me1",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E005 H1 BMP4 Derived Trophoblast Cultured Cells",
-      "Tissue": "ES Cell",
-      "Datatype": "H3K27me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E005 H1 BMP4 Derived Trophoblast Cultured Cells",
+      "tissue": "ES Cell",
+      "datatype": "H3K27me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E006 H1 Derived Mesenchymal Stem Cells",
-      "Tissue": "ES Cell",
-      "Datatype": "H3K9me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E006 H1 Derived Mesenchymal Stem Cells",
+      "tissue": "ES Cell",
+      "datatype": "H3K9me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E006 H1 Derived Mesenchymal Stem Cells",
-      "Tissue": "ES Cell",
-      "Datatype": "H3K27me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E006 H1 Derived Mesenchymal Stem Cells",
+      "tissue": "ES Cell",
+      "datatype": "H3K27me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E007 H1 Derived Neuronal Progenitor Cultured Cells",
-      "Tissue": "ES Cell",
-      "Datatype": "H3K4me1",
-      "Variant rsid": "rs12203592"
+      "cell": "E007 H1 Derived Neuronal Progenitor Cultured Cells",
+      "tissue": "ES Cell",
+      "datatype": "H3K4me1",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E007 H1 Derived Neuronal Progenitor Cultured Cells",
-      "Tissue": "ES Cell",
-      "Datatype": "H3K27me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E007 H1 Derived Neuronal Progenitor Cultured Cells",
+      "tissue": "ES Cell",
+      "datatype": "H3K27me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E008 H9 Cells",
-      "Tissue": "ES Cell",
-      "Datatype": "H3K9me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E008 H9 Cells",
+      "tissue": "ES Cell",
+      "datatype": "H3K9me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E008 H9 Cells",
-      "Tissue": "ES Cell",
-      "Datatype": "H3K27me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E008 H9 Cells",
+      "tissue": "ES Cell",
+      "datatype": "H3K27me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E085 Fetal Intestine Small",
-      "Tissue": "Fetal Intestine Small",
-      "Datatype": "H3K27me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E085 Fetal Intestine Small",
+      "tissue": "Fetal Intestine Small",
+      "datatype": "H3K27me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E080 Fetal Adrenal Gland",
-      "Tissue": "Fetal Adrenal Gland",
-      "Datatype": "H3K27me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E080 Fetal Adrenal Gland",
+      "tissue": "Fetal Adrenal Gland",
+      "datatype": "H3K27me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E081 Fetal Brain Male",
-      "Tissue": "Fetal Brain",
-      "Datatype": "H3K27me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E081 Fetal Brain Male",
+      "tissue": "Fetal Brain",
+      "datatype": "H3K27me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E082 Fetal Brain Female",
-      "Tissue": "Fetal Brain",
-      "Datatype": "H3K27me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E082 Fetal Brain Female",
+      "tissue": "Fetal Brain",
+      "datatype": "H3K27me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E083 Fetal Heart",
-      "Tissue": "Fetal Heart",
-      "Datatype": "H3K9me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E083 Fetal Heart",
+      "tissue": "Fetal Heart",
+      "datatype": "H3K9me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E083 Fetal Heart",
-      "Tissue": "Fetal Heart",
-      "Datatype": "H3K27me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E083 Fetal Heart",
+      "tissue": "Fetal Heart",
+      "datatype": "H3K27me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E083 Fetal Heart",
-      "Tissue": "Fetal Heart",
-      "Datatype": "H3K36me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E083 Fetal Heart",
+      "tissue": "Fetal Heart",
+      "datatype": "H3K36me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E084 Fetal Intestine Large",
-      "Tissue": "Fetal Intestine Large",
-      "Datatype": "H3K27me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E084 Fetal Intestine Large",
+      "tissue": "Fetal Intestine Large",
+      "datatype": "H3K27me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E086 Fetal Kidney",
-      "Tissue": "Fetal Kidney",
-      "Datatype": "H3K27me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E086 Fetal Kidney",
+      "tissue": "Fetal Kidney",
+      "datatype": "H3K27me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E088 Fetal Lung",
-      "Tissue": "Fetal Lung",
-      "Datatype": "H3K4me1",
-      "Variant rsid": "rs12203592"
+      "cell": "E088 Fetal Lung",
+      "tissue": "Fetal Lung",
+      "datatype": "H3K4me1",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E088 Fetal Lung",
-      "Tissue": "Fetal Lung",
-      "Datatype": "H3K27me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E088 Fetal Lung",
+      "tissue": "Fetal Lung",
+      "datatype": "H3K27me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E090 Fetal Muscle Leg",
-      "Tissue": "Fetal Muscle Leg",
-      "Datatype": "H3K27me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E090 Fetal Muscle Leg",
+      "tissue": "Fetal Muscle Leg",
+      "datatype": "H3K27me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E089 Fetal Muscle Trunk",
-      "Tissue": "Fetal Muscle Trunk",
-      "Datatype": "H3K27me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E089 Fetal Muscle Trunk",
+      "tissue": "Fetal Muscle Trunk",
+      "datatype": "H3K27me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E092 Fetal Stomach",
-      "Tissue": "Fetal Stomach",
-      "Datatype": "H3K27me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E092 Fetal Stomach",
+      "tissue": "Fetal Stomach",
+      "datatype": "H3K27me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E093 Fetal Thymus",
-      "Tissue": "Fetal Thymus",
-      "Datatype": "H3K27me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E093 Fetal Thymus",
+      "tissue": "Fetal Thymus",
+      "datatype": "H3K27me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E093 Fetal Thymus",
-      "Tissue": "Fetal Thymus",
-      "Datatype": "H3K36me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E093 Fetal Thymus",
+      "tissue": "Fetal Thymus",
+      "datatype": "H3K36me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E094 Gastric",
-      "Tissue": "Gastric",
-      "Datatype": "H3K4me1",
-      "Variant rsid": "rs12203592"
+      "cell": "E094 Gastric",
+      "tissue": "Gastric",
+      "datatype": "H3K4me1",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E094 Gastric",
-      "Tissue": "Gastric",
-      "Datatype": "H3K9me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E094 Gastric",
+      "tissue": "Gastric",
+      "datatype": "H3K9me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E094 Gastric",
-      "Tissue": "Gastric",
-      "Datatype": "H3K27me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E094 Gastric",
+      "tissue": "Gastric",
+      "datatype": "H3K27me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E094 Gastric",
-      "Tissue": "Gastric",
-      "Datatype": "H3K36me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E094 Gastric",
+      "tissue": "Gastric",
+      "datatype": "H3K36me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E021 iPS DF 6.9 Cells",
-      "Tissue": "IPS cell",
-      "Datatype": "H3K27me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E021 iPS DF 6.9 Cells",
+      "tissue": "IPS cell",
+      "datatype": "H3K27me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E022 iPS DF 19.11 Cells",
-      "Tissue": "IPS cell",
-      "Datatype": "H3K27me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E022 iPS DF 19.11 Cells",
+      "tissue": "IPS cell",
+      "datatype": "H3K27me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E017 IMR90 fetal lung fibroblasts Cell Line",
-      "Tissue": "Lung",
-      "Datatype": "H3K27me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E017 IMR90 fetal lung fibroblasts Cell Line",
+      "tissue": "Lung",
+      "datatype": "H3K27me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E097 Ovary",
-      "Tissue": "Ovary",
-      "Datatype": "H3K27me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E097 Ovary",
+      "tissue": "Ovary",
+      "datatype": "H3K27me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E098 Pancreas",
-      "Tissue": "Pancreas",
-      "Datatype": "H3K4me1",
-      "Variant rsid": "rs12203592"
+      "cell": "E098 Pancreas",
+      "tissue": "Pancreas",
+      "datatype": "H3K4me1",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E091 Placenta",
-      "Tissue": "Placenta",
-      "Datatype": "H3K27me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E091 Placenta",
+      "tissue": "Placenta",
+      "datatype": "H3K27me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E100 Psoas Muscle",
-      "Tissue": "Psoas Muscle",
-      "Datatype": "H3K27me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E100 Psoas Muscle",
+      "tissue": "Psoas Muscle",
+      "datatype": "H3K27me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E055 Foreskin Fibroblast Primary Cells skin01",
-      "Tissue": "Skin",
-      "Datatype": "H3K27me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E055 Foreskin Fibroblast Primary Cells skin01",
+      "tissue": "Skin",
+      "datatype": "H3K27me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E055 Foreskin Fibroblast Primary Cells skin01",
-      "Tissue": "Skin",
-      "Datatype": "H3K36me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E055 Foreskin Fibroblast Primary Cells skin01",
+      "tissue": "Skin",
+      "datatype": "H3K36me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E056 Foreskin Fibroblast Primary Cells skin02",
-      "Tissue": "Skin",
-      "Datatype": "H3K27me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E056 Foreskin Fibroblast Primary Cells skin02",
+      "tissue": "Skin",
+      "datatype": "H3K27me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E057 Foreskin Keratinocyte Primary Cells skin02",
-      "Tissue": "Skin",
-      "Datatype": "H3K27me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E057 Foreskin Keratinocyte Primary Cells skin02",
+      "tissue": "Skin",
+      "datatype": "H3K27me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E059 Foreskin Melanocyte Primary Cells skin01",
-      "Tissue": "Skin",
-      "Datatype": "H3K4me1",
-      "Variant rsid": "rs12203592"
+      "cell": "E059 Foreskin Melanocyte Primary Cells skin01",
+      "tissue": "Skin",
+      "datatype": "H3K4me1",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E059 Foreskin Melanocyte Primary Cells skin01",
-      "Tissue": "Skin",
-      "Datatype": "H3K4me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E059 Foreskin Melanocyte Primary Cells skin01",
+      "tissue": "Skin",
+      "datatype": "H3K4me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E059 Foreskin Melanocyte Primary Cells skin01",
-      "Tissue": "Skin",
-      "Datatype": "H3K9me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E059 Foreskin Melanocyte Primary Cells skin01",
+      "tissue": "Skin",
+      "datatype": "H3K9me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E059 Foreskin Melanocyte Primary Cells skin01",
-      "Tissue": "Skin",
-      "Datatype": "H3K36me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E059 Foreskin Melanocyte Primary Cells skin01",
+      "tissue": "Skin",
+      "datatype": "H3K36me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E109 Small Intestine",
-      "Tissue": "Small Intestine",
-      "Datatype": "H3K27me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E109 Small Intestine",
+      "tissue": "Small Intestine",
+      "datatype": "H3K27me3",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "E109 Small Intestine",
-      "Tissue": "Small Intestine",
-      "Datatype": "H3K36me3",
-      "Variant rsid": "rs12203592"
+      "cell": "E109 Small Intestine",
+      "tissue": "Small Intestine",
+      "datatype": "H3K36me3",
+      "rsid": "rs12203592"
     }
   ]
 }

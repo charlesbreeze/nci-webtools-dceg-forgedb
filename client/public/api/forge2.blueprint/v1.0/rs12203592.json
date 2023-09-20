@@ -1,11 +1,1 @@
-{
-  "rsid": "rs12203592",
-  "data": [
-    {
-      "Cell": "macrophage_-_T_6days_untreated",
-      "Tissue": "Venous Blood",
-      "Datatype": "DNase I hotspot",
-      "Variant rsid": "rs12203592"
-    }
-  ]
-}
+{"rsid":"rs12203592","data":[{"rsid":"rs12203592","dataset":"blueprint","cell":"macrophage_-_T_6days_untreated","tissue":"Venous Blood","datatype":"DNase I Hotspot"}]}

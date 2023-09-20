@@ -3,11 +3,11 @@
   "shortTitle": "eQTLGen blood cis-eQTLs",
   "columns": [
     {
-      "name": "Gene Symbol",
+      "name": "GeneSymbol",
       "label": "Gene Symbol"
     },
     {
-      "name": "p-value",
+      "name": "Pvalue",
       "label": "p-value"
     },
     {
@@ -15,55 +15,56 @@
       "label": "rsid"
     },
     {
-      "name": "SNP Chromosome",
+      "name": "SNPChr",
       "label": "SNP Chromosome"
     },
     {
-      "name": "SNP Position",
+      "name": "SNPPos",
       "label": "SNP Position"
     },
     {
-      "name": "Assessed Allele",
+      "name": "AssessedAllele",
       "label": "Assessed Allele"
     },
     {
-      "name": "Other Allele",
+      "name": "OtherAllele",
       "label": "Other Allele"
     },
     {
-      "name": "Z-score",
+      "name": "Zscore",
       "label": "Z-score"
     },
     {
-      "name": "Gene ID",
+      "name": "Gene",
       "label": "Gene ID"
     },
     {
-      "name": "Gene Chromosome",
+      "name": "GeneChr",
       "label": "Gene Chromosome"
     },
     {
-      "name": "Gene Position",
+      "name": "GenePos",
       "label": "Gene Position"
     },
     {
-      "name": "Number of Cohorts",
+      "name": "NrCohorts",
       "label": "Number of Cohorts"
     },
     {
-      "name": "Number of Samples",
+      "name": "NrSamples",
       "label": "Number of Samples"
     },
     {
-      "name": "TISSUE",
-      "label": "TISSUE"
+      "name": "Tissue",
+      "label": "Tissue",
+      "defaultValue": "Blood"
     },
     {
       "name": "FDR",
       "label": "FDR"
     },
     {
-      "name": "Bonferroni p-value",
+      "name": "BonferroniP",
       "label": "Bonferroni p-value"
     }
   ]

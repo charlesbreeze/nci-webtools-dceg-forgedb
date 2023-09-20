@@ -1,15 +1,1 @@
-{
-  "rsid": "rs12203592",
-  "data": [
-    {
-      "chr": "chr6",
-      "start": 396320,
-      "end": 396321,
-      "rsid": "rs12203592",
-      "chr2": "chr6",
-      "start2": 393151,
-      "end2": 407598,
-      "gene name": "IRF4"
-    }
-  ]
-}
+{"rsid":"rs12203592","data":[{"chr":"chr6","start":"396320","end":"396321","rsid":"rs12203592","chr2":"chr6","start2":"393151","end2":"407598","refseq_gene":"IRF4"}]}

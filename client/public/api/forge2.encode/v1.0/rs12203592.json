@@ -2,112 +2,112 @@
   "rsid": "rs12203592",
   "data": [
     {
-      "Cell": "Adult_CD4+",
-      "Tissue": "Blood",
-      "Datatype": "DNase I hotspot",
-      "Variant rsid": "rs12203592"
+      "cell": "Adult_CD4+",
+      "tissue": "Blood",
+      "datatype": "DNase I hotspot",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "CD20+",
-      "Tissue": "Blood",
-      "Datatype": "DNase I hotspot",
-      "Variant rsid": "rs12203592"
+      "cell": "CD20+",
+      "tissue": "Blood",
+      "datatype": "DNase I hotspot",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "CMK",
-      "Tissue": "Blood",
-      "Datatype": "DNase I hotspot",
-      "Variant rsid": "rs12203592"
+      "cell": "CMK",
+      "tissue": "Blood",
+      "datatype": "DNase I hotspot",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "GM12864",
-      "Tissue": "Blood",
-      "Datatype": "DNase I hotspot",
-      "Variant rsid": "rs12203592"
+      "cell": "GM12864",
+      "tissue": "Blood",
+      "datatype": "DNase I hotspot",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "GM12865",
-      "Tissue": "Blood",
-      "Datatype": "DNase I hotspot",
-      "Variant rsid": "rs12203592"
+      "cell": "GM12865",
+      "tissue": "Blood",
+      "datatype": "DNase I hotspot",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "GM12878",
-      "Tissue": "Blood",
-      "Datatype": "DNase I hotspot",
-      "Variant rsid": "rs12203592"
+      "cell": "GM12878",
+      "tissue": "Blood",
+      "datatype": "DNase I hotspot",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "Osteobl",
-      "Tissue": "Bone",
-      "Datatype": "DNase I hotspot",
-      "Variant rsid": "rs12203592"
+      "cell": "Osteobl",
+      "tissue": "Bone",
+      "datatype": "DNase I hotspot",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "Medullo",
-      "Tissue": "Brain",
-      "Datatype": "DNase I hotspot",
-      "Variant rsid": "rs12203592"
+      "cell": "Medullo",
+      "tissue": "Brain",
+      "datatype": "DNase I hotspot",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "MCF-7",
-      "Tissue": "Breast",
-      "Datatype": "DNase I hotspot",
-      "Variant rsid": "rs12203592"
+      "cell": "MCF-7",
+      "tissue": "Breast",
+      "datatype": "DNase I hotspot",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "8988T",
-      "Tissue": "Liver",
-      "Datatype": "DNase I hotspot",
-      "Variant rsid": "rs12203592"
+      "cell": "8988T",
+      "tissue": "Liver",
+      "datatype": "DNase I hotspot",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "Hepatocytes",
-      "Tissue": "Liver",
-      "Datatype": "DNase I hotspot",
-      "Variant rsid": "rs12203592"
+      "cell": "Hepatocytes",
+      "tissue": "Liver",
+      "datatype": "DNase I hotspot",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "Huh-7.5",
-      "Tissue": "Liver",
-      "Datatype": "DNase I hotspot",
-      "Variant rsid": "rs12203592"
+      "cell": "Huh-7.5",
+      "tissue": "Liver",
+      "datatype": "DNase I hotspot",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "Myometr",
-      "Tissue": "Myometrium",
-      "Datatype": "DNase I hotspot",
-      "Variant rsid": "rs12203592"
+      "cell": "Myometr",
+      "tissue": "Myometrium",
+      "datatype": "DNase I hotspot",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "PANC-1",
-      "Tissue": "Pancreas",
-      "Datatype": "DNase I hotspot",
-      "Variant rsid": "rs12203592"
+      "cell": "PANC-1",
+      "tissue": "Pancreas",
+      "datatype": "DNase I hotspot",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "PanIslets",
-      "Tissue": "Pancreas",
-      "Datatype": "DNase I hotspot",
-      "Variant rsid": "rs12203592"
+      "cell": "PanIslets",
+      "tissue": "Pancreas",
+      "datatype": "DNase I hotspot",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "HPDE6-E6E7",
-      "Tissue": "Pancreatic duct",
-      "Datatype": "DNase I hotspot",
-      "Variant rsid": "rs12203592"
+      "cell": "HPDE6-E6E7",
+      "tissue": "Pancreatic duct",
+      "datatype": "DNase I hotspot",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "Melano",
-      "Tissue": "Skin",
-      "Datatype": "DNase I hotspot",
-      "Variant rsid": "rs12203592"
+      "cell": "Melano",
+      "tissue": "Skin",
+      "datatype": "DNase I hotspot",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "ProgFib",
-      "Tissue": "Skin",
-      "Datatype": "DNase I hotspot",
-      "Variant rsid": "rs12203592"
+      "cell": "ProgFib",
+      "tissue": "Skin",
+      "datatype": "DNase I hotspot",
+      "rsid": "rs12203592"
     }
   ]
 }

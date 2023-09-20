@@ -31,11 +31,11 @@
       "label": "end2"
     },
     {
-      "name": "TF motif name",
+      "name": "motif_name",
       "label": "TF motif name"
     },
     {
-      "name": "p-value",
+      "name": "pval",
       "label": "p-value"
     },
     {
@@ -43,7 +43,7 @@
       "label": "strand"
     },
     {
-      "name": "genomic sequence",
+      "name": "sequence",
       "label": "genomic sequence"
     }
   ]

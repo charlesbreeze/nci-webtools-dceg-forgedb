@@ -1,49 +1,74 @@
 {
   "title": "GTEx cis-eQTL information <small>(for more details, see <a target='_blank' rel='noopener noreferrer' href='https://gtexportal.org/home/'>https://gtexportal.org/home/</a>)</small>",
   "shortTitle": "GTEx cis-eQTLs",
+  "example":  {
+    "rsid": "rs12203592",
+    "gene_id_1": "ENSG00000137265",
+    "variant_id": "chr6_396321_C_T_b38",
+    "gene_id": "ENSG00000137265.14",
+    "tss_distance": "4582",
+    "ma_samples": "127",
+    "ma_count": "134",
+    "maf": "0.142857",
+    "pval_nominal": "3.193e-06",
+    "slope": "0.314227",
+    "slope_se": "0.066502",
+    "pval_nominal_threshold": "7.71521e-05",
+    "min_pval_nominal": "3.193e-06",
+    "pval_beta": "0.00968924",
+    "biosample": "Adipose_Visceral_Omentum.v8.signif_variant_gene_pairs.txt",
+    "chr": "chr6",
+    "variant_pos": "396321",
+    "ref": "C",
+    "alt": "T",
+    "num_alt_per_site": "1",
+    "rs_id_dbSNP151_GRCh38p7": "rs12203592",
+    "variant_id_b37": "6_396321_C_T_b37",
+    "gene_symbol": "IRF4"
+  },
   "columns": [
     {
-      "name": "gene symbol",
+      "name": "gene_symbol",
       "label": "gene symbol"
     },
     {
-      "name": "gene ID",
+      "name": "gene_id_1",
       "label": "gene ID"
     },
     {
-      "name": "variant ID",
+      "name": "variant_id",
       "label": "variant ID"
     },
     {
-      "name": "gene ID2",
+      "name": "gene_id",
       "label": "gene ID2"
     },
     {
-      "name": "TSS distance",
+      "name": "tss_distance",
       "label": "TSS distance"
     },
     {
-      "name": "reference allele",
+      "name": "ref",
       "label": "reference allele"
     },
     {
-      "name": "alternative allele",
+      "name": "alt",
       "label": "alternative allele"
     },
     {
-      "name": "MA samples",
+      "name": "ma_samples",
       "label": "MA samples"
     },
     {
-      "name": "MA count",
+      "name": "ma_count",
       "label": "MA count"
     },
     {
-      "name": "MAF",
+      "name": "maf",
       "label": "MAF"
     },
     {
-      "name": "p-value nominal",
+      "name": "min_pval_nominal",
       "label": "p-value nominal"
     },
     {
@@ -51,19 +76,19 @@
       "label": "slope"
     },
     {
-      "name": "slope se",
+      "name": "slope_se",
       "label": "slope se"
     },
     {
-      "name": "p-value nominal threshold",
+      "name": "pval_nominal_threshold",
       "label": "p-value nominal threshold"
     },
     {
-      "name": "min p-value nominal",
+      "name": "min_pval_nominal",
       "label": "min p-value nominal"
     },
     {
-      "name": "p-value beta",
+      "name": "pval_beta",
       "label": "p-value beta"
     },
     {
@@ -71,23 +96,23 @@
       "label": "biosample"
     },
     {
-      "name": "chr (hg38)",
+      "name": "chr",
       "label": "chr (hg38)"
     },
     {
-      "name": "variant position (hg38)",
+      "name": "variant_pos",
       "label": "variant position (hg38)"
     },
     {
-      "name": "num alternative alleles per site",
+      "name": "num_alt_per_site",
       "label": "num alternative alleles per site"
     },
     {
-      "name": "rs ID dbSNP151 GRCh38p7",
+      "name": "rs_id_dbSNP151_GRCh38p7",
       "label": "rs ID dbSNP151 GRCh38p7"
     },
     {
-      "name": "variant ID b37",
+      "name": "variant_id_b37",
       "label": "variant ID b37"
     }
   ]

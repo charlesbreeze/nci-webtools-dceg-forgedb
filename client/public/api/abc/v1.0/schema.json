@@ -3,15 +3,15 @@
   "shortTitle": "ABC contacts",
   "columns": [
     {
-      "name": "SNP chromosome",
+      "name": "chr1",
       "label": "SNP chromosome"
     },
     {
-      "name": "SNP start",
+      "name": "start1",
       "label": "SNP start"
     },
     {
-      "name": "SNP end",
+      "name": "end1",
       "label": "SNP end"
     },
     {
@@ -19,15 +19,15 @@
       "label": "rsid"
     },
     {
-      "name": "bait chromosome",
+      "name": "chr",
       "label": "bait chromosome"
     },
     {
-      "name": "bait start",
+      "name": "start",
       "label": "bait start"
     },
     {
-      "name": "bait end",
+      "name": "end",
       "label": "bait end"
     },
     {
@@ -39,7 +39,7 @@
       "label": "class"
     },
     {
-      "name": "activity base",
+      "name": "activity_base",
       "label": "activity base"
     },
     {
@@ -71,43 +71,43 @@
       "label": "isSelfPromoter"
     },
     {
-      "name": "Hi-C contact",
+      "name": "hic_contact",
       "label": "Hi-C contact"
     },
     {
-      "name": "powerlaw contact",
+      "name": "powerlaw_contact",
       "label": "powerlaw contact"
     },
     {
-      "name": "powerlaw contact reference",
+      "name": "powerlaw_contact_reference",
       "label": "powerlaw contact reference"
     },
     {
-      "name": "Hi-C contact pl scaled",
+      "name": "hic_contact_pl_scaled",
       "label": "Hi-C contact pl scaled"
     },
     {
-      "name": "Hi-C pseudocount",
+      "name": "hic_pseudocount",
       "label": "Hi-C pseudocount"
     },
     {
-      "name": "Hi-C contact pl scaled adj",
+      "name": "hic_contact_pl_scaled_adj",
       "label": "Hi-C contact pl scaled adj"
     },
     {
-      "name": "ABC Score Numerator",
+      "name": "ABC_Score_Numerator",
       "label": "ABC Score Numerator"
     },
     {
-      "name": "ABC Score",
+      "name": "ABC_Score",
       "label": "ABC Score"
     },
     {
-      "name": "powerlaw Score Numerator",
+      "name": "powerlaw_Score_Numerator",
       "label": "powerlaw Score Numerator"
     },
     {
-      "name": "powerlaw Score",
+      "name": "powerlaw_Score",
       "label": "powerlaw Score"
     },
     {
@@ -115,7 +115,7 @@
       "label": "CellType"
     },
     {
-      "name": "base overlap",
+      "name": "base_overlap",
       "label": "base overlap"
     }
   ]

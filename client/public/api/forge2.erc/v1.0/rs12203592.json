@@ -2,82 +2,82 @@
   "rsid": "rs12203592",
   "data": [
     {
-      "Cell": "CD3",
-      "Tissue": "Blood",
-      "Datatype": "DNase I hotspot",
-      "Variant rsid": "rs12203592"
+      "cell": "CD3",
+      "tissue": "Blood",
+      "datatype": "DNase I hotspot",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "CD4",
-      "Tissue": "Blood",
-      "Datatype": "DNase I hotspot",
-      "Variant rsid": "rs12203592"
+      "cell": "CD4",
+      "tissue": "Blood",
+      "datatype": "DNase I hotspot",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "CD4",
-      "Tissue": "Blood",
-      "Datatype": "DNase I hotspot",
-      "Variant rsid": "rs12203592"
+      "cell": "CD4",
+      "tissue": "Blood",
+      "datatype": "DNase I hotspot",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "CD19",
-      "Tissue": "Blood",
-      "Datatype": "DNase I hotspot",
-      "Variant rsid": "rs12203592"
+      "cell": "CD19",
+      "tissue": "Blood",
+      "datatype": "DNase I hotspot",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "CD19",
-      "Tissue": "Blood",
-      "Datatype": "DNase I hotspot",
-      "Variant rsid": "rs12203592"
+      "cell": "CD19",
+      "tissue": "Blood",
+      "datatype": "DNase I hotspot",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "CD34_Mobilised;",
-      "Tissue": "Blood",
-      "Datatype": "DNase I hotspot",
-      "Variant rsid": "rs12203592"
+      "cell": "CD34_Mobilised;",
+      "tissue": "Blood",
+      "datatype": "DNase I hotspot",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "CD34_Mobilised;",
-      "Tissue": "Blood",
-      "Datatype": "DNase I hotspot",
-      "Variant rsid": "rs12203592"
+      "cell": "CD34_Mobilised;",
+      "tissue": "Blood",
+      "datatype": "DNase I hotspot",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "CD56_Mobilised;",
-      "Tissue": "Blood",
-      "Datatype": "DNase I hotspot",
-      "Variant rsid": "rs12203592"
+      "cell": "CD56_Mobilised;",
+      "tissue": "Blood",
+      "datatype": "DNase I hotspot",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "Fetal_Kidney",
-      "Tissue": "Fetal Kidney",
-      "Datatype": "DNase I hotspot",
-      "Variant rsid": "rs12203592"
+      "cell": "Fetal_Kidney",
+      "tissue": "Fetal Kidney",
+      "datatype": "DNase I hotspot",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "Fetal_Muscle_Arm",
-      "Tissue": "Fetal Muscle",
-      "Datatype": "DNase I hotspot",
-      "Variant rsid": "rs12203592"
+      "cell": "Fetal_Muscle_Arm",
+      "tissue": "Fetal Muscle",
+      "datatype": "DNase I hotspot",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "Fetal_Muscle_Back",
-      "Tissue": "Fetal Muscle",
-      "Datatype": "DNase I hotspot",
-      "Variant rsid": "rs12203592"
+      "cell": "Fetal_Muscle_Back",
+      "tissue": "Fetal Muscle",
+      "datatype": "DNase I hotspot",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "Penis_Foreskin_Melanocyte",
-      "Tissue": "Skin",
-      "Datatype": "DNase I hotspot",
-      "Variant rsid": "rs12203592"
+      "cell": "Penis_Foreskin_Melanocyte",
+      "tissue": "Skin",
+      "datatype": "DNase I hotspot",
+      "rsid": "rs12203592"
     },
     {
-      "Cell": "Penis_Foreskin_Melanocyte",
-      "Tissue": "Skin",
-      "Datatype": "DNase I hotspot",
-      "Variant rsid": "rs12203592"
+      "cell": "Penis_Foreskin_Melanocyte",
+      "tissue": "Skin",
+      "datatype": "DNase I hotspot",
+      "rsid": "rs12203592"
     }
   ]
 }

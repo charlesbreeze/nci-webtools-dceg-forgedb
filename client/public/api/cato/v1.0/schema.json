@@ -19,7 +19,7 @@
       "label": "rsid"
     },
     {
-      "name": "CATO score",
+      "name": "catoscore",
       "label": "CATO score"
     },
     {
@@ -27,7 +27,7 @@
       "label": "strand"
     },
     {
-      "name": "TF motif",
+      "name": "motif",
       "label": "TF motif"
     },
     {
@@ -47,7 +47,7 @@
       "label": "score2"
     },
     {
-      "name": "biosample",
+      "name": "tissuesample",
       "label": "biosample"
     }
   ]

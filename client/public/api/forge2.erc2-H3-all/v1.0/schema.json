@@ -3,28 +3,28 @@
   "shortTitle": "FORGE2 consolidated roadmap H3 histone marks (erc2-H3-all)",
   "columns": [
     {
-      "name": "Cell",
+      "name": "cell",
       "label": "Cell",
       "style": {
         "width": "40%"
       }
     },
     {
-      "name": "Tissue",
+      "name": "tissue",
       "label": "Tissue",
       "style": {
         "width": "20%"
       }
     },
     {
-      "name": "Datatype",
+      "name": "datatype",
       "label": "Datatype",
       "style": {
         "width": "20%"
       }
     },
     {
-      "name": "Variant rsid",
+      "name": "rsid",
       "label": "Variant rsid",
       "style": {
         "width": "20%"

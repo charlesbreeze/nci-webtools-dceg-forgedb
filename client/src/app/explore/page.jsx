@@ -42,7 +42,7 @@ export default function Explore() {
 
               <form action={`${process.env.NEXT_PUBLIC_BASE_PATH}/explore`} className="mb-2">
                 <div className="input-group border-bottom border-white border-2">
-                  <input className="form-control bg-transparent border-0 shadow-0 no-clear-control text-light placeholder-light fw-light ps-0 fs-1" type="search" placeholder="rsid" defaultValue={rsid} aria-label="Enter RSID" name="rsid" pattern="^rs\d+" required style={{ width: "200px" }} autoFocus  />
+                  <input className="form-control bg-transparent border-0 shadow-0 no-clear-control text-light placeholder-light fw-light ps-0 fs-1" type="search" placeholder="rsid" defaultValue={rsid} aria-label="Enter RSID" name="rsid" pattern="^rs\d+" required style={{ width: "200px" }}  />
                   <button className="btn btn-outline-secondary bg-transparent border-0 text-light fs-3" type="submit">
                     <i className="bi bi-search"></i>
                     <span className="visually-hidden">Search</span>
@@ -64,7 +64,7 @@ export default function Explore() {
                 <>
                   <div className="d-flex mb-3">
                     <div className="me-3 form-floating d-inline-block">
-                      <input className="form-control w-auto" id="search" placeholder="Search" value={search} onChange={(e) => setSearch(e.target.value)} />
+                      <input className="form-control w-auto" id="search" placeholder="Search" value={search} onChange={(e) => setSearch(e.target.value)} autoFocus />
                       <label htmlFor="search">Search</label>
                     </div>
                   </div>

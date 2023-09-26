@@ -16,7 +16,7 @@
     "react-dom": "18.2.0",
     "recoil": "^0.7.7",
     "sass": "^1.68.0",
-    "swagger-ui-react": "^5.7.2",
+    "swagger-ui-react": "5.3.2",
     "swr": "^2.2.4"
   },
   "devDependencies": {

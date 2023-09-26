@@ -1,1 +1,41 @@
-{"rsid":"rs12203592","data":[{"rsid":"rs12203592","Pvalue":"1.4771E-29","SNP":"rs12203592","SNPChr":"6","SNPPos":"396321","AssessedAllele":"T","OtherAllele":"C","Zscore":"11.2896","Gene":"ENSG00000137265","GeneSymbol":"IRF4","GeneChr":"6","GenePos":"401593","NrCohorts":"33","NrSamples":"30912","FDR":"0.0","BonferroniP":"1.8810E-21"},{"rsid":"rs12203592","Pvalue":"6.4207E-11","SNP":"rs12203592","SNPChr":"6","SNPPos":"396321","AssessedAllele":"T","OtherAllele":"C","Zscore":"-6.5335","Gene":"ENSG00000112685","GeneSymbol":"EXOC2","GeneChr":"6","GenePos":"589125","NrCohorts":"33","NrSamples":"30912","FDR":"0.0","BonferroniP":"0.008176234824186"}]}
+{
+  "rsid": "rs12203592",
+  "data": [
+    {
+      "rsid": "rs12203592",
+      "pvalue": "1.4771E-29",
+      "snp_chromosome": "chr6",
+      "snp_position": "396321",
+      "assessed_allele": "T",
+      "other_allele": "C",
+      "zscore": "11.2896",
+      "ensembl_gene": "ENSG00000137265",
+      "gene_symbol": "IRF4",
+      "gene_chromosome": "chr6",
+      "gene_position": "401593",
+      "number_of_cohorts": "33",
+      "number_of_samples": "30912",
+      "false_discovery_rate": "0.0",
+      "bonferroni_pvalue": "1.8810E-21",
+      "tissue": "Blood"
+    },
+    {
+      "rsid": "rs12203592",
+      "pvalue": "6.4207E-11",
+      "snp_chromosome": "chr6",
+      "snp_position": "396321",
+      "assessed_allele": "T",
+      "other_allele": "C",
+      "zscore": "-6.5335",
+      "ensembl_gene": "ENSG00000112685",
+      "gene_symbol": "EXOC2",
+      "gene_chromosome": "chr6",
+      "gene_position": "589125",
+      "number_of_cohorts": "33",
+      "number_of_samples": "30912",
+      "false_discovery_rate": "0.0",
+      "bonferroni_pvalue": "0.008176234824186",
+      "tissue": "Blood"
+    }
+  ]
+}

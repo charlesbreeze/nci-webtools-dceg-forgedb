@@ -3,38 +3,35 @@
   "shortTitle": "Zoonomia conservation information: Human PhyloP score V2",
   "columns": [
     {
-      "name": "chr",
-      "label": "chr"
-    },
-    {
-      "name": "start",
-      "label": "start"
-    },
-    {
-      "name": "end",
-      "label": "end"
-    },
-    {
       "name": "rsid",
       "label": "rsid"
     },
     {
-      "name": "chr2",
-      "label": "chr2",
-      "description": "PhyloP chromosome"
+      "name": "snp_chromosome",
+      "label": "snp chromosome"
     },
     {
-      "name": "start2",
-      "label": "start2",
-      "description": "PhyloP start position"
+      "name": "snp_start_position",
+      "label": "snp start position"
     },
     {
-      "name": "end2",
-      "label": "end2",
-      "description": "PhyloP end position"
+      "name": "snp_end_position",
+      "label": "snp end position"
     },
     {
-      "name": "Zoonomia_PhyloP_Score",
+      "name": "phylop_chromosome",
+      "label": "PhyloP chromosome"
+    },
+    {
+      "name": "phylop_start_position",
+      "label": "PhyloP Start Position"
+    },
+    {
+      "name": "phylop_end_position",
+      "label": "PhyloP End Position"
+    },
+    {
+      "name": "zoonomia_phylop_score",
       "label": "Zoonomia PhyloP Score"
     }
   ]

@@ -1,70 +1,86 @@
 {
   "title": "<a target='_blank' rel='noopener noreferrer' href='https://www.nature.com/articles/s41588-021-00913-z'>eQTLGen</a> blood FDR 0.05 cis-eQTL information <small>(hg19, for more details, see <a target='_blank' rel='noopener noreferrer' href='https://www.eqtlgen.org/'>https://www.eqtlgen.org</a>)</small>",
   "shortTitle": "eQTLGen blood cis-eQTLs",
+  "example": {
+    "rsid": "rs12203592",
+    "pvalue": "1.4771E-29",
+    "snp_chromosome": "chr6",
+    "snp_position": "396321",
+    "assessed_allele": "T",
+    "other_allele": "C",
+    "zscore": "11.2896",
+    "ensembl_gene": "ENSG00000137265",
+    "gene_symbol": "IRF4",
+    "gene_chromosome": "6",
+    "gene_position": "401593",
+    "number_of_cohorts": "33",
+    "number_of_samples": "30912",
+    "false_discovery_rate": "0.0",
+    "bonferroni_pvalue": "1.8810E-21"
+  },
   "columns": [
-    {
-      "name": "GeneSymbol",
-      "label": "Gene Symbol"
-    },
-    {
-      "name": "Pvalue",
-      "label": "p-value"
-    },
     {
       "name": "rsid",
       "label": "rsid"
     },
     {
-      "name": "SNPChr",
+      "name": "snp_chromosome",
       "label": "SNP Chromosome"
     },
     {
-      "name": "SNPPos",
+      "name": "snp_position",
       "label": "SNP Position"
     },
     {
-      "name": "AssessedAllele",
-      "label": "Assessed Allele"
+      "name": "gene_symbol",
+      "label": "Gene Symbol"
     },
     {
-      "name": "OtherAllele",
-      "label": "Other Allele"
+      "name": "ensembl_gene",
+      "label": "Ensembl Gene ID"
     },
     {
-      "name": "Zscore",
-      "label": "Z-score"
-    },
-    {
-      "name": "Gene",
-      "label": "Gene ID"
-    },
-    {
-      "name": "GeneChr",
+      "name": "gene_chromosome",
       "label": "Gene Chromosome"
     },
     {
-      "name": "GenePos",
+      "name": "gene_position",
       "label": "Gene Position"
     },
     {
-      "name": "NrCohorts",
+      "name": "pvalue",
+      "label": "p-value"
+    },
+    {
+      "name": "assessed_allele",
+      "label": "Assessed Allele"
+    },
+    {
+      "name": "other_allele",
+      "label": "Other Allele"
+    },
+    {
+      "name": "zscore",
+      "label": "Z-score"
+    },
+    {
+      "name": "number_of_cohorts",
       "label": "Number of Cohorts"
     },
     {
-      "name": "NrSamples",
+      "name": "number_of_samples",
       "label": "Number of Samples"
     },
     {
-      "name": "Tissue",
-      "label": "Tissue",
-      "defaultValue": "Blood"
+      "name": "tissue",
+      "label": "Tissue"
     },
     {
-      "name": "FDR",
+      "name": "false_discovery_rate",
       "label": "FDR"
     },
     {
-      "name": "BonferroniP",
+      "name": "bonferroni_pvalue",
       "label": "Bonferroni p-value"
     }
   ]

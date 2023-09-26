@@ -17,7 +17,7 @@
   },
   {
     "name": "abc",
-    "forgedb_versions": [{ "version": "v1.0", "metadata": { "original_version": "v3.0", "url": "https://www.engreitzlab.org/resources", "download_url": "https://mitra.stanford.edu/engreitz/oak/public/Nasser2021/AllPredictions.AvgHiC.ABC0.015.minus150.ForABCPaperV3.txt.gz", "notes": "ABC predictions in 131 cell types and tissues (all element-gene connections with ABC scores >= 0.015; from Nasser et al. Nature (2021), Downloaded 2020-07-03" } }]
+    "forgedb_versions": [{ "version": "v1.0", "metadata": { "original_version": "v3.0", "url": "https://www.engreitzlab.org/resources", "download_url": "https://mitra.stanford.edu/engreitz/oak/public/Nasser2021/AllPredictions.AvgHiC.ABC0.015.minus150.ForABCPaperV3.txt.gz", "notes": "ABC predictions in 131 cell types and tissues (all element-gene connections with ABC scores >= 0.015; from Nasser et al. Nature (2021)), Downloaded 2020-07-03" } }]
   },
   {
     "name": "forge2tf",

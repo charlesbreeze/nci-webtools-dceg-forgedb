@@ -39,7 +39,7 @@
             "in": "path",
             "description": "Dataset name",
             "required": true,
-            "example": "closestGene",
+            "example": "closest_gene",
             "schema": {
               "type": "string"
             }
@@ -77,7 +77,7 @@
             "in": "path",
             "description": "Dataset name",
             "required": true,
-            "example": "closestGene",
+            "example": "closest_gene",
             "schema": {
               "type": "string"
             }

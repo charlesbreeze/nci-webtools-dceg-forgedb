@@ -12,23 +12,22 @@ export default function Explore() {
 
   const { data: datasetsResponse, error: datasetsError, isLoading: datasetsLoading } = useSWR([`${process.env.NEXT_PUBLIC_BASE_PATH}/api/datasets.json`], fetchBatch);
   const datasets = datasetsResponse ? datasetsResponse[0] : [];
-  const schemaQueries = datasets.map(({ name, versions }) => `${process.env.NEXT_PUBLIC_BASE_PATH}/api/${name}/${versions[0]}/schema.json`);
-  const tableQueries = datasets.map(({ name, versions }) => `${process.env.NEXT_PUBLIC_BASE_PATH}/api/${name}/${versions[0]}/${rsid}.json`);
+  const schemaQueries = datasets.map(({ name, forgedb_versions }) => `${process.env.NEXT_PUBLIC_BASE_PATH}/api/${name}/${forgedb_versions[0].version}/schema.json`);
+  const tableQueries = datasets.map(({ name, forgedb_versions }) => `${process.env.NEXT_PUBLIC_BASE_PATH}/api/${name}/${forgedb_versions[0].version}/${rsid}.json`);
   const { data: schemaData, error: schemaError, isLoading: schemaLoading } = useSWR(schemaQueries, fetchBatch);
   const { data: tableData, error: tableError, isLoading: tableLoading } = useSWR(tableQueries, fetchBatch);
 
   // combine datasets, schema, and table data
   const isLoading = datasetsLoading || schemaLoading || tableLoading;
-  const data = datasets?.map(({ name, versions }, index) => ({
+  const data = datasets?.map(({ name, forgedb_versions }, index) => ({
     name,
-    version: versions[0],
+    version: forgedb_versions[0]?.version,
     schema: schemaData?.[index] || null,
     originalTable: tableData?.[index]?.data,
     table: tableData?.[index]?.data?.filter(getRowFilter(search, schemaData?.[index])),
   }));
   const forgeDbScore = getForgeDbScore(data);
-  const closestGene = data?.find((d) => d.name === "closestGene")?.originalTable?.[0];
-  const hasData = data?.some((d) => d.originalTable?.length > 0);
+  const closestGene = data?.find((d) => d.name === "closest_gene")?.originalTable?.[0];
 
   return (
     <>
@@ -121,6 +120,13 @@ export default function Explore() {
                                   ))}
                                 </tr>
                               ))}
+                              {!table?.length && (
+                                <tr>
+                                  <td colSpan={schema.columns.length} className="text-center p-2">
+                                    No data available
+                                  </td>
+                                </tr>
+                              )}
                             </tbody>
                           </table>
                         </div>

@@ -2,28 +2,31 @@
   "rsid": "rs12203592",
   "data": [
     {
-      "chromosome": 6,
-      "position": 396321,
+      "rsid": "rs12203592",
+      "snp_chromosome": "chr6",
+      "snp_position": 396321,
       "reference_allele": "C",
       "alternative_allele": "A",
-      "raw_CADD_score": 0.639586,
-      "PHRED_score": 10.65
+      "raw_cadd_score": 0.639586,
+      "phred_score": 10.65
     },
     {
-      "chromosome": 6,
-      "position": 396321,
+      "rsid": "rs12203592",
+      "snp_chromosome": "chr6",
+      "snp_position": 396321,
       "reference_allele": "C",
       "alternative_allele": "G",
-      "raw_CADD_score": 0.629036,
-      "PHRED_score": 10.56
+      "raw_cadd_score": 0.629036,
+      "phred_score": 10.56
     },
     {
-      "chromosome": 6,
-      "position": 396321,
+      "rsid": "rs12203592",
+      "snp_chromosome": "chr6",
+      "snp_position": 396321,
       "reference_allele": "C",
       "alternative_allele": "T",
-      "raw_CADD_score": 0.687756,
-      "PHRED_score": 11.05
+      "raw_cadd_score": 0.687756,
+      "phred_score": 11.05
     }
   ]
 }

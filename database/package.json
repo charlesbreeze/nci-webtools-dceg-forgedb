@@ -11,8 +11,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.400.0",
+    "@aws-sdk/client-s3": "^3.420.0",
     "csv": "^6.3.3",
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "p-queue": "^7.4.1"
   }
 }

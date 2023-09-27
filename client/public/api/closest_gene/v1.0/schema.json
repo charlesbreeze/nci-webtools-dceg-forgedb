@@ -1,0 +1,42 @@
+{
+  "title": "RefSeq closest gene information <small>(hg19, for more details, see <a target='_blank' rel='noopener noreferrer' href='https://www.ncbi.nlm.nih.gov/refseq/about/'>NCBI RefSeq</a>)</small>",
+  "shortTitle": "RefSeq closest gene data",
+  "columns": [
+    {
+      "name": "rsid",
+      "label": "rsid"
+    },
+    {
+      "name": "snp_chromosome",
+      "label": "snp chromosome"
+    },
+    {
+      "name": "snp_start_position",
+      "label": "snp start position"
+    },
+    {
+      "name": "snp_end_position",
+      "label": "snp end position"
+    },
+    {
+      "name": "gene_chromosome",
+      "label": "gene chromosome"
+    },
+    {
+      "name": "gene_start_position",
+      "label": "gene start position"
+    },
+    {
+      "name": "gene_end_position",
+      "label": "gene end position"
+    },
+    {
+      "name": "gene_symbol",
+      "label": "gene symbol"
+    },
+    {
+      "name": "gene_strand",
+      "label": "gene strand"
+    }
+  ]
+}

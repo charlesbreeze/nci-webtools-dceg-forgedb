@@ -3,28 +3,28 @@
   "shortTitle": "CADD v1.6 annotations",
   "columns": [
     {
-      "name": "chromosome",
-      "label": "chromosome"
+      "name": "snp_chromosome",
+      "label": "snp chromosome"
     },
     {
-      "name": "position",
-      "label": "position"
+      "name": "snp_position",
+      "label": "snp position"
     },
     {
       "name": "reference_allele",
-      "label": "reference_allele"
+      "label": "reference allele"
     },
     {
       "name": "alternative_allele",
-      "label": "alternative_allele"
+      "label": "alternative allele"
     },
     {
-      "name": "raw_CADD_score",
-      "label": "raw_CADD_score"
+      "name": "raw_cadd_score",
+      "label": "raw cadd score"
     },
     {
-      "name": "PHRED_score",
-      "label": "PHRED_score"
+      "name": "phred_score",
+      "label": "phred score"
     }
   ]
 }

@@ -3,84 +3,84 @@
   "shortTitle": "ABC contacts",
   "columns": [
     {
-      "name": "chr1",
-      "label": "SNP chromosome"
-    },
-    {
-      "name": "start1",
-      "label": "SNP start"
-    },
-    {
-      "name": "end1",
-      "label": "SNP end"
-    },
-    {
       "name": "rsid",
       "label": "rsid"
     },
     {
-      "name": "chr",
-      "label": "bait chromosome"
+      "name": "snp_chromosome",
+      "label": "SNP chromosome"
     },
     {
-      "name": "start",
-      "label": "bait start"
+      "name": "snp_start_position",
+      "label": "SNP start position"
     },
     {
-      "name": "end",
-      "label": "bait end"
+      "name": "snp_end_position",
+      "label": "SNP end position"
+    },
+    {
+      "name": "bait_chromosome",
+      "label": "Bait chromosome"
+    },
+    {
+      "name": "bait_start_position",
+      "label": "Bait start position"
+    },
+    {
+      "name": "bait_end_position",
+      "label": "Bait end position"
     },
     {
       "name": "name",
-      "label": "name"
+      "label": "Name"
     },
     {
       "name": "class",
-      "label": "class"
+      "label": "Class"
     },
     {
       "name": "activity_base",
-      "label": "activity base"
+      "label": "Activity base"
     },
     {
-      "name": "TargetGene",
+      "name": "target_gene",
       "label": "Target Gene"
     },
     {
-      "name": "TargetGeneTSS",
+      "name": "target_gene_tss",
       "label": "Target Gene TSS"
     },
     {
-      "name": "TargetGeneExpression",
+      "name": "target_gene_expression",
       "label": "Target Gene Expression"
     },
     {
-      "name": "TargetGenePromoterActivityQuantile",
+      "name": "target_gene_promoter_activity_quantile",
       "label": "Target Gene Promoter Activity Quantile"
     },
     {
-      "name": "TargetGeneIsExpressed",
-      "label": "Target Gene Is Expressed"
+      "name": "target_gene_is_expressed",
+      "label": "Target Gene Is Expressed?"
     },
     {
       "name": "distance",
-      "label": "distance"
+      "label": "Distance"
     },
     {
-      "name": "isSelfPromoter",
-      "label": "isSelfPromoter"
+      "name": "is_self_promoter",
+      "label": "Is Self Promoter?"
+    },
+    {
+      "name": "powerlaw_contact",
+      "label": "Powerlaw contact"
+    },
+    {
+      "name": "powerlaw_contact_reference",
+      "label": "Powerlaw contact reference"
     },
     {
       "name": "hic_contact",
       "label": "Hi-C contact"
-    },
-    {
-      "name": "powerlaw_contact",
-      "label": "powerlaw contact"
-    },
-    {
-      "name": "powerlaw_contact_reference",
-      "label": "powerlaw contact reference"
     },
     {
       "name": "hic_contact_pl_scaled",
@@ -95,28 +95,28 @@
       "label": "Hi-C contact pl scaled adj"
     },
     {
-      "name": "ABC_Score_Numerator",
+      "name": "abc_score_numerator",
       "label": "ABC Score Numerator"
     },
     {
-      "name": "ABC_Score",
+      "name": "abc_score",
       "label": "ABC Score"
     },
     {
-      "name": "powerlaw_Score_Numerator",
-      "label": "powerlaw Score Numerator"
+      "name": "powerlaw_score_numerator",
+      "label": "Powerlaw Score Numerator"
     },
     {
-      "name": "powerlaw_Score",
-      "label": "powerlaw Score"
+      "name": "powerlaw_score",
+      "label": "Powerlaw Score"
     },
     {
-      "name": "CellType",
-      "label": "CellType"
+      "name": "cell_type",
+      "label": "Cell Type"
     },
     {
       "name": "base_overlap",
-      "label": "base overlap"
+      "label": "Base Overlap"
     }
   ]
 }

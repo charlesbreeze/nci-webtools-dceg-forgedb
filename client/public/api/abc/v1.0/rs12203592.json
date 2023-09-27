@@ -1,1 +1,36 @@
-{"rsid":"rs12203592","data":[{"chr1":"chr6","start1":"396320","end1":"396321","rsid":"rs12203592","chr":"chr6","start":"396175","end":"396375","name":"genic|chr6:396025-396525","class":"genic","activity_base":"3.644273","TargetGene":"IRF4","TargetGeneTSS":"391738","TargetGeneExpression":"NA","TargetGenePromoterActivityQuantile":"0.815667","TargetGeneIsExpressed":"True","distance":"4537","isSelfPromoter":"False","hic_contact":"0.04777","powerlaw_contact":"0.125372","powerlaw_contact_reference":"0.123436","hic_contact_pl_scaled":"0.047032","hic_pseudocount":"0.001216","hic_contact_pl_scaled_adj":"0.048248","ABC_Score_Numerator":"0.175829","ABC_Score":"0.03375","powerlaw_Score_Numerator":"0.449835","powerlaw_Score":"0.040169","CellType":"MM.1S-ENCODE","base_overlap":"1"}]}
+{
+  "rsid": "rs12203592",
+  "data": [
+    {
+      "rsid": "rs12203592",
+      "snp_chromosome": "chr6",
+      "snp_start_position": "396320",
+      "snp_end_position": "396321",
+      "bait_chromosome": "chr6",
+      "bait_start_position": "396175",
+      "bait_end_position": "396375",
+      "name": "genic|chr6:396025-396525",
+      "class": "genic",
+      "activity_base": "3.644273",
+      "target_gene": "IRF4",
+      "target_gene_tss": "391738",
+      "target_gene_expression": "NA",
+      "target_gene_promoter_activity_quantile": "0.815667",
+      "target_gene_is_expressed": "True",
+      "distance": "4537",
+      "is_self_promoter": "False",
+      "powerlaw_contact": "0.125372",
+      "powerlaw_contact_reference": "0.123436",
+      "hic_contact": "0.04777",
+      "hic_contact_pl_scaled": "0.047032",
+      "hic_pseudocount": "0.001216",
+      "hic_contact_pl_scaled_adj": "0.048248",
+      "abc_score_numerator": "0.175829",
+      "abc_score": "0.03375",
+      "powerlaw_score_numerator": "0.449835",
+      "powerlaw_score": "0.040169",
+      "cell_type": "MM.1S-ENCODE",
+      "base_overlap": "1"
+    }
+  ]
+}

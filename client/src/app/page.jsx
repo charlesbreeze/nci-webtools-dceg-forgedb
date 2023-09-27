@@ -16,9 +16,9 @@ export default function Home() {
                 <p className="lead text-light">Explore candidate functional variants</p>
 
                 <form action={`${process.env.NEXT_PUBLIC_BASE_PATH}/explore`} className="mb-2">
-                  <div className="input-group border-white">
-                    <input className="form-control search-control-transparent fw-light ps-0" type="search" placeholder="Enter RSID" aria-label="Enter RSID" name="rsid" pattern="^rs\d+" required />
-                    <button className="btn btn-outline-secondary search-control-transparent-button" type="submit">
+                  <div className="input-group border-bottom border-white border-2">
+                    <input className="form-control  bg-transparent border-0 shadow-0 no-clear-control text-light placeholder-light fw-light ps-0" type="search" placeholder="Enter rsid" aria-label="Enter rsid" name="rsid" pattern="^rs\d+" required autoFocus />
+                    <button className="btn btn-outline-secondary bg-transparent border-0 text-light" type="submit">
                       <i className="bi bi-search"></i>
                       <span className="visually-hidden">Search</span>
                     </button>

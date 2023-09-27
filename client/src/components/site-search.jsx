@@ -20,9 +20,9 @@ export default function SiteSearch({className = ''}) {
       role="search"
       action="https://www.google.com/search"
       onSubmit={handleSubmit}>
-      <div className="input-group border-white">
-        <input className="form-control"  type="search" placeholder="Search" aria-label="search" name="q"/>
-        <button className="btn btn-outline-secondary" type="submit" >
+      <div className="input-group border-bottom border-dark border-2">
+        <input className="form-control border-0 outline-0 shadow-0 no-clear-control text-dark fw-light ps-0" type="search" placeholder="Search Documentation" aria-label="Search Documentation" name="q" required/>
+        <button className="btn btn-outline-light text-dark bg-transparent border-0 outline-0" type="submit" >
           <i className="bi bi-search" ></i>
           <span className="visually-hidden">submit</span>
         </button>

@@ -16,10 +16,12 @@ export function fetchBatch(requests) {
   }));
 }
 
-export function getRowFilter(query) {
+export function getRowFilter(query, schema) {
   return (row) => {
     query = (query.trim() || "").toLowerCase();
-    return !query || Object.values(row).some((value) => String(value).toLowerCase().includes(query));
+    return !query || 
+      schema.columns.some(({ defaultValue }) => defaultValue?.toLowerCase().includes(query)) ||
+      Object.values(row).some((value) => String(value).toLowerCase().includes(query));
   }
 }
 

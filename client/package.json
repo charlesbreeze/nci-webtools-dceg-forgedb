@@ -6,8 +6,8 @@
     "start": "next start"
   },
   "dependencies": {
-    "bootstrap": "^5.3.0",
-    "bootstrap-icons": "^1.10.5",
+    "bootstrap": "^5.3.2",
+    "bootstrap-icons": "^1.11.1",
     "clsx": "^2.0.0",
     "encoding": "^0.1.13",
     "next": "latest",
@@ -15,11 +15,11 @@
     "react-bootstrap": "^2.8.0",
     "react-dom": "18.2.0",
     "recoil": "^0.7.7",
-    "sass": "^1.64.1",
-    "swagger-ui-react": "^5.2.0",
-    "swr": "^2.2.0"
+    "sass": "^1.68.0",
+    "swagger-ui-react": "5.3.2",
+    "swr": "^2.2.4"
   },
   "devDependencies": {
-    "eslint": "^8.46.0"
+    "eslint": "^8.50.0"
   }
 }

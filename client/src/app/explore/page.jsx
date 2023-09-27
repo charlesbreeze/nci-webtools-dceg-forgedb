@@ -12,23 +12,22 @@ export default function Explore() {
 
   const { data: datasetsResponse, error: datasetsError, isLoading: datasetsLoading } = useSWR([`${process.env.NEXT_PUBLIC_BASE_PATH}/api/datasets.json`], fetchBatch);
   const datasets = datasetsResponse ? datasetsResponse[0] : [];
-  const schemaQueries = datasets.map(({ name, versions }) => `${process.env.NEXT_PUBLIC_BASE_PATH}/api/${name}/${versions[0]}/schema.json`);
-  const tableQueries = datasets.map(({ name, versions }) => `${process.env.NEXT_PUBLIC_BASE_PATH}/api/${name}/${versions[0]}/${rsid}.json`);
+  const schemaQueries = datasets.map(({ name, forgedb_versions }) => `${process.env.NEXT_PUBLIC_BASE_PATH}/api/${name}/${forgedb_versions[0].version}/schema.json`);
+  const tableQueries = datasets.map(({ name, forgedb_versions }) => `${process.env.NEXT_PUBLIC_BASE_PATH}/api/${name}/${forgedb_versions[0].version}/${rsid}.json`);
   const { data: schemaData, error: schemaError, isLoading: schemaLoading } = useSWR(schemaQueries, fetchBatch);
   const { data: tableData, error: tableError, isLoading: tableLoading } = useSWR(tableQueries, fetchBatch);
 
   // combine datasets, schema, and table data
   const isLoading = datasetsLoading || schemaLoading || tableLoading;
-  const data = datasets?.map(({ name, versions }, index) => ({
+  const data = datasets?.map(({ name, forgedb_versions }, index) => ({
     name,
-    version: versions[0],
+    version: forgedb_versions[0]?.version,
     schema: schemaData?.[index] || null,
     originalTable: tableData?.[index]?.data,
-    table: tableData?.[index]?.data?.filter(getRowFilter(search)),
+    table: tableData?.[index]?.data?.filter(getRowFilter(search, schemaData?.[index])),
   }));
   const forgeDbScore = getForgeDbScore(data);
-  const closestGene = data?.find((d) => d.name === "closestGene")?.originalTable?.[0];
-  const hasData = data?.some((d) => d.originalTable?.length > 0);
+  const closestGene = data?.find((d) => d.name === "closest_gene")?.originalTable?.[0];
 
   return (
     <>
@@ -41,14 +40,13 @@ export default function Explore() {
               </h1>
 
               <form action={`${process.env.NEXT_PUBLIC_BASE_PATH}/explore`} className="mb-2">
-                <div className="input-group border-white">
-                  <input className="form-control search-control-transparent fs-1 fw-light ps-0" type="search" placeholder="rsid" aria-label="rsid" name="rsid" defaultValue={rsid} required style={{ width: "200px" }} pattern="^rs\d+" />
-                  <button className="btn btn-outline-secondary fs-1 search-control-transparent-button" type="submit">
+                <div className="input-group border-bottom border-white border-2">
+                  <input className="form-control bg-transparent border-0 shadow-0 no-clear-control text-light placeholder-light fw-light ps-0 fs-1" type="search" placeholder="rsid" defaultValue={rsid} aria-label="Enter RSID" name="rsid" pattern="^rs\d+" required style={{ width: "200px" }}  />
+                  <button className="btn btn-outline-secondary bg-transparent border-0 text-light fs-3" type="submit">
                     <i className="bi bi-search"></i>
                     <span className="visually-hidden">Search</span>
                   </button>
                 </div>
-                {rsid && !isLoading && !hasData && <div className="text-warning bg-black">No results were found for the given rsid.</div>}
               </form>
             </div>
           </div>
@@ -65,7 +63,7 @@ export default function Explore() {
                 <>
                   <div className="d-flex mb-3">
                     <div className="me-3 form-floating d-inline-block">
-                      <input className="form-control w-auto" id="search" placeholder="Search" value={search} onChange={(e) => setSearch(e.target.value)} />
+                      <input className="form-control w-auto" id="search" placeholder="Search" value={search} onChange={(e) => setSearch(e.target.value)} autoFocus />
                       <label htmlFor="search">Search</label>
                     </div>
                   </div>
@@ -86,7 +84,7 @@ export default function Explore() {
                         {data
                           ?.filter((d) => d.schema)
                           ?.map(({ name, schema, table }, index) => (
-                            <tr key={index}>
+                            <tr key={`${index}_${name}`}>
                               <th className="fw-normal">{schema.shortTitle || schema.title}</th>
                               <td>
                                 <a href={`#${name}`}> {table?.length || 0}</a>
@@ -107,8 +105,8 @@ export default function Explore() {
                           <table className="table table-sm table-striped table-hover shadow-lg border" tabIndex={0}>
                             <thead className="position-sticky top-0">
                               <tr>
-                                {schema.columns.map(({ name, label, description, style }) => (
-                                  <th key={name} className="small text-muted fw-bold bg-light text-uppercase" title={description} style={style}>
+                                {schema.columns.map(({ name, label, description, style }, index) => (
+                                  <th key={`${name}_${index}`} className="small text-muted fw-bold bg-light text-uppercase" title={description} style={style}>
                                     {label}
                                   </th>
                                 ))}
@@ -117,11 +115,18 @@ export default function Explore() {
                             <tbody>
                               {table?.map((row, index) => (
                                 <tr key={index}>
-                                  {schema.columns.map(({ name, defaultValue }) => (
-                                    <td key={name} className="text-nowrap">{row[name] ?? defaultValue}</td>
+                                  {schema.columns.map(({ name, defaultValue }, index) => (
+                                    <td key={`${name}_${index}`} className="text-nowrap">{row[name] ?? defaultValue}</td>
                                   ))}
                                 </tr>
                               ))}
+                              {!table?.length && (
+                                <tr>
+                                  <td colSpan={schema.columns.length} className="text-center p-2">
+                                    No data available
+                                  </td>
+                                </tr>
+                              )}
                             </tbody>
                           </table>
                         </div>

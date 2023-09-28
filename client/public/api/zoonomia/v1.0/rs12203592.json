@@ -1,1 +1,1 @@
-{ "rsid": "rs12203592", "data": [{ "rsid": "rs12203592", "snp_chromosome": "chr6", "snp_start_position": "396320", "snp_end_position": "396321", "phylop_chromosome": "chr6", "phylop_start_position": "396320", "phylop_end_position": "396321", "zoonomia_phylop_score": "1.274" }] }
+{ "rsid": "rs12203592", "data": [{ "rsid": "rs12203592", "chromosome": "chr6", "start_position": "396320", "end_position": "396321", "phylop_chromosome": "chr6", "phylop_start_position": "396320", "phylop_end_position": "396321", "zoonomia_phylop_score": "1.274" }] }

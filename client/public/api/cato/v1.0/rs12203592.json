@@ -3,9 +3,9 @@
   "data": [
     {
       "rsid": "rs12203592",
-      "snp_chromosome": "chr6",
-      "snp_start_position": "396320",
-      "snp_end_position": "396321",
+      "chromosome": "chr6",
+      "start_position": "396320",
+      "end_position": "396321",
       "cato_score": "0.0542",
       "strand": "-",
       "motif": "V_NFKAPPAB65_01",

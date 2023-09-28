@@ -1,51 +1,51 @@
 {
   "title": "FORGE2-TF motif information <small>(hg19, for more details, see <a target='_blank' rel='noopener noreferrer' href='https://forge2-tf.altiusinstitute.org/'>FORGE2-TF</a>, <a target='_blank' rel='noopener noreferrer' href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6853678/'>eFORGE-TF</a> and the <a target='_blank' rel='noopener noreferrer' href='https://genomebiology.biomedcentral.com/articles/10.1186/s13059-021-02560-3'>FORGE2 main paper</a>)</small>",
   "shortTitle": "FORGE2-TF motifs",
-  "example": { "rsid": "rs12203592", "snp_chromosome": "chr6", "snp_start_position": "396320", "snp_end_position": "396321", "motif_chromosome": "chr6", "motif_start_position": "396315", "motif_end_position": "396330", "motif_name": "V_TST1_01", "pvalue": "8.19273e-06", "strand": "-", "sequence": "GAAGGCAAATTCCCC" },
+  "example": { "rsid": "rs12203592", "chromosome": "chr6", "start_position": "396320", "end_position": "396321", "motif_chromosome": "chr6", "motif_start_position": "396315", "motif_end_position": "396330", "motif_name": "V_TST1_01", "pvalue": "8.19273e-06", "strand": "-", "sequence": "GAAGGCAAATTCCCC" },
   "columns": [
     {
       "name": "rsid",
-      "label": "rsid"
+      "label": "RSID"
     },
     {
-      "name": "snp_chromosome",
-      "label": "snp chromosome"
+      "name": "chromosome",
+      "label": "SNP Chromosome"
     },
     {
-      "name": "snp_start_position",
-      "label": "snp start position"
+      "name": "start_position",
+      "label": "SNP Start Position"
     },
     {
-      "name": "snp_end_position",
-      "label": "snp end position"
+      "name": "end_position",
+      "label": "SNP End Position"
     },
     {
       "name": "motif_chromosome",
-      "label": "tf motif chromosome"
+      "label": "TF Motif Chromosome"
     },
     {
       "name": "motif_start_position",
-      "label": "tf motif start position"
+      "label": "TF Motif Start Position"
     },
     {
       "name": "motif_end_position",
-      "label": "tf motif end position"
+      "label": "TF Motif End Position"
     },
     {
       "name": "motif_name",
-      "label": "tf motif name"
+      "label": "TF Motif Name"
     },
     {
       "name": "pvalue",
-      "label": "p-value"
+      "label": "P-value"
     },
     {
       "name": "strand",
-      "label": "strand"
+      "label": "Strand"
     },
     {
       "name": "sequence",
-      "label": "genomic sequence"
+      "label": "Genomic Sequence"
     }
   ]
 }

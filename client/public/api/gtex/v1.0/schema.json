@@ -16,8 +16,8 @@
     "min_pvalue_nominal": "3.193e-06",
     "pvalue_beta": "0.00968924",
     "biosample": "Adipose_Visceral_Omentum.v8.signif_variant_gene_pairs.txt",
-    "snp_chromosome": "chr6",
-    "snp_position": "396321",
+    "chromosome": "chr6",
+    "position": "396321",
     "reference_allele": "C",
     "alternate_allele": "T",
     "num_alternate_alleles_per_site": "1",
@@ -28,43 +28,43 @@
   "columns": [
     {
       "name": "rsid",
-      "label": "rsid"
+      "label": "RSID"
     },
     {
       "name": "gene_symbol",
-      "label": "gene symbol"
+      "label": "Gene Symbol"
     },
     {
       "name": "ensembl_gene_id",
-      "label": "Ensembl gene ID"
+      "label": "Ensembl Gene ID"
     },
     {
       "name": "ensembl_gene_id_versioned",
-      "label": "Ensembl gene ID2"
+      "label": "Ensembl Gene ID 2"
     },
     {
       "name": "tss_distance",
-      "label": "TSS distance"
+      "label": "TSS Distance"
     },
     {
       "name": "reference_allele",
-      "label": "reference allele"
+      "label": "Reference Allele"
     },
     {
       "name": "alternate_allele",
-      "label": "alternative allele"
+      "label": "Alternative Allele"
     },
     {
       "name": "num_alternate_alleles_per_site",
-      "label": "num alternative alleles per site"
+      "label": "Num. Alternative Alleles Per Site"
     },
     {
       "name": "ma_samples",
-      "label": "MA samples"
+      "label": "MA Samples"
     },
     {
       "name": "ma_count",
-      "label": "MA count"
+      "label": "MA Count"
     },
     {
       "name": "maf",
@@ -72,43 +72,43 @@
     },
     {
       "name": "min_pvalue_nominal",
-      "label": "p-value nominal"
+      "label": "P-value Nominal"
     },
     {
       "name": "slope",
-      "label": "slope"
+      "label": "Slope"
     },
     {
       "name": "slope_se",
-      "label": "slope se"
+      "label": "Slope SE"
     },
     {
       "name": "pvalue_nominal_threshold",
-      "label": "p-value nominal threshold"
+      "label": "P-value Nominal Threshold"
     },
     {
       "name": "min_pvalue_nominal",
-      "label": "min p-value nominal"
+      "label": "Min P-value Nominal"
     },
     {
       "name": "pvalue_beta",
-      "label": "p-value beta"
+      "label": "P-value Beta"
     },
     {
       "name": "biosample",
-      "label": "biosample"
+      "label": "Biosample"
     },
     {
-      "name": "snp_chromosome",
-      "label": "variant chromosome (hg38)"
+      "name": "chromosome",
+      "label": "Variant Chromosome (hg38)"
     },
     {
-      "name": "snp_position",
-      "label": "variant position (hg38)"
+      "name": "position",
+      "label": "Variant Position (hg38)"
     },
     {
       "name": "variant_id_b37",
-      "label": "variant ID (b37)"
+      "label": "Variant ID (b37)"
     },
     {
       "name": "variant_id_b38",

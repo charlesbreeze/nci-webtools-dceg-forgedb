@@ -4,19 +4,19 @@
   "columns": [
     {
       "name": "rsid",
-      "label": "rsid"
+      "label": "RSID"
     },
     {
-      "name": "snp_chromosome",
-      "label": "SNP chromosome"
+      "name": "chromosome",
+      "label": "SNP Chromosome"
     },
     {
-      "name": "snp_start_position",
-      "label": "SNP start position"
+      "name": "start_position",
+      "label": "SNP Start Position"
     },
     {
-      "name": "snp_end_position",
-      "label": "SNP end position"
+      "name": "end_position",
+      "label": "SNP End Position"
     },
     {
       "name": "cato_score",
@@ -24,31 +24,31 @@
     },
     {
       "name": "strand",
-      "label": "strand"
+      "label": "Strand"
     },
     {
       "name": "motif",
-      "label": "TF motif"
+      "label": "TF Motif"
     },
     {
       "name": "score1",
-      "label": "score1"
+      "label": "Score 1"
     },
     {
       "name": "score2",
-      "label": "score2"
+      "label": "Score 2"
     },    
     {
       "name": "allele1",
-      "label": "allele1"
+      "label": "Allele 1"
     },
     {
       "name": "allele2",
-      "label": "allele2"
+      "label": "Allele 2"
     },
     {
       "name": "biosample",
-      "label": "biosample"
+      "label": "Biosample"
     }
   ]
 }

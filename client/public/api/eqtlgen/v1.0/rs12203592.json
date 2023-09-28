@@ -4,8 +4,8 @@
     {
       "rsid": "rs12203592",
       "pvalue": "1.4771E-29",
-      "snp_chromosome": "chr6",
-      "snp_position": "396321",
+      "chromosome": "chr6",
+      "position": "396321",
       "assessed_allele": "T",
       "other_allele": "C",
       "zscore": "11.2896",
@@ -22,8 +22,8 @@
     {
       "rsid": "rs12203592",
       "pvalue": "6.4207E-11",
-      "snp_chromosome": "chr6",
-      "snp_position": "396321",
+      "chromosome": "chr6",
+      "position": "396321",
       "assessed_allele": "T",
       "other_allele": "C",
       "zscore": "-6.5335",

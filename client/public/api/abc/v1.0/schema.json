@@ -4,31 +4,31 @@
   "columns": [
     {
       "name": "rsid",
-      "label": "rsid"
+      "label": "RSID"
     },
     {
-      "name": "snp_chromosome",
-      "label": "SNP chromosome"
+      "name": "chromosome",
+      "label": "SNP Chromosome"
     },
     {
-      "name": "snp_start_position",
-      "label": "SNP start position"
+      "name": "start_position",
+      "label": "SNP Start Position"
     },
     {
-      "name": "snp_end_position",
-      "label": "SNP end position"
+      "name": "end_position",
+      "label": "SNP End Position"
     },
     {
       "name": "bait_chromosome",
-      "label": "Bait chromosome"
+      "label": "Bait Chromosome"
     },
     {
       "name": "bait_start_position",
-      "label": "Bait start position"
+      "label": "Bait Start Position"
     },
     {
       "name": "bait_end_position",
-      "label": "Bait end position"
+      "label": "Bait End Position"
     },
     {
       "name": "name",
@@ -40,7 +40,7 @@
     },
     {
       "name": "activity_base",
-      "label": "Activity base"
+      "label": "Activity Base"
     },
     {
       "name": "target_gene",
@@ -72,28 +72,28 @@
     },
     {
       "name": "powerlaw_contact",
-      "label": "Powerlaw contact"
+      "label": "Powerlaw Contact"
     },
     {
       "name": "powerlaw_contact_reference",
-      "label": "Powerlaw contact reference"
+      "label": "Powerlaw Contact Reference"
     },
     {
       "name": "hic_contact",
-      "label": "Hi-C contact"
+      "label": "Hi-C Contact"
     },
     {
       "name": "hic_contact_pl_scaled",
-      "label": "Hi-C contact pl scaled"
-    },
-    {
-      "name": "hic_pseudocount",
-      "label": "Hi-C pseudocount"
+      "label": "Hi-C Contact PL Scaled"
     },
     {
       "name": "hic_contact_pl_scaled_adj",
-      "label": "Hi-C contact pl scaled adj"
+      "label": "Hi-C Contact PL Scaled Adj."
     },
+    {
+      "name": "hic_pseudocount",
+      "label": "Hi-C Pseudocount"
+    },    
     {
       "name": "abc_score_numerator",
       "label": "ABC Score Numerator"

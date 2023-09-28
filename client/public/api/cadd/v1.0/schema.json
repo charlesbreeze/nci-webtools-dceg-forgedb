@@ -15,7 +15,7 @@
       "label": "Reference Allele"
     },
     {
-      "name": "alternative_allele",
+      "name": "alternate_allele",
       "label": "Alternative Allele"
     },
     {

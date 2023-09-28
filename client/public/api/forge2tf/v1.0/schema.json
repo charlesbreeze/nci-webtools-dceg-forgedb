@@ -1,7 +1,6 @@
 {
   "title": "FORGE2-TF motif information <small>(hg19, for more details, see <a target='_blank' rel='noopener noreferrer' href='https://forge2-tf.altiusinstitute.org/'>FORGE2-TF</a>, <a target='_blank' rel='noopener noreferrer' href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6853678/'>eFORGE-TF</a> and the <a target='_blank' rel='noopener noreferrer' href='https://genomebiology.biomedcentral.com/articles/10.1186/s13059-021-02560-3'>FORGE2 main paper</a>)</small>",
   "shortTitle": "FORGE2-TF motifs",
-  "example": { "rsid": "rs12203592", "chromosome": "chr6", "start_position": "396320", "end_position": "396321", "motif_chromosome": "chr6", "motif_start_position": "396315", "motif_end_position": "396330", "motif_name": "V_TST1_01", "pvalue": "8.19273e-06", "strand": "-", "sequence": "GAAGGCAAATTCCCC" },
   "columns": [
     {
       "name": "rsid",

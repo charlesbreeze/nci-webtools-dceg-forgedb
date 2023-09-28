@@ -1,23 +1,6 @@
 {
   "title": "<a target='_blank' rel='noopener noreferrer' href='https://www.nature.com/articles/s41588-021-00913-z'>eQTLGen</a> blood FDR 0.05 cis-eQTL information <small>(hg19, for more details, see <a target='_blank' rel='noopener noreferrer' href='https://www.eqtlgen.org/'>https://www.eqtlgen.org</a>)</small>",
   "shortTitle": "eQTLGen blood cis-eQTLs",
-  "example": {
-    "rsid": "rs12203592",
-    "pvalue": "1.4771E-29",
-    "chromosome": "chr6",
-    "position": "396321",
-    "assessed_allele": "T",
-    "other_allele": "C",
-    "zscore": "11.2896",
-    "ensembl_gene": "ENSG00000137265",
-    "gene_symbol": "IRF4",
-    "gene_chromosome": "6",
-    "gene_position": "401593",
-    "number_of_cohorts": "33",
-    "number_of_samples": "30912",
-    "false_discovery_rate": "0.0",
-    "bonferroni_pvalue": "1.8810E-21"
-  },
   "columns": [
     {
       "name": "rsid",

@@ -1,30 +1,6 @@
 {
   "title": "GTEx cis-eQTL information <small>(for more details, see <a target='_blank' rel='noopener noreferrer' href='https://gtexportal.org/home/'>https://gtexportal.org/home/</a>)</small>",
   "shortTitle": "GTEx cis-eQTLs",
-  "example":      {
-    "rsid": "rs12203592",
-    "ensembl_gene_id": "ENSG00000137265",
-    "ensembl_gene_id_versioned": "ENSG00000137265.14",
-    "tss_distance": "4582",
-    "ma_samples": "127",
-    "ma_count": "134",
-    "maf": "0.142857",
-    "pvalue_nominal": "3.193e-06",
-    "slope": "0.314227",
-    "slope_se": "0.066502",
-    "pvalue_nominal_threshold": "7.71521e-05",
-    "min_pvalue_nominal": "3.193e-06",
-    "pvalue_beta": "0.00968924",
-    "biosample": "Adipose_Visceral_Omentum.v8.signif_variant_gene_pairs.txt",
-    "chromosome": "chr6",
-    "position": "396321",
-    "reference_allele": "C",
-    "alternate_allele": "T",
-    "num_alternate_alleles_per_site": "1",
-    "variant_id_b37": "chr6_396321_C_T_b37",
-    "variant_id_b38": "chr6_396321_C_T_b38",
-    "gene_symbol": "IRF4"
-  },
   "columns": [
     {
       "name": "rsid",
@@ -39,7 +15,7 @@
       "label": "Ensembl Gene ID"
     },
     {
-      "name": "ensembl_gene_id_versioned",
+      "name": "ensembl_versioned_gene_id",
       "label": "Ensembl Gene ID 2"
     },
     {
@@ -71,16 +47,16 @@
       "label": "MAF"
     },
     {
-      "name": "min_pvalue_nominal",
-      "label": "P-value Nominal"
-    },
-    {
       "name": "slope",
       "label": "Slope"
     },
     {
       "name": "slope_se",
       "label": "Slope SE"
+    },
+    {
+      "name": "pvalue_nominal",
+      "label": "P-value Nominal"
     },
     {
       "name": "pvalue_nominal_threshold",

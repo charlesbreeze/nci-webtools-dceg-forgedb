@@ -4,23 +4,23 @@
   "columns": [
     {
       "name": "rsid",
-      "label": "rsid"
+      "label": "RSID"
     },
     {
-      "name": "snp_chromosome",
-      "label": "snp chromosome"
+      "name": "chromosome",
+      "label": "SNP Chromosome"
     },
     {
-      "name": "snp_start_position",
-      "label": "snp start position"
+      "name": "start_position",
+      "label": "SNP Start Position"
     },
     {
-      "name": "snp_end_position",
-      "label": "snp end position"
+      "name": "end_position",
+      "label": "SNP End Position"
     },
     {
       "name": "phylop_chromosome",
-      "label": "PhyloP chromosome"
+      "label": "PhyloP Chromosome"
     },
     {
       "name": "phylop_start_position",

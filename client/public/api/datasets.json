@@ -1,58 +1,58 @@
 [
   {
     "name": "closest_gene",
-    "forgedb_versions": [{ "version": "v1.0", "metadata": { "original_version": "v2019.02.grch37", "url": "https://genome.ucsc.edu/cgi-bin/hgTables", "download_url": "https://genome.ucsc.edu/cgi-bin/hgTables?clade=mammal&db=hg19&hgta_group=genes&hgta_track=refSeqComposite&hgta_table=ncbiRefSeq&hgta_regionType=genome&hgta_outputType=primaryTable&hgta_outFileName=refseq_grch37.tsv", "notes": "GRCh37, NCBI RefSeq, Downloaded 2022-08-05 using UCSC table browser" } }]
+    "forgedb_versions": [{ "version": "v1.0", "metadata": { "original_version": "v2022.08.05.grch37", "assembly": "GRCh37", "url": "https://genome.ucsc.edu/cgi-bin/hgTables", "download_url": "https://genome.ucsc.edu/cgi-bin/hgTables?clade=mammal&db=hg19&hgta_group=genes&hgta_track=refSeqComposite&hgta_table=ncbiRefSeq&hgta_regionType=genome&hgta_outputType=primaryTable&hgta_outFileName=refseq_grch37.tsv", "notes": "GRCh37, NCBI RefSeq, Downloaded 2022-08-05 using UCSC table browser" } }]
   },
   {
     "name": "cadd",
-    "forgedb_versions": [{ "version": "v1.0", "metadata": { "original_version": "v1.6", "url": "https://cadd.gs.washington.edu/", "download_url": "https://krishna.gs.washington.edu/download/CADD/v1.6/GRCh37/whole_genome_SNVs.tsv.gz", "notes": "GRCh37" } }]
+    "forgedb_versions": [{ "version": "v1.0", "metadata": { "original_version": "v1.6", "assembly": "GRCh37", "url": "https://cadd.gs.washington.edu/", "download_url": "https://krishna.gs.washington.edu/download/CADD/v1.6/GRCh37/whole_genome_SNVs.tsv.gz", "notes": "GRCh37" } }]
   },
   {
     "name": "gtex",
-    "forgedb_versions": [{ "version": "v1.0", "metadata": { "original_version": "v8.0", "url": "https://gtexportal.org/home/", "download_url": "https://storage.googleapis.com/gtex_analysis_v8/single_tissue_qtl_data/GTEx_Analysis_v8_eQTL.tar", "notes": "" } }]
+    "forgedb_versions": [{ "version": "v1.0", "metadata": { "original_version": "v8.0", "assembly": "GRCh38", "url": "https://gtexportal.org/home/", "download_url": "https://storage.googleapis.com/gtex_analysis_v8/single_tissue_qtl_data/GTEx_Analysis_v8_eQTL.tar", "notes": "" } }]
   },
   {
     "name": "eqtlgen",
-    "forgedb_versions": [{ "version": "v1.0", "metadata": { "original_version": "v2019.12.23", "url": "https://www.eqtlgen.org/phase1.html", "download_url": "https://molgenis26.gcc.rug.nl/downloads/eqtlgen/cis-eqtl/2019-12-11-cis-eQTLsFDR-ProbeLevel-CohortInfoRemoved-BonferroniAdded.txt.gz", "notes": "eQTLGen phase I, Downloaded 2022-08-16" } }]
+    "forgedb_versions": [{ "version": "v1.0", "metadata": { "original_version": "v2019.12.11", "assembly": "GRCh37", "url": "https://www.eqtlgen.org/phase1.html", "download_url": "https://molgenis26.gcc.rug.nl/downloads/eqtlgen/cis-eqtl/2019-12-11-cis-eQTLsFDR-ProbeLevel-CohortInfoRemoved-BonferroniAdded.txt.gz", "notes": "eQTLGen phase I, Downloaded 2022-08-16" } }]
   },
   {
     "name": "abc",
-    "forgedb_versions": [{ "version": "v1.0", "metadata": { "original_version": "v3.0", "url": "https://www.engreitzlab.org/resources", "download_url": "https://mitra.stanford.edu/engreitz/oak/public/Nasser2021/AllPredictions.AvgHiC.ABC0.015.minus150.ForABCPaperV3.txt.gz", "notes": "ABC predictions in 131 cell types and tissues (all element-gene connections with ABC scores >= 0.015; from Nasser et al. Nature (2021)), Downloaded 2020-07-03" } }]
+    "forgedb_versions": [{ "version": "v1.0", "metadata": { "original_version": "v2022.07.03.Nasser.2021", "assembly": "GRCh37", "url": "https://www.engreitzlab.org/resources", "download_url": "https://mitra.stanford.edu/engreitz/oak/public/Nasser2021/AllPredictions.AvgHiC.ABC0.015.minus150.ForABCPaperV3.txt.gz", "notes": "ABC predictions in 131 cell types and tissues (all element-gene connections with ABC scores >= 0.015; from Nasser et al. Nature (2021)), Downloaded 2022-07-03" } }]
   },
   {
     "name": "forge2tf",
-    "forgedb_versions": [{ "version": "v1.0", "metadata": { "original_version": "v1.0", "url": "https://forge2-tf.altiusinstitute.org/", "download_url": "https://forge2.altiusinstitute.org/files/forge2.tf.fimo.jaspar.1e-5.taipale.1e-5.taipaledimer.1e-5.uniprobe.1e-5.xfac.1e-5.db", "notes": "" } }]
+    "forgedb_versions": [{ "version": "v1.0", "metadata": { "original_version": "v1.0", "assembly": "GRCh37", "url": "https://forge2-tf.altiusinstitute.org/", "download_url": "https://forge2.altiusinstitute.org/files/forge2.tf.fimo.jaspar.1e-5.taipale.1e-5.taipaledimer.1e-5.uniprobe.1e-5.xfac.1e-5.db", "notes": "" } }]
   },
   {
     "name": "cato",
-    "forgedb_versions": [{ "version": "v1.0", "metadata": { "original_version": "v1.1", "url": "http://www.mauranolab.org/CATO/", "download_url": "http://www.mauranolab.org/CATO/dbSNP142.all.CATO.V1.1.starch", "notes": "dbSNP142" } }]
+    "forgedb_versions": [{ "version": "v1.0", "metadata": { "original_version": "v1.1", "assembly": "GRCh37", "url": "http://www.mauranolab.org/CATO/", "download_url": "http://www.mauranolab.org/CATO/dbSNP142.all.CATO.V1.1.starch", "notes": "dbSNP142" } }]
   },
   {
     "name": "zoonomia",
-    "forgedb_versions": [{ "version": "v1.0", "metadata": { "original_version": "v2.0", "url": "https://zoonomiaproject.org/", "download_url": "https://cgl.gi.ucsc.edu/data/cactus/241-mammalian-2020v2-hub/Homo_sapiens/241-mammalian-2020v2.bigWig", "notes": "Human PhyloP scores" } }]
+    "forgedb_versions": [{ "version": "v1.0", "metadata": { "original_version": "v2.0", "assembly": "GRCh38", "url": "https://zoonomiaproject.org/", "download_url": "https://cgl.gi.ucsc.edu/data/cactus/241-mammalian-2020v2-hub/Homo_sapiens/241-mammalian-2020v2.bigWig", "notes": "241-way mammalian alignment (Zoonomia) update (V2) - Human PhyloP scores" } }]
   },
   {
     "name": "forge2.blueprint",
-    "forgedb_versions": [{ "version": "v1.0", "metadata": { "original_version": "v1.0", "url": "https://forge2.altiusinstitute.org/", "download_url": "https://forge2.altiusinstitute.org/files/forge_2.0.db", "notes": "" } }]
+    "forgedb_versions": [{ "version": "v1.0", "metadata": { "original_version": "v1.0", "assembly": "", "url": "https://forge2.altiusinstitute.org/", "download_url": "https://forge2.altiusinstitute.org/files/forge_2.0.db", "notes": "" } }]
   },
   {
     "name": "forge2.encode",
-    "forgedb_versions": [{ "version": "v1.0", "metadata": { "original_version": "v1.0", "url": "https://forge2.altiusinstitute.org/", "download_url": "https://forge2.altiusinstitute.org/files/forge_2.0.db", "notes": "" } }]
+    "forgedb_versions": [{ "version": "v1.0", "metadata": { "original_version": "v1.0", "assembly": "", "url": "https://forge2.altiusinstitute.org/", "download_url": "https://forge2.altiusinstitute.org/files/forge_2.0.db", "notes": "" } }]
   },
   {
     "name": "forge2.erc",
-    "forgedb_versions": [{ "version": "v1.0", "metadata": { "original_version": "v1.0", "url": "https://forge2.altiusinstitute.org/", "download_url": "https://forge2.altiusinstitute.org/files/forge_2.0.db", "notes": "" } }]
+    "forgedb_versions": [{ "version": "v1.0", "metadata": { "original_version": "v1.0", "assembly": "", "url": "https://forge2.altiusinstitute.org/", "download_url": "https://forge2.altiusinstitute.org/files/forge_2.0.db", "notes": "" } }]
   },
   {
     "name": "forge2.erc2-chromatin15state-all",
-    "forgedb_versions": [{ "version": "v1.0", "metadata": { "original_version": "v1.0", "url": "https://forge2.altiusinstitute.org/", "download_url": "https://forge2.altiusinstitute.org/files/forge_2.0.db", "notes": "" } }]
+    "forgedb_versions": [{ "version": "v1.0", "metadata": { "original_version": "v1.0", "assembly": "", "url": "https://forge2.altiusinstitute.org/", "download_url": "https://forge2.altiusinstitute.org/files/forge_2.0.db", "notes": "" } }]
   },
   {
     "name": "forge2.erc2-DHS",
-    "forgedb_versions": [{ "version": "v1.0", "metadata": { "original_version": "v1.0", "url": "https://forge2.altiusinstitute.org/", "download_url": "https://forge2.altiusinstitute.org/files/forge_2.0.db", "notes": "" } }]
+    "forgedb_versions": [{ "version": "v1.0", "metadata": { "original_version": "v1.0", "assembly": "", "url": "https://forge2.altiusinstitute.org/", "download_url": "https://forge2.altiusinstitute.org/files/forge_2.0.db", "notes": "" } }]
   },
   {
     "name": "forge2.erc2-H3-all",
-    "forgedb_versions": [{ "version": "v1.0", "metadata": { "original_version": "v1.0", "url": "https://forge2.altiusinstitute.org/", "download_url": "https://forge2.altiusinstitute.org/files/forge_2.0.db", "notes": "" } }]
+    "forgedb_versions": [{ "version": "v1.0", "metadata": { "original_version": "v1.0", "assembly": "", "url": "https://forge2.altiusinstitute.org/", "download_url": "https://forge2.altiusinstitute.org/files/forge_2.0.db", "notes": "" } }]
   }
 ]

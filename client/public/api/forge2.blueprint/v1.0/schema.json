@@ -25,7 +25,7 @@
     },
     {
       "name": "rsid",
-      "label": "Variant rsid",
+      "label": "RSID",
       "style": {
         "width": "20%"
       }

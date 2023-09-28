@@ -4,8 +4,8 @@
   "example": {
     "rsid": "rs12203592",
     "pvalue": "1.4771E-29",
-    "snp_chromosome": "chr6",
-    "snp_position": "396321",
+    "chromosome": "chr6",
+    "position": "396321",
     "assessed_allele": "T",
     "other_allele": "C",
     "zscore": "11.2896",
@@ -21,14 +21,14 @@
   "columns": [
     {
       "name": "rsid",
-      "label": "rsid"
+      "label": "RSID"
     },
     {
-      "name": "snp_chromosome",
+      "name": "chromosome",
       "label": "SNP Chromosome"
     },
     {
-      "name": "snp_position",
+      "name": "position",
       "label": "SNP Position"
     },
     {
@@ -49,7 +49,7 @@
     },
     {
       "name": "pvalue",
-      "label": "p-value"
+      "label": "P-value"
     },
     {
       "name": "assessed_allele",
@@ -81,7 +81,7 @@
     },
     {
       "name": "bonferroni_pvalue",
-      "label": "Bonferroni p-value"
+      "label": "Bonferroni P-value"
     }
   ]
 }

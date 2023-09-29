@@ -31,19 +31,19 @@
       "label": "TF Motif"
     },
     {
-      "name": "score1",
+      "name": "score_1",
       "label": "Score 1"
     },
     {
-      "name": "score2",
+      "name": "score_2",
       "label": "Score 2"
     },    
     {
-      "name": "allele1",
+      "name": "allele_1",
       "label": "Allele 1"
     },
     {
-      "name": "allele2",
+      "name": "allele_2",
       "label": "Allele 2"
     },
     {

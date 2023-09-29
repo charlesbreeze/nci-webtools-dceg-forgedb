@@ -9,10 +9,10 @@
       "cato_score": "0.0542",
       "strand": "-",
       "motif": "V_NFKAPPAB65_01",
-      "score1": "9",
-      "score2": "4",
-      "allele1": "C",
-      "allele2": "T",
+      "score_1": "9",
+      "score_2": "4",
+      "allele_1": "C",
+      "allele_2": "T",
       "biosample": "CD19;CD20;CD3;CD34;CD3_CordBlood;CD4;CD4pos_N;CD56;CMK;GM12864;GM12865;GM12878;Gastric_Mucosa;K562;PANC1;Skin_Melanocytes;Trophoblast;fKidney;fMuscle;hTH1;hTH17;hTH2;hTR;iTH1;vHMEC"
     }
   ]

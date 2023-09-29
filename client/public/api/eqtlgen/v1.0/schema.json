@@ -15,12 +15,12 @@
       "label": "SNP Position"
     },
     {
-      "name": "gene_symbol",
-      "label": "Gene Symbol"
+      "name": "ensembl_gene_id",
+      "label": "Ensembl Gene ID"
     },
     {
-      "name": "ensembl_gene",
-      "label": "Ensembl Gene ID"
+      "name": "gene_symbol",
+      "label": "Gene Symbol"
     },
     {
       "name": "gene_chromosome",

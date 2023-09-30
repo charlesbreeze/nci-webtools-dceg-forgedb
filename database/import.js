@@ -16,7 +16,6 @@ console.log(`Input object key: s3://${bucket}/${key}`);
 const keyParts = key.split("/");
 const [datasetName, version] = keyParts.slice(-3, -1);
 const outputKeyPrefix = keyParts.slice(0, -1).join("/") + "/";
-const indexKey = `${keyParts.slice(0, -3).join("/")}/datasets.json`;
 const logKey = `${outputKeyPrefix}${keyParts.at(-1)}.log`;
 
 if (datasetName === "api" || version === "api") {
@@ -24,7 +23,6 @@ if (datasetName === "api" || version === "api") {
 }
 
 console.log(`Output object key prefix: s3://${bucket}/${outputKeyPrefix}`);
-console.log(`Index key: s3://${bucket}/${indexKey}`);
 console.log(`Log key: s3://${bucket}/${logKey}`);
 
 async function main() {
@@ -67,6 +65,8 @@ async function main() {
   let previousRsid = null;
   let previousItems = [];
   let buffer = [];
+  let rsidKey = 'rsid'
+  let dropRsid = false;
   const bufferSize = 300;
   const logInterval = 100000;
 
@@ -77,22 +77,34 @@ async function main() {
   };
 
   for await (const item of response.Body.pipe(gunzip).pipe(parser)) {
+    // if the rsid column is _rsid, drop it from the output
+    if (item._rsid) {
+      rsidKey = '_rsid'
+      dropRsid = true;
+    }
+
     // initialize previousRsid if it's null
     if (!previousRsid) {
-      previousRsid = item.rsid;
+      previousRsid = item[rsidKey];
     }
 
     // if the rsid has changed, flush the buffer
-    if (item.rsid !== previousRsid) {
+    if (item[rsidKey] !== previousRsid) {
       buffer.push({
         Bucket: bucket,
         Key: `${outputKeyPrefix}${previousRsid}.json`,
         Body: JSON.stringify({
           rsid: previousRsid,
-          data: previousItems,
+          data: previousItems.map(item => {
+            let clone = Object.assign({}, item);
+            if (dropRsid) {
+              delete clone[rsidKey]
+            }
+            return clone
+          }),
         }),
       });
-      previousRsid = item.rsid;
+      previousRsid = item[rsidKey];
       previousItems = [item];
     } else {
       previousItems.push(item);
@@ -114,13 +126,19 @@ async function main() {
   }
 
   if (previousItems.length > 0) {
-    const rsid = previousItems[0].rsid;
+    const rsid = previousItems[0][rsidKey];
     buffer.push({
       Bucket: bucket,
       Key: `${outputKeyPrefix}${rsid}.json`,
       Body: JSON.stringify({
         rsid,
-        data: previousItems,
+        data: previousItems.map(item => {
+          let clone = Object.assign({}, item);
+          if (dropRsid) {
+            delete clone[rsidKey]
+          }
+          return clone
+        }),
       }),
     });
   }
@@ -132,41 +150,6 @@ async function main() {
   let rate = i / elapsed;
   let objectRate = objectCount / elapsed;
   await log(`Processed ${i} rows (${objectCount} objects) in ${elapsed.toFixed(2)}s (${rate.toFixed(2)} rows/s) (${objectRate.toFixed(2)} objects/s)`);
-
-  // update the index file
-  const indexResponse = await s3Client.send(
-    new GetObjectCommand({
-      Bucket: bucket,
-      Key: indexKey,
-    })
-  );
-
-  let indexResponseContents = "";
-  for await (const chunk of indexResponse.Body) {
-    indexResponseContents += chunk;
-  }
-
-  const datasets = JSON.parse(indexResponseContents);
-  let dataset = datasets.find((d) => d.name === datasetName);
-  if (!dataset) {
-    dataset = {
-      name: dataset,
-      versions: [],
-    };
-    datasets.push(dataset);
-  }
-
-  if (!dataset.versions.find((v) => v === version)) {
-    await log(`Updating s3://${bucket}/${indexKey}`);
-    dataset.versions.unshift(version);
-    await s3Client.send(
-      new PutObjectCommand({
-        Bucket: bucket,
-        Key: indexKey,
-        Body: JSON.stringify(datasets, null, 2),
-      })
-    );
-  }
 }
 
 // keeps the process alive until all promises are resolved

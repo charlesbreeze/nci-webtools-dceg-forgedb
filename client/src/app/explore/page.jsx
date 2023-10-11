@@ -64,7 +64,7 @@ export default function Explore() {
                   <div className="d-flex mb-3">
                     <div className="me-3 form-floating d-inline-block">
                       <input className="form-control w-auto" id="search" placeholder="Search" value={search} onChange={(e) => setSearch(e.target.value)} autoFocus />
-                      <label htmlFor="search">Search</label>
+                      <label htmlFor="search">Tissue/cell type Search</label>
                     </div>
                   </div>
 
